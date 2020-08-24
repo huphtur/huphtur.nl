@@ -18,6 +18,9 @@ module.exports = {
           h1: {
             fontFamily: `${theme('fontFamily.sans')}`,
           },
+          'h1 a': {
+            textDecoration: 'none',
+          },
           h2: {
             fontFamily: `${theme('fontFamily.sans')}`,
           },
@@ -42,7 +45,7 @@ module.exports = {
             content: 'none',
           },
           a: {
-            textDecoration: 'no-underline',
+            textDecoration: 'underline',
             '&:link': {
               color: theme('colors.orange.800'),
             },
