@@ -1,0 +1,20 @@
+{
+  "name": "huphtur.nl",
+  "description": "Personal blog built with Eleventy and Tailwind.",
+  "scripts": {
+    "start": "rm -rf _site && eleventy --serve --config=eleventy.config.js & postcss src/_includes/css/tailwind.css --o src/_includes/css/output.css --watch",
+    "build": "rm -rf _site && NODE_ENV=production postcss src/_includes/css/tailwind.css --o src/_includes/css/output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js"
+  },
+  "browserslist": [
+    "> 1%"
+  ],
+  "devDependencies": {
+    "@11ty/eleventy": "^0.11.0",
+    "@11ty/eleventy-plugin-rss": "^1.0.9",
+    "@tailwindcss/typography": "^0.2.0",
+    "eleventy-plugin-embed-everything": "^1.8.1",
+    "html-minifier-terser": "^5.1.1",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.7.3"
+  }
+}
