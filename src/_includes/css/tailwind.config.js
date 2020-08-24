@@ -1,9 +1,6 @@
 module.exports = {
-  corePlugins: {
-    // animation: false,
-  },
   purge: {
-    mode: 'all',
+    // mode: 'all',
     content: ['./src/**/*.html', './src/**/*.njk', './src/**/*.md'],
     options: {
       keyframes: true,
@@ -47,10 +44,10 @@ module.exports = {
           a: {
             textDecoration: 'no-underline',
             '&:link': {
-              color: theme('colors.orange.600'),
+              color: theme('colors.orange.800'),
             },
             '&:visited': {
-              color: theme('colors.pink.700'),
+              color: theme('colors.pink.900'),
             },
             '&:hover': {
               color: theme('colors.black'),
