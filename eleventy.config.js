@@ -1,17 +1,16 @@
-const htmlmin = require('html-minifier-terser');
+const htmlmin = require('html-minifier');
 const embedEverything = require('eleventy-plugin-embed-everything');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget('./src/_includes/css/output.css');
+  eleventyConfig.addWatchTarget('./src/tailwind/output.css');
 
   eleventyConfig.addPassthroughCopy('src/images');
+
   if (!process.env.ELEVENTY_ENV) {
-    eleventyConfig.addPassthroughCopy({
-      './src/_includes/css/output.css': './output.css',
-    });
+    eleventyConfig.addPassthroughCopy('./src/css/style.css');
   }
 
   const markdownIt = require('markdown-it');
