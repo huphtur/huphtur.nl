@@ -1,6 +1,7 @@
 const htmlmin = require('html-minifier');
 const embedEverything = require('eleventy-plugin-embed-everything');
 const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
@@ -25,6 +26,50 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPlugin(embedEverything, {
     use: ['youtube', 'soundcloud'],
   });
+
+
+  eleventyConfig.addPlugin(pluginLocalRespimg, {
+    folders: {
+      source: 'src', // Folder images are stored in
+      output: '_site', // Folder images should be output to
+    },
+    images: {
+      resize: {
+        min: 250, // Minimum width to resize an image to
+        max: 1500, // Maximum width to resize an image to
+        step: 150, // Width difference between each resized image
+      },
+      gifToVideo: false, // Convert GIFs to MP4 videos
+      sizes: '100vw', // Default image `sizes` attribute
+      lazy: true, // Include `loading="lazy"` attribute for images
+      additional: [
+        // Globs of additional images to optimize (won't be resized)
+        'images/icons/**/*',
+      ],
+      watch: {
+        src: 'images/**/*', // Glob of images that Eleventy should watch for changes to
+      },
+      pngquant: {
+        /* ... */
+      }, // imagemin-pngquant options
+      mozjpeg: {
+        /* ... */
+      }, // imagemin-mozjpeg options
+      svgo: {
+        /* ... */
+      }, // imagemin-svgo options
+      gifresize: {
+        /* ... */
+      }, // @gumlet/gif-resize options
+      webp: {
+        /* ... */
+      }, // imagemin-webp options
+      gifwebp: {
+        /* ... */
+      }, // imagemin-gif2webp options
+    },
+  });
+
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
