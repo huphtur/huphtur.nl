@@ -1,6 +1,6 @@
 const htmlmin = require('html-minifier');
 const embedEverything = require('eleventy-plugin-embed-everything');
-const pluginRss = require("@11ty/eleventy-plugin-rss");
+const pluginRss = require('@11ty/eleventy-plugin-rss');
 const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 
 module.exports = function (eleventyConfig) {
@@ -22,11 +22,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownIt(options));
 
   eleventyConfig.addPlugin(pluginRss);
-  
+
   eleventyConfig.addPlugin(embedEverything, {
     use: ['youtube', 'soundcloud'],
   });
-
 
   eleventyConfig.addPlugin(pluginLocalRespimg, {
     folders: {
@@ -58,14 +57,13 @@ module.exports = function (eleventyConfig) {
         /* ... */
       }, // @gumlet/gif-resize options
       webp: {
-        quality: 50
+        quality: 50,
       }, // imagemin-webp options
       gifwebp: {
         /* ... */
       }, // imagemin-gif2webp options
     },
   });
-
 
   eleventyConfig.addTransform('htmlmin', function (content, outputPath) {
     if (
