@@ -35,17 +35,13 @@ module.exports = function (eleventyConfig) {
     },
     images: {
       resize: {
-        min: 250, // Minimum width to resize an image to
-        max: 1500, // Maximum width to resize an image to
-        step: 150, // Width difference between each resized image
+        min: 480, // Minimum width to resize an image to
+        max: 1440, // Maximum width to resize an image to
+        step: 480, // Width difference between each resized image
       },
       gifToVideo: false, // Convert GIFs to MP4 videos
       sizes: '100vw', // Default image `sizes` attribute
       lazy: true, // Include `loading="lazy"` attribute for images
-      additional: [
-        // Globs of additional images to optimize (won't be resized)
-        'images/icons/**/*',
-      ],
       watch: {
         src: 'images/**/*', // Glob of images that Eleventy should watch for changes to
       },
@@ -62,7 +58,7 @@ module.exports = function (eleventyConfig) {
         /* ... */
       }, // @gumlet/gif-resize options
       webp: {
-        /* ... */
+        quality: 50
       }, // imagemin-webp options
       gifwebp: {
         /* ... */
