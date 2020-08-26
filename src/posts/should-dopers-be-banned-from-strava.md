@@ -1,6 +1,6 @@
 ---
 title: "Should Dopers Be Banned From Strava?"
-description: "Full version of my interview with the LA Times about How Strava coiple handle dopers on their platform."
+description: "Full version of my interview with the LA Times about How Strava should handle dopers on their platform."
 image: /images/strava-doper.jpg
 date: 2016-04-12
 ---
