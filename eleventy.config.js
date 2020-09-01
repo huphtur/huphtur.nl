@@ -25,6 +25,11 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addPlugin(embedEverything, {
     use: ['youtube', 'soundcloud'],
+    youtube: {
+      options: {
+        lazy: true,
+      },
+    },
   });
 
   eleventyConfig.addPlugin(pluginLocalRespimg, {
