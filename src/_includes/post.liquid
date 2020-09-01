@@ -4,5 +4,5 @@ layout: default
 <article class="md:prose-2xl max-w-none prose">
   <h1>{{ title }}</h1>
   {{ content | safe }}
-  <time class="md:text-lg text-sm" datetime="{{ date.toISOString() }}">{{ date.toDateString() }}</time>
+  <time class="md:text-lg text-sm" datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%B %d, %Y" }}</time>
 </article>

@@ -4,12 +4,12 @@ title: "Marcel Appelman"
 description: "Tall, skinny Dutch guy with a penchant for skateboarding, cycling, and nerdy computer crap."
 ---
 <div class="md:prose-2xl max-w-none sm:space-y-40 space-y-20 prose">
-  {%- for item in collections.post | reverse -%}
+  {%- for item in collections.post reversed -%}
   <article>
     <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
     <p class="lead">{{ item.data.description | safe }}</p>
     <p><a href="{{ item.url }}"><time class="md:text-lg text-sm"
-          datetime="{{ item.date.toISOString() }}">{{ item.date.toDateString() }}</time></a></p>
+          datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date: "%B %d, %Y" }}</time></a></p>
   </article>
   {%- endfor -%}
 </div>

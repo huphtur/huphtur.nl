@@ -12,14 +12,14 @@
   <meta name="format-detection" content="telephone=no">
   <link rel="canonical" href="{{ site.url }}{{ page.url }}">
   <title>{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title>
-  <link rel="icon" sizes="192x192" href="/images/avatar.jpg">
-  <link rel="apple-touch-icon" href="/images/avatar.jpg">
-  <meta property="og:url" content="{{ site.url}}{{ page.url }}">
+  <link rel="icon" sizes="192x192" href="{{ site.url }}/images/avatar.jpg">
+  <link rel="apple-touch-icon" href="{{ site.url }}/images/avatar.jpg">
+  <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
   {% if site.meta_data.default_social_image or image %}
   <meta property="og:image"
-    content="{% if env == 'production' %}{{ site.url }}{% endif %}{% if image %}{{ image }}{% else %}{{ site.meta_data.default_social_image }}{% endif %}" />
+    content="{% if env == 'production' %}{{ site.url }}{% endif %}{% if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}{{ site.meta_data.default_social_image }}{% endif %}" />
   {% endif %}
   <meta property="og:description"
     content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
