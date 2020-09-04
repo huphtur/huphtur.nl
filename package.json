@@ -16,7 +16,7 @@
     "eleventy-plugin-local-respimg": "^0.3.1",
     "html-minifier": "^4.0.0",
     "postcss-clean": "^1.1.0",
-    "postcss-cli": "^7.1.1",
-    "tailwindcss": "^1.7.6"
+    "postcss-cli": "^7.1.2",
+    "tailwindcss": "^1.8.0"
   }
 }
