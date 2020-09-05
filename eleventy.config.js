@@ -78,10 +78,14 @@ module.exports = function (eleventyConfig) {
     ) {
       let minified = htmlmin.minify(content, {
         useShortDoctype: true,
-        removeComments: true,
+        removeAttributeQuotes: true,
+        collapseBooleanAttributes: true,
         collapseWhitespace: true,
-        minifyCSS: true,
-        minifyJS: true,
+        removeComments: true,
+        sortClassName: true,
+        sortAttributes: true,
+        html5: true,
+        decodeEntities: true,
       });
       return minified;
     }
