@@ -1,6 +1,8 @@
 {
   "name": "huphtur.nl",
   "description": "Personal blog built with Eleventy and Tailwind.",
+  "repository": "https://github.com/huphtur/huphtur.nl",
+  "license": "MIT",
   "scripts": {
     "start": "rm -rf _site && eleventy --serve --config=eleventy.config.js & postcss src/css/tailwind.css --o src/css/style.css --watch",
     "build": "rm -rf _site && ELEVENTY_ENV=production eleventy --config=eleventy.config.js && NODE_ENV=production postcss src/css/tailwind.css --o _site/css/style.css"
