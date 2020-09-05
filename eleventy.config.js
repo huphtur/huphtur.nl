@@ -9,7 +9,6 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./src/tailwind/output.css');
 
   eleventyConfig.addPassthroughCopy('src/images');
-  eleventyConfig.addPassthroughCopy("src/_headers");
 
   if (!process.env.ELEVENTY_ENV) {
     eleventyConfig.addPassthroughCopy('./src/css/style.css');
