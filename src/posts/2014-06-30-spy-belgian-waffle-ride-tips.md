@@ -3,6 +3,7 @@ title: "SPY Belgian Waffle Ride Tips"
 description: "Tips on how to prepare and train for the most unique cycling event in the US."
 image: /images/spybwr-steep-hill.jpg
 date: 2014-06-30
+intro: yes
 ---
 Back in April I participated in what was labeled *The Most Unique Cycling Event in The U.S.* aka the [SPY Belgian Waffle Ride](https://facebook.com/SPYBWR). A 217KM long ride/race with over 3450 meters of climbing, dirt sections, water crossing, jerseys, waffles and beer. What more does a bike nerd need?!
 
