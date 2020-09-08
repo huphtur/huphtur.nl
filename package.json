@@ -19,6 +19,6 @@
     "html-minifier": "^4.0.0",
     "postcss-cli": "^7.1.2",
     "postcss-csso": "^4.0.0",
-    "tailwindcss": "^1.8.2"
+    "tailwindcss": "^1.8.5"
   }
 }
