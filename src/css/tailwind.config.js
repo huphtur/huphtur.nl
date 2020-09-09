@@ -9,7 +9,7 @@ module.exports = {
   theme: {
     extend: {
       spacing: {
-        '18': '4.5rem',
+        18: '4.5rem',
       },
     },
     typography: (theme) => ({
@@ -17,6 +17,7 @@ module.exports = {
         css: {
           h1: {
             fontFamily: `${theme('fontFamily.sans')}`,
+            marginBottom: '.5em',
           },
           'h1 a': {
             textDecoration: 'none',
@@ -30,6 +31,20 @@ module.exports = {
           h4: {
             fontFamily: `${theme('fontFamily.sans')}`,
           },
+          'ol > li::before': {
+            color: theme('colors.pink.800'),
+          },
+          'ul > li::before': {
+            backgroundColor: theme('colors.pink.800'),
+          },
+          blockquote: {
+            borderLeftColor: theme('colors.pink.800'),
+          },          
+          pre: {
+            code: {
+              "&:after": { content: "none !important" },
+            },
+          },                        
           code: {
             color: theme('colors.indigo.900'),
             backgroundColor: theme('colors.gray.300'),
@@ -58,6 +73,15 @@ module.exports = {
             },
           },
         },
+      },
+      '2xl': {
+        css: [
+          {
+            h1: {
+              marginBottom: '.5em',
+            },
+          },
+        ],
       },
     }),
   },
