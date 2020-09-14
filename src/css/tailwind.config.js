@@ -11,6 +11,9 @@ module.exports = {
       spacing: {
         18: '4.5rem',
       },
+      animation: {
+        'spin-once': 'spin .69s cubic-bezier(.6,-0.28,.74,.05) reverse',
+      },
     },
     typography: (theme) => ({
       default: {
@@ -39,12 +42,12 @@ module.exports = {
           },
           blockquote: {
             borderLeftColor: theme('colors.pink.800'),
-          },          
+          },
           pre: {
             code: {
-              "&:after": { content: "none !important" },
+              '&:after': { content: 'none !important' },
             },
-          },                        
+          },
           code: {
             color: theme('colors.indigo.900'),
             backgroundColor: theme('colors.gray.300'),
@@ -85,6 +88,8 @@ module.exports = {
       },
     }),
   },
-  variants: {},
+  variants: {
+    animation: ['hover', 'motion-safe'],
+  },
   plugins: [require('@tailwindcss/typography')],
 };
