@@ -3,6 +3,7 @@ title: "3D Printed Thru-Axle Adapter"
 description: "How to 3D print a Tacx Thru-Axle Fork Mount Adapter for the Tacx Spider Team Repair Stand (T3050)."
 image: /images/tacx-thru-axle.jpg
 date: 2018-08-31
+intro: yes
 ---
 Recently I got me one of those bikes with disc brakes. However my [Tacx Spider Team Repair Stand (T3050)](https://amzn.to/2LH6C1W) only came with a quick release fork mount, which doesn't work with the new disc brake fork (12mm × 100mm).
 

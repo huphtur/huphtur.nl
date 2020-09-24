@@ -3,6 +3,7 @@ title: "My Rdio Replacement(s)"
 description: "RIP Rdio 🙏 Here are some streaming services and podcasts that I am using to fill the void."
 image: /images/rdio-goodbye.png
 date: 2016-01-15
+intro: yes
 ---
 Some of us must have done something bad last year, because Santa shut down [Rdio](http://rdio.com/) right before Xmas. It was one of the better music services with a clean design and amazing comunity with whom I discovered and shared so many great tunes with.
 
