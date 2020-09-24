@@ -11,9 +11,6 @@ module.exports = {
       spacing: {
         18: '4.5rem',
       },
-      animation: {
-        'spin-once': 'spin .69s cubic-bezier(.6,-0.28,.74,.05) reverse',
-      },
     },
     typography: (theme) => ({
       default: {
@@ -89,7 +86,7 @@ module.exports = {
     }),
   },
   variants: {
-    animation: ['hover', 'motion-safe'],
+    translate: ['hover', 'group-hover'],
   },
   plugins: [require('@tailwindcss/typography')],
 };

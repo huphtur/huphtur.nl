@@ -9,7 +9,7 @@ module.exports = {
     email: 'huphtur@gmail.com',
   },
   meta_data: {
-    theme_color: '#fffaf0',
+    theme_color: '#f56565',
     default_social_image: '/images/avatar.jpg',
     locale: 'en_US',
     twitter_username: '@huphtur',
