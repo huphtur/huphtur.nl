@@ -10,7 +10,7 @@ module.exports = {
   },
   meta_data: {
     theme_color: '#f56565',
-    default_social_image: '/images/avatar.jpg',
+    default_social_image: '/images/avatar.png',
     locale: 'en_US',
     twitter_username: '@huphtur',
   },
