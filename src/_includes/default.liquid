@@ -34,7 +34,16 @@
   <meta name="twitter:site" content="{{ site.meta_data.twitter_username }}">
   <meta name="twitter:creator" content="{{ site.meta_data.twitter_username }}">
   <meta name="twitter:dnt" content="on">
-  <link rel="stylesheet" href="/css/style.css" />
+
+  {% if env.environment == "production" %}
+    {% capture css %}{% include style.css %}{% endcapture %}
+    <style> 
+      {{ css | safe }}
+    </style>
+  {% else %}
+    <link rel="stylesheet" href="/style.css">
+  {% endif %}
+
 </head>
 
 <body class="font-serif text-gray-700 bg-orange-100">

@@ -6,12 +6,10 @@ const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
 module.exports = function (eleventyConfig) {
   eleventyConfig.setUseGitIgnore(false);
 
-  eleventyConfig.addWatchTarget('./src/tailwind/output.css');
-
   eleventyConfig.addPassthroughCopy('src/images');
 
   if (!process.env.ELEVENTY_ENV) {
-    eleventyConfig.addPassthroughCopy('./src/css/style.css');
+    eleventyConfig.addPassthroughCopy({'src/_includes/style.css': 'style.css'});
   }
 
   const markdownIt = require('markdown-it');
@@ -77,6 +75,7 @@ module.exports = function (eleventyConfig) {
       outputPath.endsWith('.html')
     ) {
       let minified = htmlmin.minify(content, {
+        minifyCSS: true,
         useShortDoctype: true,
         removeAttributeQuotes: true,
         collapseBooleanAttributes: true,
