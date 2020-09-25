@@ -68,7 +68,7 @@ https://youtu.be/6Y1Emb7Jyks
 
 I could leave it at [Summer in the City](https://www.youtube.com/watch?v=6xN3KOY2kbg), but did you know about there's all kinds of behind-the-scenes drama related to this song? According to most resources, J-Swift (originally from Spain) produced _Passin' Me By_. But, Imani and Bootie Brown (two members from The Pharcyde) claim that J-Swift [did not](http://revive-music.com/2012/06/11/imani-bootie-brown-are-the-pharcyde-celebrities-on-the-brink-of-insanity-part-1/#.V5FryLgrK00) produce _Passin' Me By_. After the release of the album, J-Swift gained some success (even did some remixes for Prince and Massive Attack) but  fell into depression and a gnarly drug addiction. In 2007, a documentary movie, _[1 More Hit](https://www.youtube.com/watch?v=HUCAhmsap_w)_, was made about his path to sobriety. In 2015, J-Swift relapsed, got caught with some substances and got deported to Spain. He recently [made a video](https://www.youtube.com/watch?v=MghX_KCmnUY) directed at (then) president Obama in hopes of returning home to his family in the US.
 
-https://youtu.be/QjsPG0Kspxo
+https://youtu.be/a-mAK3uB2_0
 
 ## Jeru The Damaja - Come Clean (1993)
 
