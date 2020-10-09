@@ -1,5 +1,5 @@
 module.exports = {
-  lang: 'en', // for html tag
+  lang: 'en',
   title: 'Marcel Appelman',
   description:
     'Tall, skinny Dutch guy with a penchant for cycling, skateboarding, and nerdy computer crap.',

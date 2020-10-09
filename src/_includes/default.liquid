@@ -34,7 +34,16 @@
   <meta name="twitter:site" content="{{ site.meta_data.twitter_username }}">
   <meta name="twitter:creator" content="{{ site.meta_data.twitter_username }}">
   <meta name="twitter:dnt" content="on">
-  <link rel="stylesheet" href="/css/style.css" />
+
+  {% if env.environment == "production" %}
+    {% capture css %}{% include style.css %}{% endcapture %}
+    <style> 
+      {{ css | safe }}
+    </style>
+  {% else %}
+    <link rel="stylesheet" href="/style.css">
+  {% endif %}
+
 </head>
 
 <body class="font-serif text-gray-700 bg-orange-100">
@@ -67,16 +76,16 @@
   <main class="md:max-w-3xl md:my-16 max-w-lg p-4 mx-auto my-6" id="main-content">
     {{ content | safe }}
   </main>
+  
   <footer class="md:mb-16 mb-8">
-    <ul class="flex justify-around max-w-lg p-2 mx-auto font-sans">
-      <li><a class="hover:text-black text-blue-800" href="/">Home</a></li>
-      <li><a class="hover:text-black text-blue-800" rel="external" href="https://twitter.com/huphtur">Twitter</a></li>
-      <li><a class="hover:text-black text-blue-800" rel="external"
-          href="https://www.instagram.com/huphtur/">Instagram</a></li>
-      <li><a class="hover:text-black text-blue-800" rel="external" href="https://github.com/huphtur">GitHub</a></li>
-      <li><a class="hover:text-black text-blue-800" rel="external"
-          href="https://www.strava.com/athletes/huphtur">Strava</a></li>
-    </ul>
+    <div class="flex justify-around max-w-lg p-2 mx-auto font-sans text-xl">
+      <a href="/">🏠</a>
+      {% comment %} <a href="/archives/">🗄</a> {% endcomment %}
+      <a rel="external" href="https://twitter.com/huphtur">🐦</a>
+      <a rel="external" href="https://www.instagram.com/huphtur/">📸</a>
+      <a rel="external" href="https://github.com/huphtur">👨‍💻</a>
+      <a rel="external" href="https://www.strava.com/athletes/huphtur">🚴‍♂️</a>
+    </div>
   </footer>
 </body>
 
