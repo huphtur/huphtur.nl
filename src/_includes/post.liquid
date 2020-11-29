@@ -1,6 +1,6 @@
 ---
 layout: default
 ---
-<h1><a href="{{ url }}">{{ title }}</a></h1>
-<time class="md:text-lg text-thc-pop dark:text-thc-pop-dark text-sm" datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%B %d, %Y" }}</time>
-<p>{{ content | safe }}</p>
+<h1><a href="{{ post.url | url }}">{{ title }}</a></h1>
+{% if date %}<time class="md:text-lg text-thc-pop dark:text-thc-pop-dark text-sm" datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%B %d, %Y" }}</time>{% endif %}
+{{ content | safe }}
