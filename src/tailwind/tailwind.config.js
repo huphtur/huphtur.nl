@@ -1,6 +1,10 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
+  corePlugins: {
+    transform: false,
+    ringWidth: false,
+  },
   purge: {
     mode: 'all',
     content: ['src/**/*.liquid', 'src/**/*.md'],
@@ -59,7 +63,9 @@ module.exports = {
               fontWeight: theme('fontWeight.bold'),
               textDecoration: 'none',
             },
-            strong: theme('colors.thc-body.DEFAULT'),
+            strong: {
+              color: theme('colors.thc-body.DEFAULT'),
+            },
             a: {
               color: theme('colors.thc-link.DEFAULT'),
               '&:visited': {
@@ -101,7 +107,6 @@ module.exports = {
             'h1, h2, h3, h4': {
               color: theme('colors.thc-body.dark'),
             },
-            strong: theme('colors.thc-body.dark'),
             a: {
               color: theme('colors.thc-link.dark'),
               '&:visited': {
