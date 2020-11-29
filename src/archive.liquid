@@ -1,0 +1,18 @@
+---
+layout: default
+title: "Marcel Appelman"
+description: "Tall, skinny Dutch guy with a penchant for skateboarding, cycling, and nerdy computer crap."
+---
+{% for post in collections.post reversed %}
+  {% assign currentdate = post.date | date: "%Y" %}
+  {% if currentdate != date %}
+    {% unless forloop.first %}</ul>{% endunless %}
+    <h1 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h1>
+    <ul class="pb-12 ml-3">
+      {% assign date = currentdate %}
+      {% endif %}
+        <li><a class="link" href="{{ post.url }}">{{ post.data.title }}</a></li>
+      {% if forloop.last %}
+    </ul>
+  {% endif %}
+{% endfor %}

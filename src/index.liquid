@@ -8,11 +8,11 @@ pagination:
   reverse: true
   alias: posts
 ---
-<div class="md:prose-2xl max-w-none md:space-y-40 space-y-20 prose">
+<div class="md:space-y-40 space-y-20">
   {%- for item in posts -%}
     <article>
       <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
-      <time class="md:text-lg text-sm" datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date: "%B %d, %Y" }}</time>
+      <time class="md:text-lg text-thc-pop dark:text-thc-pop-dark text-sm" datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date: "%B %d, %Y" }}</time>
       {%- if item.data.intro -%}
         <p class="lead">{{ item.data.description | safe }}</p>
         <p><a href="{{ item.url }}">Continue reading →</a></p>
@@ -24,6 +24,6 @@ pagination:
 </div>
 
 <div class="md:text-lg md:mt-40 mt-20 text-sm text-center">
-  {% if pagination.href.next %}<a class="hover:text-black p-2 text-orange-800" href="{{ pagination.href.next }}">← Older</a>{% endif %}
-  {% if pagination.href.previous %}<a class="hover:text-black p-2 text-orange-800" href="{{ pagination.href.previous }}">Newer →</a>{% endif %}
+  {% if pagination.href.next %}<a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="{{ pagination.href.next }}">← Older</a>{% endif %}
+  {% if pagination.href.previous %}<a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="{{ pagination.href.previous }}">Newer →</a>{% endif %}
 </div>

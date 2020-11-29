@@ -36,57 +36,62 @@
   <meta name="twitter:dnt" content="on">
 
   {% if env.environment == "production" %}
-    {% capture css %}{% include style.css %}{% endcapture %}
-    <style> 
-      {{ css | safe }}
+    {% capture css %}{% include _output.css %}{% endcapture %}
+    <style>
+    {{ css | safe }}
     </style>
   {% else %}
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/_output.css">
   {% endif %}
 
 </head>
 
-<body class="font-serif text-gray-700 bg-orange-100">
+<body class="bg-thc-bg dark:bg-thc-bg-dark text-thc-body antialiased">
   <p><a class="focus:not-sr-only focus:outline-none focus:bg-primary focus:text-white text-center sr-only"
-      href="#main-content">Skip to content</a></p>
-  
-  <header class="bg-gradient-to-r from-orange-400 via-red-500 to-pink-500 p-4">
-    <div class="md:max-w-3xl md:p-4 flex max-w-lg mx-auto">
-      <a class="group inline-block mr-4 overflow-hidden text-orange-100 rounded-full shadow-md" href="/" aria-label="huphtur.nl">
-        <svg class="sm:w-24 sm:h-24 w-18 h-18 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-          <ellipse cx="15.5" cy="16" fill="#fffaf0" rx="5.5" ry="5" transform="matrix(9.09091 0 0 10 -90.91 -110)"/>
-          <g class="group-hover:translate-y-16 duration-200 ease-in-out transform">
+      href="#main">Skip to content</a></p>
+ 
+  <header class="bg-thc-link dark:bg-thc-link-dark h-24">
+    <div class="md:max-w-3xl relative flex max-w-lg mx-auto">
+      <a class="p-2" href="/" aria-label="huphtur.nl">
+        <svg class="group w-20 h-20" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+          <ellipse cx="15.5" cy="16" class="text-thc-bg dark:text-thc-bg-dark group-hover:text-thc-visited dark:group-hover:text-thc-visited-dark fill-current" fill="#fffaf0" rx="5.5" ry="5" transform="matrix(9.09091 0 0 10 -90.91 -110)"/>
+          <g class="">
             <path fill="#fbd38d" d="M38.553 66.866v-7.63a19.045 19.045 0 01-7.616-14.679 5.087 5.087 0 11-.015-9.315V33.8c0-10.536 8.541-19.077 19.077-19.077 10.536 0 19.078 8.54 19.078 19.077v1.443a5.087 5.087 0 11-.015 9.315 19.046 19.046 0 01-7.617 14.678v7.63c0 6.322-5.124 11.447-11.445 11.447-6.322 0-11.447-5.125-11.447-11.446z"/>
             <path fill="#f6ad55" d="M50 63.05c-2.353 0-4.605-.428-6.685-1.206A18.97 18.97 0 0053.56 64.83c2.813 0 5.48-.614 7.885-1.707v-3.889a18.989 18.989 0 01-11.447 3.815z"/>
             <path fill="#2a4365" d="M52.542 54.405c0 1.686-1.139 3.052-2.543 3.052-1.405 0-2.544-1.366-2.544-3.052 0-1.687 1.14-3.053 2.544-3.053 1.404 0 2.543 1.366 2.543 3.053zm-.326-7.336l-2.461-8.365a.254.254 0 01.488-.145l2.544 8.65a.25.25 0 01-.03.208.25.25 0 01-.178.115l-3.561.508a.253.253 0 01-.288-.215.253.253 0 01.215-.288l3.27-.468zm8.212-6.402a2.034 2.034 0 11-4.068 0 2.034 2.034 0 014.068 0zm-16.788 0a2.034 2.034 0 11-4.069 0 2.034 2.034 0 014.069 0zm-11.809.045a3.053 3.053 0 00-4.132-3.621.253.253 0 00-.134.334c.054.128.203.19.333.134a2.544 2.544 0 013.442 3.019.255.255 0 00.178.313.255.255 0 00.313-.179zm36.827-.134a2.544 2.544 0 013.442-3.019.253.253 0 00.334-.134.253.253 0 00-.134-.334 3.053 3.053 0 00-4.132 3.621.254.254 0 10.49-.134z"/>
-            <path fill="#702459" d="M15.112 80.111l1.576-2.248a20.35 20.35 0 0111.249-8.023l10.616-2.974c0 6.321 5.125 11.446 11.447 11.446 6.321 0 11.446-5.125 11.446-11.446l10.616 2.974a20.349 20.349 0 0111.25 8.023l1.482 2.357C76.34 89.943 63.883 96.094 50 96.094c-13.933 0-26.431-6.196-34.888-15.983z"/>
+            <path class="text-thc-pop dark:text-thc-pop-dark fill-current" fill="#702459" d="M15.112 80.111l1.576-2.248a20.35 20.35 0 0111.249-8.023l10.616-2.974c0 6.321 5.125 11.446 11.447 11.446 6.321 0 11.446-5.125 11.446-11.446l10.616 2.974a20.349 20.349 0 0111.25 8.023l1.482 2.357C76.34 89.943 63.883 96.094 50 96.094c-13.933 0-26.431-6.196-34.888-15.983z"/>
           </g>
-          <ellipse cx="15.5" cy="16" fill="none" stroke="#000" stroke-width=".44" rx="5.5" ry="5" transform="matrix(8.72727 0 0 9.6 -85.273 -103.6)"/>
+          <ellipse class="text-thc-bg dark:text-thc-bg-dark stroke-current" cx="15.5" cy="16" fill="none" stroke="#000" stroke-width=".44" rx="5.5" ry="5" transform="matrix(8.72727 0 0 9.6 -85.273 -103.6)"/>
         </svg>
       </a> 
-      <div class="self-center">
-        <p><strong class="font-sans text-2xl font-bold text-black">Marcel Appelman</strong></p>
-        <p class="sm:inline-block hidden max-w-sm text-gray-900">Tall, skinny Dutch guy with a penchant for cycling,
-          skateboarding, and nerdy computer crap.</p>
-        <p class="sm:hidden">⬆️ 🇳🇱 👨‍🦲 🧡 🚴‍♂️ 🛹 🤓 🖥 💩</p>
-      </div>
+      <p class="text-thc-tint dark:text-thc-tint-dark sm:text-lg sm:mt-5 sm:ml-28 sm:pl-0 absolute pl-1 mt-8 ml-24 text-xs">Personal blog of Marcel Appelman</p>
+      <nav class="hidden!"> 
+        <ul class="text-thc-bg dark:text-thc-bg-dark font-heading sm:text-4xl flex w-64 h-full text-2xl tracking-tighter text-center lowercase">
+          <li><a class="hover:bg-thc-visited dark:hover:bg-thc-visited-dark sm:px-4 flex items-end h-full px-1 pb-2" href="/"><span>Home</span></a></li>
+          <li><a class="hover:bg-thc-visited dark:hover:bg-thc-visited-dark sm:px-4 flex items-end h-full px-1 pb-2" href="/about/">About</a></li>
+          <li><a class="hover:bg-thc-visited dark:hover:bg-thc-visited-dark sm:px-4 flex items-end h-full px-1 pb-2" href="/archive/">Archives</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-
-  <main class="md:max-w-3xl md:my-16 max-w-lg p-4 mx-auto my-6" id="main-content">
+    
+  <main class="md:max-w-3xl md:my-16 md:prose-2xl dark:prose-dark max-w-lg p-4 mx-auto my-6 prose" id="main">
     {{ content | safe }}
   </main>
   
-  <footer class="md:mb-16 mb-8">
-    <div class="flex justify-around max-w-lg p-2 mx-auto font-sans text-xl">
-      <a href="/">🏠</a>
-      {% comment %} <a href="/archives/">🗄</a> {% endcomment %}
-      <a rel="external" href="https://twitter.com/huphtur">🐦</a>
-      <a rel="external" href="https://www.instagram.com/huphtur/">📸</a>
-      <a rel="external" href="https://github.com/huphtur">👨‍💻</a>
-      <a rel="external" href="https://www.strava.com/athletes/huphtur">🚴‍♂️</a>
-    </div>
+  <footer class="md:mb-16 sm:max-w-xl max-w-xs mx-auto mb-8">
+    <ul class="font-heading flex flex-wrap justify-center tracking-widest uppercase">
+      <li class="border-thc-tint dark:border-thc-tint-dark px-2 my-1 border-r"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="#main">Top</a></li>
+      <li class="border-thc-tint dark:border-thc-tint-dark px-2 my-1 border-r"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="/">Home</a></li>
+      <li class="border-thc-tint dark:border-thc-tint-dark px-2 my-1 border-r"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="/about/">About</a></li>
+      <li class="border-thc-tint dark:border-thc-tint-dark sm:border-r px-2 my-1"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="/archive/">Archives</a></li>
+      <li class="border-thc-tint dark:border-thc-tint-dark px-2 my-1 border-r"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="/feed.xml">Feed</a></li>
+      <li class="border-thc-tint dark:border-thc-tint-dark px-2 my-1 border-r"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="https://validator.w3.org/check/referer">HTML</a></li>
+      <li class="border-thc-tint dark:border-thc-tint-dark px-2 my-1 border-r"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="https://validator.w3.org/check/referer">CSS</a></li>
+      <li class="px-2 my-1"><a class="text-thc-link hover:bg-thc-hover visited:text-thc-visited dark:text-thc-link-dark dark:hover:bg-thc-hover-dark dark:visited:text-thc-visited-dark" href="https://www.11ty.dev/">Eleventy</a></li>
+    </ul>
   </footer>
-</body>
+
+<body>
 
 </html>
