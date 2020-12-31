@@ -21,18 +21,11 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="website">
   <meta property="og:title" content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}">
-  {% if site.meta_data.default_social_image or image %}
-  <meta property="og:image"
-    content="{% if env == 'production' %}{{ site.url }}{% endif %}{% if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}{{ site.meta_data.default_social_image }}{% endif %}" />
-  {% endif %}
-  <meta property="og:description"
-    content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
-  <meta property="og:site_name" content="{{ site.title }}">
-  <meta property="og:locale" content="{{ site.meta_data.locale }}">
-  <meta property="article:author" content="{{ site.author.name }}">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="{{ site.meta_data.twitter_username }}">
-  <meta name="twitter:creator" content="{{ site.meta_data.twitter_username }}">
+  <meta property="og:image" content="{% if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}{{ site.meta_data.default_social_image }}{% endif %}" />
+  <meta property="og:description" content="{% if description %}{{ description }}{% else %}{{ site.description }}{% endif %}" />
+  <meta property="og:site_name" content="huphtur.nl">
+  <meta name="twitter:card" content="{% if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}{{ site.meta_data.default_social_image }}{% endif %}">
+  <meta name="twitter:site" content="@huphtur">
   <meta name="twitter:dnt" content="on">
 
   {% if env.environment == "production" %}
