@@ -1,0 +1,46 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'build' ]
+2 info using npm@3.10.10
+3 info using node@v6.17.1
+4 verbose run-script [ 'prebuild', 'build', 'postbuild' ]
+5 info lifecycle huphtur.nl@~prebuild: huphtur.nl@
+6 silly lifecycle huphtur.nl@~prebuild: no script for prebuild, continuing
+7 info lifecycle huphtur.nl@~build: huphtur.nl@
+8 verbose lifecycle huphtur.nl@~build: unsafe-perm in lifecycle true
+9 verbose lifecycle huphtur.nl@~build: PATH: /usr/local/lib/node_modules/npm/bin/node-gyp-bin:/Users/mappelman/Documents/web/huphtur/huphtur.nl/node_modules/.bin:/Users/mappelman/.rvm/gems/ruby-2.6.3/bin:/Users/mappelman/.rvm/gems/ruby-2.6.3@global/bin:/Users/mappelman/.rvm/rubies/ruby-2.6.3/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/Library/Apple/usr/bin:/Users/mappelman/.rvm/bin
+10 verbose lifecycle huphtur.nl@~build: CWD: /Users/mappelman/Documents/web/huphtur/huphtur.nl
+11 silly lifecycle huphtur.nl@~build: Args: [ '-c',
+11 silly lifecycle   'rm -rf _site && NODE_ENV=production postcss src/tailwind/tailwind.css --o src/_includes/_output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js' ]
+12 silly lifecycle huphtur.nl@~build: Returned: code: 1  signal: null
+13 info lifecycle huphtur.nl@~build: Failed to exec build script
+14 verbose stack Error: huphtur.nl@ build: `rm -rf _site && NODE_ENV=production postcss src/tailwind/tailwind.css --o src/_includes/_output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js`
+14 verbose stack Exit status 1
+14 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:255:16)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at EventEmitter.emit (events.js:191:7)
+14 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:40:14)
+14 verbose stack     at emitTwo (events.js:106:13)
+14 verbose stack     at ChildProcess.emit (events.js:191:7)
+14 verbose stack     at maybeClose (internal/child_process.js:920:16)
+14 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:230:5)
+15 verbose pkgid huphtur.nl@
+16 verbose cwd /Users/mappelman/Documents/web/huphtur/huphtur.nl
+17 error Darwin 20.1.0
+18 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "build"
+19 error node v6.17.1
+20 error npm  v3.10.10
+21 error code ELIFECYCLE
+22 error huphtur.nl@ build: `rm -rf _site && NODE_ENV=production postcss src/tailwind/tailwind.css --o src/_includes/_output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js`
+22 error Exit status 1
+23 error Failed at the huphtur.nl@ build script 'rm -rf _site && NODE_ENV=production postcss src/tailwind/tailwind.css --o src/_includes/_output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js'.
+23 error Make sure you have the latest version of node.js and npm installed.
+23 error If you do, this is most likely a problem with the huphtur.nl package,
+23 error not with npm itself.
+23 error Tell the author that this fails on your system:
+23 error     rm -rf _site && NODE_ENV=production postcss src/tailwind/tailwind.css --o src/_includes/_output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js
+23 error You can get information on how to open an issue for this project with:
+23 error     npm bugs huphtur.nl
+23 error Or if that isn't available, you can get their info via:
+23 error     npm owner ls huphtur.nl
+23 error There is likely additional logging output above.
+24 verbose exit [ 1, true ]

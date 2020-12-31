@@ -18,7 +18,7 @@
     "eleventy-plugin-embed-everything": "^1.9.4",
     "eleventy-plugin-local-respimg": "^0.4.0",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.1.10",
+    "postcss": "^8.1.14",
     "postcss-cli": "^8.3.0",
     "tailwindcss": "^2.0.1"
   }

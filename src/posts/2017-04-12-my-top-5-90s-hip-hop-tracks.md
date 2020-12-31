@@ -1,6 +1,6 @@
 ---
 title: "My Top 5 ’90s Hip-Hop Tracks"
-description: " It’s incredible hard to pick a top 5 because that era is just too good. I tried anyway."
+description: "It’s incredible hard to pick a top 5 because that era is just too good. I tried anyway."
 date: 2017-04-12
 intro: yes
 ---

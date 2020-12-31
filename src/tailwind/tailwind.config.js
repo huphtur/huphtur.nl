@@ -19,6 +19,14 @@ module.exports = {
         DEFAULT: '#F9F5F2',
         dark: '#060A0D',
       },
+      'thc-header': {
+        DEFAULT: '#76594F',
+        dark: '#a3c3ce',
+        // DEFAULT: '#7C4E3E',
+        // DEFAULT: '#592a24',
+        // DEFAULT: '#693A33',
+        // DEFAULT: '#52251F'
+      },
       'thc-body': {
         DEFAULT: '#534F4C',
         dark: '#AAAEB1',
@@ -107,6 +115,9 @@ module.exports = {
             'h1, h2, h3, h4': {
               color: theme('colors.thc-body.dark'),
             },
+            strong: {
+              color: theme('colors.thc-body.dark'),
+            },            
             a: {
               color: theme('colors.thc-link.dark'),
               '&:visited': {
