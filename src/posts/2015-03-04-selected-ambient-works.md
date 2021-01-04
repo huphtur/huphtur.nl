@@ -2,12 +2,13 @@
 title: "Selected Ambient Works 85–92"
 description: "One of my all time top favorite music albums is Selected Ambient Works 85-92 by the enigmatic Aphex Twin."
 image: /images/selected-ambient-works-95-92.jpg
+alt: "Cover art of the Select Ambient Works 85 - 92 album."
 date: 2015-03-04
 intro: yes
 ---
 One of my all time top favorite music albums is "[Selected Ambient Works 85-92](http://www.amazon.com/gp/product/B00DF2AF96?ie=UTF8&camp=213733&creative=393177&creativeASIN=B00DF2AF96&linkCode=shr&tag=thhocr02-20&linkId=OLB7NVA3DYPZXTEF)" by the enigmatic Aphex Twin. I purchased it right after it came out (1992) at a small record store in Amsterdam. Had no idea who or what the record was about, I purely bought it for the cover art.
 
-![Cover art of the Select AMbient Works 85 - 92 album.](/images/selected-ambient-works-95-92.jpg)
+![Cover art of the Select Ambient Works 85 - 92 album.](/images/selected-ambient-works-95-92.jpg)
 
 Apparently the Aphex Twin logo was [designed by](http://pictograms.blogspot.nl/2007/11/logo-111-aphex-twin.html) a guy named Paul ['Terratag'](http://www.terratag.com/) Nicholson. It was first used on the cover of Aphex Twin's "Xylem Tube" release.
 

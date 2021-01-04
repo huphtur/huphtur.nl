@@ -2,6 +2,7 @@
 title: "NetSuite’s Ridiculous Security Questions"
 description: "Netsuite is pretty powerful app but the UI and UX are seriously stuck in 1996. Some of their security questions are pretty ridiculous as well."
 image: /images/nutsweat.jpg
+alt: "screenshot of Netsuite security questions."
 date: 2013-08-20
 intro: yes
 ---

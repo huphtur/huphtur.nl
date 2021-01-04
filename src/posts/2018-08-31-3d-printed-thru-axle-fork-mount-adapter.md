@@ -2,6 +2,7 @@
 title: "3D Printed Thru-Axle Adapter"
 description: "How to 3D print a Tacx Thru-Axle Fork Mount Adapter for the Tacx Spider Team Repair Stand (T3050)."
 image: /images/tacx-thru-axle.jpg
+alt: "Thru-Axle bike fork mounted on the bike stand."
 date: 2018-08-31
 intro: yes
 ---

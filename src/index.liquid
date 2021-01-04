@@ -12,8 +12,10 @@ pagination:
   {%- for item in posts -%}
     <article>
       <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
-      <time class="md:text-lg text-sm" datetime="{{ item.date | date: "%Y-%m-%d" }}">{{ item.date | date: "%B %d, %Y" }}</time>
       {%- if item.data.intro -%}
+        {%- if item.data.image -%}
+          <p><a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}"></a></p>
+        {%- endif -%}
         <p class="lead">{{ item.data.description | safe }}</p>
         <p><a href="{{ item.url }}">Continue reading →</a></p>
       {%- else -%}

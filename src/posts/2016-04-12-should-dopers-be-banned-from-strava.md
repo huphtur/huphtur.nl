@@ -2,6 +2,7 @@
 title: "Should Dopers Be Banned From Strava?"
 description: "Full version of my interview with the LA Times about How Strava should handle dopers on their platform."
 image: /images/strava-doper.jpg
+alt: "Legendary Strava doper Nicholas Brandt-Sorenson taking a selfie while biking."
 date: 2016-04-12
 intro: yes
 ---

@@ -2,9 +2,10 @@
 title: "5 Things I Do Not Miss about San Francisco"
 description: "Karl, Recycling, Cat 6 racing, Street spam, and Layer programming."
 image: /images/streetspam.jpg
+alt: "streetspam."
 date: 2013-10-14
 ---
-[![streetspam](/images/streetspam.jpg)][1]
+[![streetspam.](/images/streetspam.jpg)][1]
 
 1.  [Karl][2]
 2.  [Recycling][3]
