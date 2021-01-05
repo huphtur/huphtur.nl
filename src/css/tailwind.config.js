@@ -1,7 +1,6 @@
 module.exports = {
   purge: {
-    mode: 'all',
-    content: ['src/**/*.njk', 'src/**/*.liquid', 'src/**/*.md'],
+    content: ['src/**/*.liquid', 'src/**/*.md'],
     options: {
       keyframes: true,
     },
