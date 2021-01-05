@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/images');
 
   if (!process.env.ELEVENTY_ENV) {
-    eleventyConfig.addPassthroughCopy({'src/_includes/style.css': 'style.css'});
+    eleventyConfig.addPassthroughCopy({'src/_includes/_output.css': '_output.css'});
   }
 
   const markdownIt = require('markdown-it');
