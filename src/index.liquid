@@ -8,7 +8,7 @@ pagination:
   reverse: true
   alias: posts
 ---
-<div class="md:prose-2xl max-w-none md:space-y-40 space-y-20 prose">
+<div class="md:space-y-40 space-y-20">
   {%- for item in posts -%}
     <article>
       <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
@@ -17,7 +17,7 @@ pagination:
           <p><a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}"></a></p>
         {%- endif -%}
         <p class="lead">{{ item.data.description | safe }}</p>
-        <p><a href="{{ item.url }}">Continue reading →</a></p>
+        <p><a href="{{ item.url }}">Read <em class="italic">{{ item.data.title }}</em> →</a></p>
       {%- else -%}
         <p>{{ item.templateContent | safe }}</p>
       {%- endif -%}
@@ -26,6 +26,6 @@ pagination:
 </div>
 
 <div class="md:text-lg md:mt-40 mt-20 text-sm text-center">
-  {% if pagination.href.next %}<a class="hover:text-black p-2 text-orange-800" href="{{ pagination.href.next }}">← Older</a>{% endif %}
-  {% if pagination.href.previous %}<a class="hover:text-black p-2 text-orange-800" href="{{ pagination.href.previous }}">Newer →</a>{% endif %}
+  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">← Older</a>{% endif %}
+  {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer →</a>{% endif %}
 </div>
