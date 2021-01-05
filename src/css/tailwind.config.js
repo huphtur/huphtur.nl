@@ -7,20 +7,34 @@ module.exports = {
     },
   },
   theme: {
-    extend: {
-      colors: {
-        orange: {
-          100: '#fffaf0',
-          200: '#feebc8',
-          300: '#fbd38d',
-          400: '#f6ad55',
-          500: '#ed8936',
-          600: '#dd6b20',
-          700: '#c05621',
-          800: '#9c4221',
-          900: '#7b341e',
-        },
+    colors: {
+      black: '#000',
+      orange: {
+        50: '#f9f4e6',
+        100: '#faecc7',
+        200: '#f8df91',
+        300: '#f4c94d',
+        400: '#f1a71d',
+        500: '#ef820b',
+        600: '#fe6201',
+        700: '#c5460d',
+        800: '#a33813',
+        900: '#872e15',
       },
+      gray: {
+        50: '#f9fafb',
+        100: '#f3f4f6',
+        200: '#e5e7eb',
+        300: '#d1d5db',
+        400: '#9ca3af',
+        500: '#6b7280',
+        600: '#4b5563',
+        700: '#374151',
+        800: '#1f2937',
+        900: '#111827',
+      },
+    },
+    extend: {
       spacing: {
         18: '4.5rem',
       },
@@ -45,13 +59,13 @@ module.exports = {
               fontFamily: `${theme('fontFamily.sans')}`,
             },
             'ol > li::before': {
-              color: theme('colors.pink.800'),
+              color: theme('colors.gray.500'),
             },
             'ul > li::before': {
-              backgroundColor: theme('colors.pink.800'),
+              backgroundColor: theme('colors.gray.500'),
             },
             blockquote: {
-              borderLeftColor: theme('colors.pink.800'),
+              borderLeftColor: theme('colors.orange.600'),
             },
             pre: {
               code: {
@@ -59,7 +73,7 @@ module.exports = {
               },
             },
             code: {
-              color: theme('colors.indigo.900'),
+              color: theme('colors.gray.700'),
               backgroundColor: theme('colors.gray.300'),
               paddingLeft: '.25rem',
               paddingRight: '.25rem',
@@ -75,10 +89,10 @@ module.exports = {
             a: {
               textDecoration: 'underline',
               '&:link': {
-                color: theme('colors.orange.800'),
+                color: theme('colors.orange.700'),
               },
               '&:visited': {
-                color: theme('colors.pink.900'),
+                color: theme('colors.orange.900'),
               },
               '&:hover': {
                 color: theme('colors.black'),
