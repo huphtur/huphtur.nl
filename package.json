@@ -4,8 +4,8 @@
   "repository": "https://github.com/huphtur/huphtur.nl",
   "license": "MIT",
   "scripts": {
-    "start": "rm -rf _site && eleventy --serve --config=eleventy.config.js & postcss src/css/tailwind.css --o src/_includes/style.css --watch",
-    "build": "rm -rf _site && NODE_ENV=production postcss src/css/tailwind.css --o src/_includes/style.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js"
+    "start": "rm -rf _site && eleventy --serve --config=eleventy.config.js & postcss src/tailwind/tailwind.css --o src/_includes/_output.css --watch",
+    "build": "rm -rf _site && NODE_ENV=production postcss src/tailwind/tailwind.css --o src/_includes/_output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js"
   },
   "browserslist": [
     "> 1%"

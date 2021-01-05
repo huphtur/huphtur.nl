@@ -5,6 +5,7 @@ module.exports = {
       keyframes: true,
     },
   },
+  darkMode: 'media',
   theme: {
     colors: {
       black: '#000',
@@ -40,6 +41,7 @@ module.exports = {
       typography: (theme) => ({
         DEFAULT: {
           css: {
+            '[class~="lead"]': theme('colors.gray.700'),
             h1: {
               fontFamily: `${theme('fontFamily.sans')}`,
               marginBottom: '.5em',
@@ -57,6 +59,9 @@ module.exports = {
             h4: {
               fontFamily: `${theme('fontFamily.sans')}`,
             },
+            strong: {
+              color: theme('colors.gray.800'),
+            },
             'ol > li::before': {
               color: theme('colors.gray.500'),
             },
@@ -64,6 +69,7 @@ module.exports = {
               backgroundColor: theme('colors.gray.500'),
             },
             blockquote: {
+              color: theme('colors.gray.800'),
               borderLeftColor: theme('colors.orange.600'),
             },
             pre: {
@@ -100,6 +106,39 @@ module.exports = {
             },
           },
         },
+        dark: {
+          css: {
+            color: theme('colors.gray.400'),
+            '[class~="lead"]': theme('colors.gray.400'),
+            'h1, h2, h3, h4': {
+              color: theme('colors.gray.200'),
+            },
+            strong: {
+              color: theme('colors.gray.300'),
+            },        
+            'ol > li::before': {
+              color: theme('colors.gray.400'),
+            },
+            'ul > li::before': {
+              backgroundColor: theme('colors.gray.500'),
+            },
+            blockquote: {
+              color: theme('colors.gray.200'),
+              borderLeftColor: theme('colors.orange.600'),
+            },
+            a: {
+              '&:link': {
+                color: theme('colors.orange.600'),
+              },
+              '&:visited': {
+                color: theme('colors.orange.700'),
+              },
+              '&:hover': {
+                color: theme('colors.gray.200'),
+              },
+            },
+          },
+        },        
         '2xl': {
           css: [
             {
@@ -113,7 +152,10 @@ module.exports = {
     },
   },
   variants: {
-    translate: ['hover', 'group-hover'],
+    extend: {
+      translate: ['hover', 'group-hover'],
+      typography: ['dark'],
+    }
   },
   plugins: [require('@tailwindcss/typography')],
 };

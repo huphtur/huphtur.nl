@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html class="scroll-smooth overflow-y-scroll" lang="en">
+<html class="scroll-smooth dark:bg-gray-900 bg-orange-50 overflow-y-scroll font-serif" lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -29,17 +29,17 @@
   <meta name="twitter:dnt" content="on">
 
   {% if env.environment == "production" %}
-    {% capture css %}{% include style.css %}{% endcapture %}
+    {% capture css %}{% include _output.css %}{% endcapture %}
     <style> 
       {{ css | safe }}
     </style>
   {% else %}
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/_output.css">
   {% endif %}
 
 </head>
 
-<body class="bg-orange-50 font-serif text-gray-700">
+<body>
   <p><a class="focus:not-sr-only focus:outline-none focus:bg-primary focus:text-white text-center sr-only"
       href="#main-content">Skip to content</a></p>
   
@@ -47,7 +47,7 @@
     <div class="md:max-w-3xl md:p-4 flex max-w-lg mx-auto">
       <a class="group inline-block mr-4 overflow-hidden rounded-full shadow-md" href="/" aria-label="huphtur.nl">
         <svg class="sm:w-24 sm:h-24 w-18 h-18 " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-          <ellipse cx="15.5" cy="16" class="text-orange-50 fill-current" fill="#f9f4e6" rx="5.5" ry="5" transform="matrix(9.09091 0 0 10 -90.91 -110)"/>
+          <ellipse cx="15.5" cy="16" class="text-orange-50 dark:text-gray-900 fill-current" fill="#f9f4e6" rx="5.5" ry="5" transform="matrix(9.09091 0 0 10 -90.91 -110)"/>
           <g class="group-hover:translate-y-16 duration-200 ease-in-out transform">
             <path fill="#fbd38d" d="M38.553 66.866v-7.63a19.045 19.045 0 01-7.616-14.679 5.087 5.087 0 11-.015-9.315V33.8c0-10.536 8.541-19.077 19.077-19.077 10.536 0 19.078 8.54 19.078 19.077v1.443a5.087 5.087 0 11-.015 9.315 19.046 19.046 0 01-7.617 14.678v7.63c0 6.322-5.124 11.447-11.445 11.447-6.322 0-11.447-5.125-11.447-11.446z"/>
             <path fill="#f6ad55" d="M50 63.05c-2.353 0-4.605-.428-6.685-1.206A18.97 18.97 0 0053.56 64.83c2.813 0 5.48-.614 7.885-1.707v-3.889a18.989 18.989 0 01-11.447 3.815z"/>
@@ -66,7 +66,7 @@
     </div>
   </header>
 
-  <main class="md:max-w-3xl md:my-16 md:prose-2xl max-w-lg p-4 mx-auto prose" id="main-content">
+  <main class="md:max-w-3xl md:my-16 md:prose-2xl dark:prose-dark max-w-lg p-4 mx-auto my-8 prose" id="main-content">
     {{ content | safe }}
   </main>
   
