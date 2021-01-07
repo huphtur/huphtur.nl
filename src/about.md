@@ -9,8 +9,9 @@ Huphtur started as a zine, founded by a couple friends to support the Dutch skat
 This site was generated with [Eleventy](https://www.11ty.dev/), decorated via [Tailwind CSS](https://tailwindcss.com/), and deployed on [Netlify](https://www.netlify.com/). Feel free to dig around in the [source code](https://github.com/huphtur/huphtur.nl).
 
 You can also find me on a bunch of other online entities such as
-[Strava](https://www.strava.com/athletes/huphtur),
+[Flickr](https://www.flickr.com/photos/huphtur/),
 [GitHub](https://github.com/huphtur/),
-[Twitter](https://twitter.com/huphtur), 
-and
-[Instagram](https://www.instagram.com/huphtur/).
+[Instagram](https://www.instagram.com/huphtur/),
+[Strava](https://www.strava.com/athletes/huphtur),
+[Twitter](https://twitter.com/huphtur), and
+[YouTube](https://www.youtube.com/channel/UCi40BSt5e5-tRDfYH-3tjeA).
