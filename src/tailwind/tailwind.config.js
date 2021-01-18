@@ -72,11 +72,6 @@ module.exports = {
               color: theme('colors.gray.800'),
               borderLeftColor: theme('colors.orange.600'),
             },
-            pre: {
-              code: {
-                '&:after': { content: 'none !important' },
-              },
-            },
             code: {
               color: theme('colors.gray.700'),
               backgroundColor: theme('colors.gray.300'),
