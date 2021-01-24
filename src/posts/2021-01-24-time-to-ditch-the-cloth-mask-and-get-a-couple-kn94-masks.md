@@ -8,7 +8,7 @@ intro: yes
 ---
 https://youtu.be/Gu0GkjOpOj0
 
-This [aerosol engineer](https://youtu.be/4JFed_ofCwM?t=65) (and bike nerd) Aaron Collins, has been doing mask research and sharing his findings on YouTube. The videos are pretty lengthy, I watched em all, so hers's my incredible dumbed-down synopsis. 
+This [aerosol engineer](https://youtu.be/4JFed_ofCwM?t=65) (and bike nerd) Aaron Collins, has been doing mask research and sharing his findings on YouTube. The videos are pretty lengthy, I watched em all, so here's my incredible dumbed-down synopsis. 
 
 Cloth masks and surgical masks are good at [protecting other people](https://youtu.be/Z93BoeCuIE4?t=165), they only have a 50% filter efficiency, and therefore not very good at protecting yourself. Doubling up on masks only [makes things worse](https://youtu.be/Z93BoeCuIE4?t=312).
 
