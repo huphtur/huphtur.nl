@@ -14,11 +14,11 @@
     "@11ty/eleventy": "^0.11.1",
     "@11ty/eleventy-plugin-rss": "^1.1.0",
     "@tailwindcss/typography": "^0.4.0",
-    "autoprefixer": "^10.2.4",
+    "autoprefixer": "^10.2.5",
     "eleventy-plugin-embed-everything": "^1.11.0",
     "eleventy-plugin-local-respimg": "^0.4.0",
     "html-minifier": "^4.0.0",
-    "postcss": "^8.2.6",
+    "postcss": "^8.2.7",
     "postcss-cli": "^8.3.1",
     "tailwindcss": "^2.0.3"
   }
