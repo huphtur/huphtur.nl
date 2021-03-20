@@ -22,6 +22,8 @@ Next, I measured all the things and created a 3D model, visited my local 3D prin
 
 Fresh off the press, this print is solid. Only took a couple hours to print. Cost was $60 (you can probably find better deals online), cheaper than buying a new work stand.
 
+**Note**: I have no idea what type of filament was used. Probably some basic material. The adapter doesn't have to be that strong as not too many forces are put on it, just enough to hold the skewer and fork in place.
+
 ![Thru-Axle bike fork mounted on the bike stand.](/images/tacx-thru-axle.jpg)
 
 All that was left to do is insert it in the holder and presto! My fancy bike now works with the old stand.
