@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   purge: {
     content: ['src/**/*.liquid', 'src/**/*.md'],
     options: {
@@ -80,12 +81,6 @@ module.exports = {
               borderRadius: '.25rem',
               fontWeight: '400',
             },
-            'code::before': {
-              content: 'none',
-            },
-            'code::after': {
-              content: 'none',
-            },
             a: {
               textDecoration: 'underline',
               '&:link': {
@@ -146,11 +141,6 @@ module.exports = {
       }),
     },
   },
-  variants: {
-    extend: {
-      translate: ['hover', 'group-hover'],
-      typography: ['dark'],
-    }
-  },
+  variants: { },
   plugins: [require('@tailwindcss/typography')],
 };
