@@ -15,10 +15,10 @@ Cloth masks and surgical masks are good at [protecting other people](https://you
 What you need is an N95 mask, they not only protect others but also yourself. N95 masks have a 95+% filter efficiency. However, N95's are for first responders only. A great alternative is a KN95 mask, similar filter efficiency as N95, but not US government approved, so quality control may be risky. In comes KF94, a Korean general population standard, and they [perform really well](https://youtu.be/Gu0GkjOpOj0?t=55). 
 
 # KF94 Mask Top Picks
-* XS: [Blue 3D](https://behealthyusa.net/products/blue-kf94-3d-masks-large-adult-size)
-* Small: [Bluna Facelift](https://behealthyusa.net/products/facefit-kf94-black-large)
+* XS: [Blue 3D](https://behealthyusa.net/products/blue-kf94-2d-mask-aka-greek-god-goddess-black-large-2?variant=39287820550308)
+* Small: [Bluna Facelift](https://behealthyusa.net/products/facefit-kf94-black-large?_pos=2&_sid=11872329e&_ss=r&variant=36887298244772)
 * Medium: [KF Series](https://masklab.us/collections/kf-series)
-* Large: [LG Airwasher](https://www.everydaybeautylab.com/lg-airwasher-kf94-face-mask-black-made-in-korea-lg-kf94-1pcs/)
+* Large: [LG Airwasher](https://www.everydayemall.com/collections/ppe/products/lg-airwasher-kf94-face-mask-black-made-in-korea-lg-kf94-1pcs)
 * XL: [BOTN](https://behealthyusa.net/products/botn-kf94-healthcare-particulate-disposable-mask-black-large-kfda-approved-fda-registered)
 
 Dive into [the full dataset](https://drive.google.com/drive/folders/1eE2BERAvRzs28kG87ft3a27FS9-gHvdC) to find a mask right for you.
