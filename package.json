@@ -13,7 +13,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^0.12.1",
     "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "@tailwindcss/typography": "^0.4.1",
+    "@tailwindcss/typography": "^0.5.2",
     "eleventy-plugin-embed-everything": "^1.13.3",
     "eleventy-plugin-local-respimg": "^0.4.0",
     "html-minifier": "^4.0.0",
