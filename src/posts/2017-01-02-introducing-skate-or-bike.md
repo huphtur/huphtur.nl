@@ -5,7 +5,7 @@ image: /images/introducing-skateorbike.jpg
 alt: "Skate or Bikes web site displayed on an iPad with an big photo of Sal Barbier skateboarding and a frame in the same room."
 date: 2017-01-02
 ---
-Super stoked to officially launch a little side project. It's called [Skate or Bike](https://skateorbike.com/) and will feature people who sometimes ride 4, and sometimes ride 2 wheels.
+Super stoked to officially launch a little side project. It’s called [Skate or Bike](https://skateorbike.com/) and will feature people who sometimes ride 4, and sometimes ride 2 wheels.
 
 [![Skate or Bikes web site displayed on an iPad with an big photo of Sal Barbier skateboarding and a frame in the same room.](/images/introducing-skateorbike.jpg)](https://skateorbike.com/)
 

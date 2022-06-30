@@ -1,6 +1,6 @@
 module.exports = {
   lang: 'en',
-  title: 'Marcel Appelman',
+  title: 'huphtur - Marcel Appelman',
   description:
     'Tall, skinny Dutch guy with a penchant for cycling, skateboarding, and nerdy computer crap.',
   url: 'https://huphtur.nl', // don't end with a slash /
@@ -10,7 +10,7 @@ module.exports = {
   },
   meta_data: {
     theme_color: '#f56565',
-    default_social_image: '/images/avatar.png',
+    default_social_image: '/icon-512.png',
     locale: 'en_US',
     twitter_username: '@huphtur',
   },

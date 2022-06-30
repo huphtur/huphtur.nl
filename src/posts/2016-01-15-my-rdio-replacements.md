@@ -2,7 +2,7 @@
 title: "My Rdio Replacement(s)"
 description: "RIP Rdio 🙏 Here are some streaming services and podcasts that I am using to fill the void."
 image: /images/rdio-goodbye.png
-alt: "rdio goodbye banner image."
+alt: "rdio banner image with the text goodbye for now."
 date: 2016-01-15
 intro: yes
 ---
@@ -12,7 +12,7 @@ Some of us must have done something bad last year, because Santa shut down [Rdio
 
 After Rdio shut down a lot of people went with the obvious choices: [Spotify](https://www.spotify.com/), [Apple Music](http://www.apple.com/music/), [Deezer](http://www.deezer.com/), etc. I played around with them for a bit but non did it for me. So I decided to go with some other options.
 
-**Note**: my listening habbit is probably a tad different than the average person. I [don't care](/i-have-never/) much for Top 40 music and tend to focus on "electronic" music. I mostly listen to music via my notebook speakers or headphones.
+**Note**: my listening habbit is probably a tad different than the average person. I [don’t care](/i-have-never/) much for Top 40 music and tend to focus on "electronic" music. I mostly listen to music via my notebook speakers or headphones.
 
 ## Direct
 
@@ -30,7 +30,7 @@ After Rdio shut down a lot of people went with the obvious choices: [Spotify](ht
 - [Stones Throw](https://www.stonesthrow.com/podcast/). Killer record label from LA.
 - [Turntable Lab](http://www.turntablelab.com/pages/turntable-lab-radio). A record store for DJs.
 - [Gilles Peterson](http://www.gillespetersonworldwide.com/category/podcasts/). This legendary radio DJ has some of the best guests on his show.
-- [Low End Theory](http://www.lowendtheoryclub.com/podcast/). A club night named after one of Tribe's best albums gets my automatic podcast subscription!
+- [Low End Theory](http://www.lowendtheoryclub.com/podcast/). A club night named after one of Tribe’s best albums gets my automatic podcast subscription!
 - [Phonica Records](http://phonicaradio.blogspot.com/). Music shop out of London.
 - [Resident Advisor](http://www.residentadvisor.net/podcast.aspx). This amount of content that this site has to offer is overwhelming, so I just focus on their podcast.
 
@@ -38,7 +38,7 @@ After Rdio shut down a lot of people went with the obvious choices: [Spotify](ht
 
 - [dublab](http://dublab.com/). Mostly replays of past shows, but keep [their twitter account](https://twitter.com/dublab) in check for live shows announcements.
 - [SomaFM](https://somafm.com/). The default for background tunes. The [cliqhop idm](http://somafm.com/cliqhop/) station is my favorite.
-- [Eclectic 24](http://www.kcrw.com/music/shows/eclectic24). It's pretty much KCRW's [Morning Becomes Eclectic](http://www.kcrw.com/music/shows/morning-becomes-eclectic) (sans Jason Bentley) and it's really solid.
+- [Eclectic 24](http://www.kcrw.com/music/shows/eclectic24). It’s pretty much KCRW’s [Morning Becomes Eclectic](http://www.kcrw.com/music/shows/morning-becomes-eclectic) (sans Jason Bentley) and it’s really solid.
 - [Red Light Radio](http://redlightradio.net/). A Dutch station that broadcasts (in English) from a tiny studio in the famous Red Light District in Amsterdam. [Parra](/wheres-the-fun-in-skateboarding/) occasionaly has a show on it.
 - [East Village Radio](http://dashradio.com/EVR). My friend [Arlie](https://www.facebook.com/arlie.carstens) told me about this NYC station before I even had Rdio. They dissapeared for a while but [are back](http://www.wired.com/2015/04/internet-radio-soulless-outlaw-station-fix/) on some new independent radio platform called [Dash Radio](http://dashradio.com/).
 
@@ -50,4 +50,4 @@ After Rdio shut down a lot of people went with the obvious choices: [Spotify](ht
 
 ## Conclusion
 
-I could go on and on, but what it comes down to is that, there's just too much amazing **free music** to lock myself in any paid subscription services.
+I could go on and on, but what it comes down to is that, there’s just too much amazing **free music** to lock myself in any paid subscription services.

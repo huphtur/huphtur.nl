@@ -9,4 +9,4 @@ date: 2015-01-15
 
 [![Flat UI Color Palette.](/images/flat-ui-color-palette-for-sketch.png)](https://github.com/huphtur/Sketch-Flat-UI-Color-Palette/archive/master.zip)
 
-Based on [these](http://flatuicolors.co) [things](http://flatuicolors.com), originated by Designmodo's [Flat UI](http://designmodo.com/flat/).
+Based on [these](http://flatuicolors.co) [things](http://flatuicolors.com), originated by Designmodo’s [Flat UI](http://designmodo.com/flat/).

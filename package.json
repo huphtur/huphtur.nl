@@ -4,20 +4,18 @@
   "repository": "https://github.com/huphtur/huphtur.nl",
   "license": "MIT",
   "scripts": {
-    "start": "rm -rf _site && eleventy --serve --config=eleventy.config.js & tailwindcss -i ./src/tailwind/tailwind.css -c ./src/tailwind/tailwind.config.js -o ./src/_includes/_output.css --watch",
-    "build": "rm -rf _site && NODE_ENV=production tailwindcss -i ./src/tailwind/tailwind.css -c ./src/tailwind/tailwind.config.js -o ./src/_includes/_output.css && ELEVENTY_ENV=production eleventy --config=eleventy.config.js"
+    "serve": "rm -rf _site && npx @11ty/eleventy --serve & npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --watch",
+    "build": "rm -rf _site && npx @11ty/eleventy & npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --minify"
   },
-  "browserslist": [
-    "> 1%"
-  ],
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
-    "@11ty/eleventy-plugin-rss": "^1.1.1",
-    "@tailwindcss/typography": "^0.4.1",
-    "eleventy-plugin-embed-everything": "^1.13.3",
-    "eleventy-plugin-local-respimg": "^0.4.0",
-    "html-minifier": "^4.0.0",
-    "postcss": "^8.3.6",
-    "tailwindcss": "^2.2.7"
+    "@11ty/eleventy": "^1.0.1",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@tailwindcss/typography": "^0.5.2",
+    "prettier": "^2.7.1",
+    "prettier-plugin-tailwindcss": "^0.1.11",
+    "tailwindcss": "^3.1.4"
+  },
+  "dependencies": {
+    "eleventy-plugin-embed-everything": "^1.14.0"
   }
 }
