@@ -4,13 +4,13 @@ description: "Quick tutorial on how to automaticaly upload files to S3."
 date: 2016-01-02
 intro: yes
 ---
-One of the better [Gulp](http://gulpjs.com/) plugins to upload your files to [Amazon S3](https://aws.amazon.com/s3/) has to be [awspublish](https://www.npmjs.com/package/gulp-awspublish). Unfortunately, since I'm not the brightest when it comes to CLI stuff, it took me a while to get it working properly. Here's a quick tutorial that will hopefully save other developers *in spe* some time.
+One of the better [Gulp](http://gulpjs.com/) plugins to upload your files to [Amazon S3](https://aws.amazon.com/s3/) has to be [awspublish](https://www.npmjs.com/package/gulp-awspublish). Unfortunately, since I’m not the brightest when it comes to CLI stuff, it took me a while to get it working properly. Here’s a quick tutorial that will hopefully save other developers *in spe* some time.
 
 **Note:** This tutorial assumes you already have an AWS S3 bucket set up and a Gulp project running on your OS X system.
 
 ## Install AWS-CLI
 
-First we're going to install and configure [AWS CLI](https://aws.amazon.com/cli/ "Amazon Web Services Command Line Interface"). Go to your terminal and download, unzip and install the [bundled installer](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-bundle-other-os) with these commands:
+First we’re going to install and configure [AWS CLI](https://aws.amazon.com/cli/ "Amazon Web Services Command Line Interface"). Go to your terminal and download, unzip and install the [bundled installer](http://docs.aws.amazon.com/cli/latest/userguide/installing.html#install-bundle-other-os) with these commands:
 
 ```bash
 curl "https://s3.amazonaws.com/aws-cli/awscli-bundle.zip" -o "awscli-bundle.zip"
@@ -32,7 +32,7 @@ rm -r awscli-bundle*
 
 ## Configure AWS-CLI
 
-Next up we're going to [configure AWS-CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) so awspublish can use it. Type the following in your terminal:
+Next up we’re going to [configure AWS-CLI](http://docs.aws.amazon.com/cli/latest/userguide/cli-chap-getting-started.html) so awspublish can use it. Type the following in your terminal:
 
 ```bash
 aws configure
@@ -40,7 +40,7 @@ aws configure
 
 Fill out your AWS Access and Secret Key.
 
-It will also ask for default region. Check your S3 bucket to see what you used, if it's set to "US Standard" type: `us-west-2`. **It's important you fill this out or else awspublish will break.**
+It will also ask for default region. Check your S3 bucket to see what you used, if it’s set to "US Standard" type: `us-west-2`. **It’s important you fill this out or else awspublish will break.**
 
 For the default output format question just hit enter to leave it blank.
 
@@ -63,20 +63,20 @@ npm install --save-dev gulp-awspublish
 Open up your gulpfile.js and add the following:
 
 ```js
-var awspublish = require('gulp-awspublish');
+var awspublish = require(’gulp-awspublish’);
 
 // Publish to AWS S3
-gulp.task('publish', function() {
+gulp.task(’publish’, function() {
   var publisher = awspublish.create({
-    region: 'us-west-2',
+    region: ’us-west-2’,
     params: {
-      Bucket: 'YOUR-BUCKET-NAME'
+      Bucket: ’YOUR-BUCKET-NAME’
     }
   });
   var headers = {
-    'Cache-Control': 'max-age=315360000, no-transform, public'
+    ’Cache-Control’: ’max-age=315360000, no-transform, public’
   };
-  return gulp.src('public/**')
+  return gulp.src(’public/**’)
     .pipe(awspublish.gzip())
     .pipe(publisher.publish(headers))
     .pipe(publisher.cache())
@@ -88,7 +88,7 @@ gulp.task('publish', function() {
 
 Change YOUR-BUCKET-NAME to your bucket name you wish to upload to and change the gulp.src location to wherever you are uploading from.
 
-To upload all the things type: `gulp publish` and watch awspublish do it's magic.
+To upload all the things type: `gulp publish` and watch awspublish do it’s magic.
 
 ## Disclaimer
 

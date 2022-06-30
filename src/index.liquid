@@ -1,31 +1,55 @@
 ---
 layout: default
-title: "Marcel Appelman"
-description: "Tall, skinny Dutch guy with a penchant for skateboarding, cycling, and nerdy computer crap."
+title: 'huphtur'
+description: 'Tall, skinny Dutch guy with a penchant for skateboarding, cycling, and nerdy computer crap.'
 pagination:
   data: collections.post
   size: 11
   reverse: true
   alias: posts
 ---
-<div class="md:space-y-40 space-y-20">
-  {%- for item in posts -%}
-    <article>
-      <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
-      {%- if item.data.intro -%}
-        {%- if item.data.image -%}
-          <p><a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}"></a></p>
-        {%- endif -%}
-        <p class="lead">{{ item.data.description | safe }}</p>
-        <p><a href="{{ item.url }}">Read <em class="italic">{{ item.data.title }}</em> →</a></p>
-      {%- else -%}
-        <p>{{ item.templateContent | safe }}</p>
-      {%- endif -%}
-    </article>
-  {%- endfor -%}
+
+<div class="space-y-20 md:space-y-40">
+  {% for item in posts %}
+  <article>
+    <h1>
+      <a
+        class="font-extrabold !text-white no-underline hover:!text-pink"
+        href="{{ item.url }}"
+        >{{ item.data.title }}</a
+      >
+    </h1>
+    {% if item.data.intro %} {% if item.data.image %}
+    <p>
+      <a href="{{ item.url }}"
+        ><img src="{{ item.data.image }}" alt="{{ item.data.alt }}"
+      /></a>
+    </p>
+    {% endif %}
+    <p class="lead">{{ item.data.description }}</p>
+    <p>
+      <a class="no-underline after:ml-1 after:content-['→']" href="{{ item.url }}"
+        >Read <em class="italic underline decoration-pink decoration-4 underline-offset-2">{{ item.data.title }}</em></a
+      >
+    </p>
+    {% else %}
+    <p>{{ item.templateContent }}</p>
+    {% endif %}
+  </article>
+  {% endfor %}
 </div>
 
 <div class="md:mt-40 mt-20 text-center">
-  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">← Older</a>{% endif %}
-  {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer →</a>{% endif %}
+  {% if pagination.href.next %}<a
+    class="no-underline before:mr-1 before:content-['←']"
+    href="{{ pagination.href.next }}"
+    ><span class="underline decoration-pink decoration-4 underline-offset-2"
+      >Older</a
+  >{% endif %} {% if pagination.href.previous %}<a
+    class="no-underline after:ml-1 after:content-['→']"
+    href="{{ pagination.href.previous }}"
+    ><span class="underline decoration-pink decoration-4 underline-offset-2"
+      >Newer</span
+    ></a
+  >{% endif %}
 </div>

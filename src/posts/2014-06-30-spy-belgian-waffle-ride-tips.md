@@ -20,13 +20,13 @@ This things fills up quick! By the time I found out about the event, online regi
 
 ## Train Hard Retard!
 
-This is not your typical 4 hour road race. This year's winner ([Neil Shirley][4]) did it in 6:39 hrs. I finished in [7:30 hrs][5]. So train hard, put in some good miles and solid efforts. **PRO tip**: get a [good bike coach][6]. Also make sure to eat plenty of legit carbs in the week leading up to the race. Loading up on carbs the day before the race is somewhat useless.
+This is not your typical 4 hour road race. This year’s winner ([Neil Shirley][4]) did it in 6:39 hrs. I finished in [7:30 hrs][5]. So train hard, put in some good miles and solid efforts. **PRO tip**: get a [good bike coach][6]. Also make sure to eat plenty of legit carbs in the week leading up to the race. Loading up on carbs the day before the race is somewhat useless.
 
 ## Install Granny Gears
 
 You will be going up some insane steep hills. A couple of these hills are straight gravel and sand, so it will be impossible to get out the saddle or your rear wheel will spin out. Install a 27T or 28T cog. Hell, you might even want to install a compact.  
 
-[![This hill hurts, specially after 200KM of racing. Photo: Sean O'Brein.](/images/spybwr-steep-hill.jpg)][9]
+[![This hill hurts, specially after 200KM of racing. Photo: Sean O’Brein.](/images/spybwr-steep-hill.jpg)][9]
 
 ## Get Strong Rims and Fat Tires
 
@@ -42,13 +42,13 @@ For a minute I thought about riding with MTB pedals and shoes. In fact, the week
 
 The day before the race you have the opportunity to pick up your number and other race goodies. SPY puts on a great expo with all kinds of food, beer, and pony rides. Unless you live close to the event (Carlsbad), I suggest you skip the expo and do some leg openers instead. Pick up your number the morning of the race. You have plenty of time to prep.  
 
-[![Yes, that's a Unicorn. Photo: Guy East.](/images/spybwr-unicorn-guy.jpg)][11]
+[![Yes, that’s a Unicorn. Photo: Guy East.](/images/spybwr-unicorn-guy.jpg)][11]
 
 ## Skip the Waffles
 
 When you arrive at the start of the race, you will be present by the smell of fresh baked waffles. Just like any other typical race, go through your regular pre-race routine and resist the waffles.  
 
-[![Don't. Photo: Jake Orness.](/images/spybwr-waffles-and-eggs.jpg)][12]
+[![Don’t. Photo: Jake Orness.](/images/spybwr-waffles-and-eggs.jpg)][12]
 
 ## Stay Near the Front
 
@@ -58,15 +58,15 @@ The first hour of this years race was a neutral roll out with full police escort
 
 ## Single-Track Racing
 
-Before this race I had never ridden on a single track so had no idea what to expect. Basically it's a super narrow dirt path which makes it impossible to pass or get passed on. Someone passed me, hit me and apologized, I told him "don't worry about it, it's a race!". If you get stuck behind a slower person just call out where you're gonna pass and blast by them. Most likely you will hit the person, but whatever, it's a race!
+Before this race I had never ridden on a single track so had no idea what to expect. Basically it’s a super narrow dirt path which makes it impossible to pass or get passed on. Someone passed me, hit me and apologized, I told him "don’t worry about it, it’s a race!". If you get stuck behind a slower person just call out where you’re gonna pass and blast by them. Most likely you will hit the person, but whatever, it’s a race!
 
 ## Speed Up For Sand
 
-At times you will hit some really deep sand. Your bike will decelerate and might get squirrely if you don't keep your speed up. Lean back a bit and keep pedaling.
+At times you will hit some really deep sand. Your bike will decelerate and might get squirrely if you don’t keep your speed up. Lean back a bit and keep pedaling.
 
 # Bring Extra Tubes
 
-"Holy shit, Thanks to my 28s I'm able to finish without any flats!", is what I thought in the last couple kilometers. Until... I kid you not... 1KM before the finish, I got a flat! I've bounced over sharp rocks the size of baby heads and I get nailed [pun!] by a tiny staple right before the finish. I thought about riding on my rims, but it was too sketchy, and I quickly replaced my tube. So, bring tubes, because most likely you will flat.
+"Holy shit, Thanks to my 28s I’m able to finish without any flats!", is what I thought in the last couple kilometers. Until... I kid you not... 1KM before the finish, I got a flat! I’ve bounced over sharp rocks the size of baby heads and I get nailed [pun!] by a tiny staple right before the finish. I thought about riding on my rims, but it was too sketchy, and I quickly replaced my tube. So, bring tubes, because most likely you will flat.
 
 [![Get prepared to do this. Photo: Lucas Keenan.](/images/spybwr-flat-tire.jpg)][14]
 
@@ -76,9 +76,9 @@ Someone in the [SPYBWR Strava group][8] broke down the entire race: every turn, 
 
 ## Eat
 
-Bring all the food for the entire race with you. Yes, there are plenty of feed zones, but you don't want to stop for food. Stuff your pockets. Eat your solid foods earlier in the race and keep the blocks and gels for last part of the race. It gets harder and harder to eat the longer the race lasts.
+Bring all the food for the entire race with you. Yes, there are plenty of feed zones, but you don’t want to stop for food. Stuff your pockets. Eat your solid foods earlier in the race and keep the blocks and gels for last part of the race. It gets harder and harder to eat the longer the race lasts.
 
-[![Don't bonk bro! Photo: Jake Orness.](/images/spybwr-eat.jpg)][15]
+[![Don’t bonk bro! Photo: Jake Orness.](/images/spybwr-eat.jpg)][15]
 
 ## Drink
 
@@ -88,13 +88,13 @@ Fill up your bottles with your favorite mix at the start of the race. They have 
 
 ## Pay Attention to the Directions
 
-There are signs and arrows on the road to point you to the right direction. Always pay attention to them. At one point the group I was with took a wrong turn and we were off course for a few minutes until someone set us straight. So even when you're in a big pack keep looking for the directions.
+There are signs and arrows on the road to point you to the right direction. Always pay attention to them. At one point the group I was with took a wrong turn and we were off course for a few minutes until someone set us straight. So even when you’re in a big pack keep looking for the directions.
 
 ## Keep Hammering
 
 People will get dropped, people will drop you. You will pick people up. People will crash in front of you, next to you or even into you. Bikini girls will convince you to stop for a refreshing beverage (I failed to resist). Whatever you do, **do NOT stop!**
 
-[![Ryan Trebon did not stop for anything (and finished 2nd). Photo: Sean O'Brein.](/images/spybwr-ryan-trebon.jpg)][17]
+[![Ryan Trebon did not stop for anything (and finished 2nd). Photo: Sean O’Brein.](/images/spybwr-ryan-trebon.jpg)][17]
 
 ## Recover
 
@@ -102,9 +102,9 @@ At the finish you will be rewarded with tons of food and beer. Eat as much as yo
 
 [![Beer yo. Photo: Jake Orness.](/images/spybwr-beer.jpg)][18]
 
-That's it! By far the most brutal but fun race I've ever done and can't wait to it again next year ([April 26, 2015][19])!
+That’s it! By far the most brutal but fun race I’ve ever done and can’t wait to it again next year ([April 26, 2015][19])!
 
-<iframe height='405' width='700' frameborder='0' allowtransparency='true' scrolling='no' src='//www.strava.com/activities/134955860/embed/c45f63569b9f6350e8df6936ca8742939b56401b'></iframe>
+<iframe height=’405’ width=’700’ frameborder=’0’ allowtransparency=’true’ scrolling=’no’ src=’//www.strava.com/activities/134955860/embed/c45f63569b9f6350e8df6936ca8742939b56401b’></iframe>
 
  [2]: https://facebook.com/SPYBWR/ "SPYBWR"
  [3]: https://bikereg.com/
