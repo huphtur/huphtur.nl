@@ -29,7 +29,7 @@ pagination:
     <p class="lead">{{ item.data.description }}</p>
     <p>
       <a class="no-underline after:ml-1 after:content-['→']" href="{{ item.url }}"
-        >Read <em class="italic underline decoration-pink decoration-4 underline-offset-2">{{ item.data.title }}</em></a
+        >Read <em class="italic underline decoration-pink decoration-2 md:decoration-4 underline-offset-2">{{ item.data.title }}</em></a
       >
     </p>
     {% else %}
@@ -43,12 +43,12 @@ pagination:
   {% if pagination.href.next %}<a
     class="no-underline before:mr-1 before:content-['←']"
     href="{{ pagination.href.next }}"
-    ><span class="underline decoration-pink decoration-4 underline-offset-2"
+    ><span class="underline decoration-pink decoration-2 md:decoration-4 underline-offset-2"
       >Older</a
   >{% endif %} {% if pagination.href.previous %}<a
     class="no-underline after:ml-1 after:content-['→']"
     href="{{ pagination.href.previous }}"
-    ><span class="underline decoration-pink decoration-4 underline-offset-2"
+    ><span class="underline decoration-pink decoration-2 md:decoration-4 underline-offset-2"
       >Newer</span
     ></a
   >{% endif %}
