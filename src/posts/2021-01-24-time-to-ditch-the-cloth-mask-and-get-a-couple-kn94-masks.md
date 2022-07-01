@@ -25,6 +25,6 @@ Dive into [the full dataset](https://drive.google.com/drive/folders/1eE2BERAvRzs
 
 You can wear the mask for [30-40 hours](https://youtu.be/_In-nBP6WkQ?t=105) in a clean office-type environment. After wearing a mask, [let it sit for at least 4 days](https://youtu.be/Gu0GkjOpOj0?t=1187), then you can reuse it again. Pro tip: Buy a couple of masks to keep in rotation.
 
-**Heavy disclaimer: my synopsis is extremely watered down, I advise you to watch all of [Aaron’s mask videos](https://www.youtube.com/user/coll0412/videos), this great write-up about [Aaron on Yahoo News](https://www.yahoo.com/news/one-man-is-on-a-mission-to-figure-out-the-best-covidprotection-mask-here-is-what-he-found-174756926.html), and do your research to find the right mask for you.**
+**Heavy disclaimer:** my synopsis is extremely watered down, I advise you to watch all of [Aaron’s mask videos](https://www.youtube.com/user/coll0412/videos), this great write-up about [Aaron on Yahoo News](https://www.yahoo.com/news/one-man-is-on-a-mission-to-figure-out-the-best-covidprotection-mask-here-is-what-he-found-174756926.html), and do your research to find the right mask for you.
 
 Stay safe peoples!
