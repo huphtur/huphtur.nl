@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "serve": "rm -rf _site && npx @11ty/eleventy --serve & npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --watch",
-    "build": "rm -rf _site && npx @11ty/eleventy & npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --minify"
+    "build": "rm -rf _site && npx @11ty/eleventy && npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --minify"
   },
   "devDependencies": {
     "@11ty/eleventy": "^1.0.1",
@@ -16,6 +16,7 @@
     "tailwindcss": "^3.1.4"
   },
   "dependencies": {
-    "eleventy-plugin-embed-everything": "^1.14.0"
+    "eleventy-plugin-embed-everything": "^1.14.0",
+    "eleventy-plugin-img2picture": "github:saneef/eleventy-plugin-img2picture"
   }
 }
