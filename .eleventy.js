@@ -18,20 +18,24 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/site.webmanifest');
   eleventyConfig.addPlugin(pluginRss);
 
-  eleventyConfig.addPlugin(img2picture, {
-    eleventyInputDir: INPUT_DIR,
-    imagesOutputDir: OUTPUT_DIR,
-    urlPath: '/images/',
-    formats: ['webp'],
-    // sizes: '(min-width: 960px) 720px, 100vw',
-    minWidth: 480,
-    maxWidth: 1440,
-    widthStep: 320,
-    // sharpAvifOptions: {
-    //   lossless: true,
-    //   quality: 1,
-    // },
-  });
+  if (process.env.ELEVENTY_ENV === 'production') {
+    eleventyConfig.addPlugin(img2picture, {
+      eleventyInputDir: INPUT_DIR,
+      imagesOutputDir: OUTPUT_DIR,
+      urlPath: '/images/',
+      formats: ['webp'],
+      // sizes: '(min-width: 960px) 720px, 100vw',
+      minWidth: 480,
+      maxWidth: 1440,
+      widthStep: 320,
+      // sharpAvifOptions: {
+      //   lossless: true,
+      //   quality: 1,
+      // },
+    });
+  } else {
+    eleventyConfig.addPassthroughCopy('src/images');
+  }
 
   eleventyConfig.addPlugin(embedEverything, {
     use: ['youtube', 'soundcloud'],
