@@ -1,6 +1,8 @@
 const embedEverything = require('eleventy-plugin-embed-everything');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
 const img2picture = require('eleventy-plugin-img2picture');
+const pluginRss = require('@11ty/eleventy-plugin-rss');
+const markdownItAttrs = require('markdown-it-attrs');
+const markdownIt = require('markdown-it');
 
 const INPUT_DIR = './src';
 const OUTPUT_DIR = './_site/images';
@@ -8,6 +10,14 @@ const OUTPUT_DIR = './_site/images';
 module.exports = function (eleventyConfig) {
   eleventyConfig.addWatchTarget('./tailwind.config.js');
   eleventyConfig.addWatchTarget('./src/tailwind.css');
+
+  let options = {
+    html: true,
+    typographer: true,
+  };
+  let markdownLibrary = markdownIt(options).use(markdownItAttrs);
+
+  eleventyConfig.setLibrary('md', markdownLibrary);
 
   // eleventyConfig.addPassthroughCopy('src/images');
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
