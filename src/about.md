@@ -13,5 +13,6 @@ You can also find me on a bunch of other online entities such as
 [GitHub](https://github.com/huphtur/),
 [Instagram](https://www.instagram.com/huphtur/),
 [Strava](https://www.strava.com/athletes/huphtur),
-[Twitter](https://twitter.com/huphtur), and
+[Twitter](https://twitter.com/huphtur),
+[Mastadon](https://mastodon.social/@huphtur){rel=me}, and
 [YouTube](https://www.youtube.com/channel/UCi40BSt5e5-tRDfYH-3tjeA).
