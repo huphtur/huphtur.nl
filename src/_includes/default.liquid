@@ -38,12 +38,6 @@
       content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}"
     />
     <meta
-      property="og:image"
-      content="{% if image %}{{ site.url }}{{ image }}{% else %}{{ site.url }}{{
-        site.meta_data.default_social_image
-      }}{% endif %}"
-    />
-    <meta
       property="og:description"
       content="{% if description %}{{ description }}{% else %}{{
         site.description
@@ -52,7 +46,6 @@
     <meta property="og:site_name" content="huphtur.nl" />
     <meta property="og:locale" content="{{ site.meta_data.locale }}" />
     <meta property="article:author" content="{{ site.author.name }}" />
-    <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="{{ site.meta_data.twitter_username }}" />
     <meta
       name="twitter:creator"
