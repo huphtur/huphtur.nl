@@ -21,9 +21,13 @@ pagination:
     </h1>
     {% if item.data.intro %} {% if item.data.image %}
     <p>
-      <a href="{{ item.url }}"
-        ><img src="{{ item.data.image }}" alt="{{ item.data.alt }}"
-      /></a>
+      <a href="{{ item.url }}">
+        {% if forloop.first == true %} 
+        <img src="{{ item.data.image }}" alt="{{ item.data.alt }}" loading="eager" />
+        {% else %}
+        <img src="{{ item.data.image }}" alt="{{ item.data.alt }}" />
+        {% endif %}
+      </a>
     </p>
     {% endif %}
     <p class="lead">{{ item.data.description }}</p>
