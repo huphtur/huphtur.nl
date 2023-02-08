@@ -8,10 +8,10 @@
     "build": "rm -rf _site && ELEVENTY_ENV=production npx @11ty/eleventy && npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --minify"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.0-beta.3",
+    "@11ty/eleventy": "^2.0.0",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@tailwindcss/typography": "^0.5.9",
-    "tailwindcss": "^3.2.4"
+    "tailwindcss": "^3.2.6"
   },
   "dependencies": {
     "eleventy-plugin-embed-everything": "^1.15.0",
