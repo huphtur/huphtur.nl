@@ -14,7 +14,7 @@
     "tailwindcss": "^3.3.2"
   },
   "dependencies": {
-    "eleventy-plugin-embed-everything": "^1.15.1",
+    "eleventy-plugin-embed-everything": "^1.16.0",
     "eleventy-plugin-img2picture": "^4.1.0"
   }
 }
