@@ -80,7 +80,7 @@ https://youtu.be/4lVH8wkp6J4
 
 The darkest and most sinister track of the _Liquid Swords_ album. Unfortunately not shown in the official video, but on the album the song start with a sample from the movie, [Shogun Assasin](https://en.wikipedia.org/wiki/Shogun_Assassin). _"I had a bad dream. Don’t be afraid, bad dreams are only dreams. What a time you chose to be born."_
 
-https://youtu.be/p179gGJ3d4c
+https://youtu.be/s48GO6tBm3A
 
 ## Fugees - Ready or Not (1996)
 
