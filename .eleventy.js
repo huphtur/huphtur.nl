@@ -16,6 +16,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/icon-192.png');
   eleventyConfig.addPassthroughCopy('src/icon-512.png');
   eleventyConfig.addPassthroughCopy('src/site.webmanifest');
+  eleventyConfig.addPassthroughCopy('src/robots.txt');
+
   eleventyConfig.addPlugin(pluginRss);
 
   if (process.env.ELEVENTY_ENV === 'production') {
