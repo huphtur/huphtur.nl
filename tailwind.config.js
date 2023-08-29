@@ -3,10 +3,10 @@ module.exports = {
   content: ['./src/**/*.{html,liquid}'],
   theme: {
     colors: {
-      white: '#ffffff',
-      black: '#000000',
-      purple: '#390645',
-      pink: '#e834f2',
+      light: '#E2E2E2',
+      dark: '#1C2126',
+      tint: '#2C3136',
+      accent: '#EC622B',
     },
   },
   plugins: [require('@tailwindcss/typography')],
