@@ -6,9 +6,8 @@ const INPUT_DIR = './src';
 const OUTPUT_DIR = './_site/images';
 
 module.exports = function (eleventyConfig) {
-  eleventyConfig.setServerOptions({
-    watch: ['_site/**/*.css'],
-  });
+  eleventyConfig.addWatchTarget('./tailwind.config.js');
+  eleventyConfig.addWatchTarget('./src/tailwind.css');
 
   // eleventyConfig.addPassthroughCopy('src/images');
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
@@ -17,6 +16,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/icon-192.png');
   eleventyConfig.addPassthroughCopy('src/icon-512.png');
   eleventyConfig.addPassthroughCopy('src/site.webmanifest');
+  eleventyConfig.addPassthroughCopy('src/robots.txt');
+
   eleventyConfig.addPlugin(pluginRss);
 
   if (process.env.ELEVENTY_ENV === 'production') {
