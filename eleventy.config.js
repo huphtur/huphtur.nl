@@ -1,6 +1,7 @@
 const embedEverything = require('eleventy-plugin-embed-everything');
 const img2picture = require('eleventy-plugin-img2picture');
 const pluginRss = require('@11ty/eleventy-plugin-rss');
+const markdownIt = require("markdown-it");
 
 const INPUT_DIR = './src';
 const OUTPUT_DIR = './_site/images';
@@ -19,6 +20,14 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/robots.txt');
 
   eleventyConfig.addPlugin(pluginRss);
+
+  let options = {
+    html: true,
+    linkify: true,
+    typographer: true
+  };
+
+  eleventyConfig.setLibrary("md", markdownIt(options));
 
   if (process.env.ELEVENTY_ENV === 'production') {
     eleventyConfig.addPlugin(img2picture, {
