@@ -5,25 +5,25 @@
 }
 ---
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
+<feed xmlns="http://www.w3.org/2005/Atom" xml:base="{{ site.url }}">
   <title>{{ site.title }}</title>
-  <subtitle>{{ site.description }}}</subtitle>
-  <link href="{{ site.url }}/feed.xml" rel="self" />
-  <link href="{{ site.url }}" />
-  <updated>{{ collections.post | rssLastUpdatedDate }}</updated>
+  <subtitle>{{ site.description }}</subtitle>
+  <link href="{{ permalink | absoluteUrl(site.url) }}" rel="self"/>
+  <link href="{{ site.url }}"/>
+  <updated>{{ collections.posts | getNewestCollectionItemDate | dateToRfc3339 }}</updated>
   <id>{{ site.url }}/</id>
   <author>
     <name>{{ site.author.name }}</name>
     <email>{{ site.author.email }}</email>
   </author>
-  {%- for post in collections.post %}
-  {% set absolutePostUrl %}{{ post.url | url | absoluteUrl(site.url) }}{% endset %}
+  {%- for post in collections.post | reverse %}
+  {%- set absolutePostUrl = post.url | absoluteUrl(site.url) %}
   <entry>
     <title>{{ post.data.title }}</title>
-    <link href="{{ absolutePostUrl }}" />
-    <updated>{{ post.date | rssDate }}</updated>
+    <link href="{{ absolutePostUrl }}"/>
+    <updated>{{ post.date | dateToRfc3339 }}</updated>
     <id>{{ absolutePostUrl }}</id>
-    <content type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
+    <content xml:lang="{{ site.language }}" type="html">{{ post.templateContent | htmlToAbsoluteUrls(absolutePostUrl) }}</content>
   </entry>
   {%- endfor %}
 </feed>
