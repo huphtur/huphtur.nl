@@ -2,7 +2,7 @@ module.exports = {
   lang: 'en',
   title: 'huphtur - Marcel Appelman',
   description:
-    'Tall, skinny Dutch guy with a penchant for cycling, skateboarding, and nerdy computer crap.',
+    'Tall, skinny Dutch guy with a penchant for cycling, skateboarding, and nerdy computer stuff.',
   url: 'https://huphtur.nl', // don't end with a slash /
   author: {
     name: 'Marcel Appelman',
