@@ -1,7 +1,8 @@
 ---
-title: "How Many Days Until Omloop"
+title: "Introducing How Many Days Until Omloop"
 description: "I made one of those single-serving sites for a handful of cycling fanatics."
 date: 2024-01-20
+intro: yes
 ---
 Every true cyclist knows the race season doesn't start until Omloop ~~Het Volk~~ Nieuwsblad. Yes, there are some early season things happening _down under_ and in other desert like environments, but none of those really count until _openingsweekend_. 
 
