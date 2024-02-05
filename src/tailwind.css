@@ -4,6 +4,6 @@
 
 @layer base {
   a {
-    @apply transition-colors duration-150 ease-in-out;
+    @apply transition-all duration-150 ease-in-out;
   }
 }
