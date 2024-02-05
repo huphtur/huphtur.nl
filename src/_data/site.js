@@ -12,6 +12,5 @@ module.exports = {
     theme_color: '#f56565',
     default_social_image: '/icon-512.png',
     locale: 'en_US',
-    twitter_username: '@huphtur',
   },
 };

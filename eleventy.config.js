@@ -30,6 +30,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.setLibrary("md", markdownIt(options));
 
   if (process.env.ELEVENTY_ENV === 'production') {
+    // also copy images for meta stuff
+    eleventyConfig.addPassthroughCopy('src/images');
     eleventyConfig.addPlugin(img2picture, {
       eleventyInputDir: INPUT_DIR,
       imagesOutputDir: OUTPUT_DIR,
