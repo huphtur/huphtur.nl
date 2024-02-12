@@ -2,6 +2,7 @@
 title: "Eleventy Filter to Turn a URL Into a Domain Name"
 description: "ZOMG I made my first 11ty filter!"
 date: 2024-01-31
+intro: yes
 ---
 For a new site I'm working on I needed to convert a URL `https://howmanydaysuntilomloop.com/` into just the domain name `howmanydaysuntilomloop.com`.
 
