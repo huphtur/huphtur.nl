@@ -22,9 +22,7 @@
     <meta name="google" content="nositelinkssearchbox" />
     <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <title>
-      {% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}
-    </title>
+    <title>{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
@@ -43,6 +41,7 @@
         site.description
       }}{% endif %}"
     />
+    <meta name="generator" content="Eleventy">
     <meta name="theme-color" content="#E2E2E2" media="(prefers-color-scheme: light)">
     <meta name="theme-color" content="#1C2126" media="(prefers-color-scheme: dark)">    
     <meta property="og:site_name" content="huphtur.nl" />
