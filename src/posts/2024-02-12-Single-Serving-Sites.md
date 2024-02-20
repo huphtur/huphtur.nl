@@ -36,3 +36,15 @@ While building the site I thought I had a fancy design that would work, but I wa
 - Some sort of automated script that flags dead sites
 
 Got any other ideas for the site or know a cool site not on the list? Add it to the [GitHub repo](https://github.com/huphtur/single-serving-sites) or [hit me up on Mastodon](https://mastodon.social/@huphtur).
+
+## UPDATE
+
+New design is now live. Originally I planned to go for a table like design but it felt too spreadsheety, so I stuck with the cards. Introduced the most basic colors for new and visited links.
+
+[![Safari desktop browser displaying the Single-Serving Sites page with a lot of cards.](/images/singleservingsitescards.png)](https://singleservingsites.cool/)
+
+Added a Search/Filter and Sorting option with [list.js](https://listjs.com/). Somewhat dated resource but still works great.
+
+Switched from using Tailwind to just handmade CSS. Not going to lie, Tailwind so much faster to develop with, but handmade CSS is much cleaner.
+
+And of course added a ton of single-serving sites to the list!
