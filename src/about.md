@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "About huphtur"
+title: "About"
 ---
 I'm Marcel Appelman, a tall, skinny Dutch guy with a penchant for cycling, skateboarding, and nerdy computer stuff. This is my personal website, anything jotted down here is my humble (and quite often incorrect) opinion. _I'm Dutch, not perfect._
 
