@@ -37,7 +37,7 @@ While building the site I thought I had a fancy design that would work, but I wa
 
 Got any other ideas for the site or know a cool site not on the list? Add it to the [GitHub repo](https://github.com/huphtur/single-serving-sites) or [hit me up on Mastodon](https://mastodon.social/@huphtur).
 
-## UPDATE
+## CARDS UPDATE
 
 New design is now live. Originally I planned to go for a table like design but it felt too spreadsheety, so I stuck with the cards. Introduced the most basic colors for new and visited links.
 
@@ -48,3 +48,14 @@ Added a Search/Filter and Sorting option with [list.js](https://listjs.com/). So
 Switched from using Tailwind to just handmade CSS. Not going to lie, Tailwind so much faster to develop with, but handmade CSS is much cleaner.
 
 And of course added a ton of single-serving sites to the list!
+
+## THUMBNAIL UPDATE
+
+Now with screenshots! Was a bit of a struggle trying to figure out how to best do this. 
+
+[![Safari desktop browser displaying the Single-Serving Sites page with a lot of cards and screenshots.](/images/singleservingsitesthumbs.png)](https://singleservingsites.cool/)
+
+First I used a simple [Puppeteer](https://pptr.dev/) script to grab screenshots of all the sites. Then manually made some screenshots to improve the content.
+
+And finally I used [11ty Image plugin](https://www.11ty.dev/docs/plugins/image/) to resize and convert to [AVIF](https://en.wikipedia.org/wiki/AVIF) format. This is all done on my local drive for now, as I'm still trying to figure out how to do best do this on the server without spending too many build minutes. 
+
