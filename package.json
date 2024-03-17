@@ -3,12 +3,13 @@
   "description": "Personal blog built with Eleventy and Tailwind CSS.",
   "repository": "https://github.com/huphtur/huphtur.nl",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "serve": "rm -rf _site && npx @11ty/eleventy --serve & npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --watch",
     "build": "rm -rf _site && ELEVENTY_ENV=production npx @11ty/eleventy && npx tailwindcss -i ./src/tailwind.css -o ./_site/styles.css --minify"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "3.0.0-alpha.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0",
     "@tailwindcss/typography": "^0.5.10",
     "tailwindcss": "^3.4.1"

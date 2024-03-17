@@ -1,12 +1,12 @@
-const embedEverything = require('eleventy-plugin-embed-everything');
-const img2picture = require('eleventy-plugin-img2picture');
-const pluginRss = require('@11ty/eleventy-plugin-rss');
-const markdownIt = require("markdown-it");
+import embedEverything from 'eleventy-plugin-embed-everything';
+import img2picture from 'eleventy-plugin-img2picture';
+import pluginRss from '@11ty/eleventy-plugin-rss';
+import markdownIt from "markdown-it";
 
 const INPUT_DIR = './src';
 const OUTPUT_DIR = './_site/images';
 
-module.exports = function (eleventyConfig) {
+export default async function(eleventyConfig) {
   eleventyConfig.addWatchTarget('./tailwind.config.js');
   eleventyConfig.addWatchTarget('./src/tailwind.css');
 
