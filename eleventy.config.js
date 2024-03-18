@@ -7,10 +7,8 @@ const INPUT_DIR = './src';
 const OUTPUT_DIR = './_site/images';
 
 export default async function(eleventyConfig) {
-  eleventyConfig.addWatchTarget('./tailwind.config.js');
-  eleventyConfig.addWatchTarget('./src/tailwind.css');
 
-  // eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy('src/styles.css');
   eleventyConfig.addPassthroughCopy('src/favicon.ico');
   eleventyConfig.addPassthroughCopy('src/icon.svg');
   eleventyConfig.addPassthroughCopy('src/apple-touch-icon.png');
@@ -39,7 +37,7 @@ export default async function(eleventyConfig) {
       formats: ['webp'],
       // sizes: '(min-width: 960px) 720px, 100vw',
       minWidth: 480,
-      maxWidth: 1440,
+      maxWidth: 2400,
       widthStep: 320,
       // sharpAvifOptions: {
       //   lossless: true,
