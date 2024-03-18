@@ -37,7 +37,7 @@ export default async function(eleventyConfig) {
       formats: ['webp'],
       // sizes: '(min-width: 960px) 720px, 100vw',
       minWidth: 480,
-      maxWidth: 1440,
+      maxWidth: 2400,
       widthStep: 320,
       // sharpAvifOptions: {
       //   lossless: true,
