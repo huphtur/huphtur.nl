@@ -6,52 +6,21 @@ pagination:
   reverse: true
   alias: posts
 ---
+{% for item in posts %}
+<article>
+  <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
+  {% if item.data.intro %} {% if item.data.image %}
+  <p><a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}" /></a></p>
+  {% endif %}
+  <p>{{ item.data.description }}</p>
+  {% else %}
+  <p>{{ item.templateContent }}</p>
+  {% endif %}
+</article>
+{% endfor %}
 
-<div class="space-y-20 md:space-y-40">
-  {% for item in posts %}
-  <article>
-    <h1>
-      <a
-        class="font-extrabold text-dark dark:!text-light no-underline hover:!text-accent"
-        href="{{ item.url }}"
-        >{{ item.data.title }}</a
-      >
-    </h1>
-    {% if item.data.intro %} {% if item.data.image %}
-    <p>
-      <a href="{{ item.url }}">
-        {% if forloop.first == true %} 
-        <img src="{{ item.data.image }}" alt="{{ item.data.alt }}" loading="eager" />
-        {% else %}
-        <img src="{{ item.data.image }}" alt="{{ item.data.alt }}" />
-        {% endif %}
-      </a>
-    </p>
-    {% endif %}
-    <p class="lead">{{ item.data.description }}</p>
-    <p>
-      <a class="no-underline after:ml-1 after:content-['→']" href="{{ item.url }}"
-        >Read <em class="italic underline decoration-accent decoration-2 md:decoration-4 underline-offset-2">{{ item.data.title }}</em></a
-      >
-    </p>
-    {% else %}
-    <p>{{ item.templateContent }}</p>
-    {% endif %}
-  </article>
-  {% endfor %}
+
+<div>
+  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older</a>{% endif %} {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer</a>{% endif %}
 </div>
 
-<div class="md:mt-40 mt-20 text-center">
-  {% if pagination.href.next %}<a
-    class="no-underline before:mr-1 before:content-['←']"
-    href="{{ pagination.href.next }}"
-    ><span class="underline decoration-accent decoration-2 md:decoration-4 underline-offset-2"
-      >Older</a
-  >{% endif %} {% if pagination.href.previous %}<a
-    class="no-underline after:ml-1 after:content-['→']"
-    href="{{ pagination.href.previous }}"
-    ><span class="underline decoration-accent decoration-2 md:decoration-4 underline-offset-2"
-      >Newer</span
-    ></a
-  >{% endif %}
-</div>
