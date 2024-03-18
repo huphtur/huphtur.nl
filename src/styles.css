@@ -52,6 +52,7 @@ header a, div a, footer a, article h1 a {
 
 img, picture, video, canvas, svg {
   max-width: 100%;
+  height: auto;
   display: block;
 }
 
