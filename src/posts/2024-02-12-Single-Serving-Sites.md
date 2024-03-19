@@ -8,7 +8,7 @@ After I [launched](/how-many-days-until-omloop/) How Many Days Until Omloop, I w
 
 Introducing: [Single-Serving Sites](https://singleservingsites.cool/). My effort to try to list all the cool single-serving sites still online. 
 
-[![Safari desktop browser displaying the Single-Serving Sites page.](/images/singleservingsites.png)](https://singleservingsites.cool/)
+<img src="/images/singleservingsites.png" alt="Safari desktop browser displaying the Single-Serving Sites page." loading="eager">
 
 ## What Makes a Single-Serving Site So Cool?
 Of course the cultural impact of some of these sites is important. To me the fact that a person had an idea, registered a URL, and found some hosting just to put up a page on the internet is awesome. And then the best part: every single time when the domain is about to expire they will have to answer the question: _"Should I keep the site or not?"_
