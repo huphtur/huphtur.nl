@@ -28,7 +28,7 @@ html {
   color: var(--text);
   -webkit-font-smoothing: antialiased;
   font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: clamp(1rem, .6786rem + 1.6071vi, 3.25rem);
+  font-size: clamp(1rem, .75rem + 1.5vi, 3.25rem);
 }
 
 a {
