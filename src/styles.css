@@ -1,20 +1,5 @@
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #e2e2e2;
-    --from: #1c2126;
-    --to: #2c3136;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    --text: #2c3136;
-    --from: #e2e2e2;
-    --to: #2c313633;
-  }
-}
-
 :root {
+  color-scheme: light dark;
   --accent: #ec622b;
 }
 
@@ -24,15 +9,15 @@
 
 html {
   scroll-behavior: smooth;
-  background: fixed linear-gradient(var(--from), var(--to));
-  color: var(--text);
+  background-color: Canvas;
+  color: CanvasText;
   -webkit-font-smoothing: antialiased;
   font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
   font-size: clamp(1rem, .75rem + 1.5vi, 3.25rem);
 }
 
 a {
-  color: var(--text);
+  color: CanvasText;
   text-decoration-color: var(--accent);
   text-underline-offset: .12rem;
   text-decoration-thickness: .08rem;
@@ -89,7 +74,7 @@ h1 a, h1, h2, h3, h4 {
 }
 
 pre {
-  background-color: var(--from);
+  background-color: black;
   tab-size: 2;
   border-radius: .5rem;
   padding: 1rem;
