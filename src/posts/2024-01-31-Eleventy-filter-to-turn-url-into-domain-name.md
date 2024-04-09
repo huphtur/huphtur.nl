@@ -1,6 +1,6 @@
 ---
 title: "Eleventy Filter to Turn a URL Into a Domain Name"
-description: "ZOMG I made my first 11ty filter!"
+description: "ZOMG my first 11ty filter!"
 date: 2024-01-31
 intro: yes
 ---

@@ -1,8 +1,9 @@
 ---
 title: "Introducing Single-Serving Sites"
-description: "I made a Single-Serving Site for SIngle-Serving Sites!"
-image: /images/singleservingsites.png
+description: "Why and how I launched a single-serving site to list all the cool single-serving sites still online."
+image: /images/singleservingsitesthumbs.png
 date: 2024-02-12
+intro: yes
 ---
 After I [launched](/how-many-days-until-omloop/) How Many Days Until Omloop, I wondered if there was a site that would list all single-serving sites. Did some searching and I came to the conclusion that there are no actively maintained sites for this. 
 
