@@ -13,7 +13,9 @@
     "@11ty/eleventy-plugin-rss": "^1.2.0"
   },
   "dependencies": {
+    "@11ty/eleventy-fetch": "^4.0.1",
     "@11ty/eleventy-img": "^4.0.2",
+    "dotenv": "^16.4.5",
     "eleventy-plugin-embed-everything": "^1.18.2"
   }
 }
