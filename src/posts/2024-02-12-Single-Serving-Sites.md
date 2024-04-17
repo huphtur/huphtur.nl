@@ -1,4 +1,5 @@
 ---
+permalink: "/single-serving-sites/"
 title: "Introducing Single-Serving Sites"
 description: "Why and how I launched a single-serving site to list all the cool single-serving sites still online."
 image: /images/singleservingsitesthumbs.png

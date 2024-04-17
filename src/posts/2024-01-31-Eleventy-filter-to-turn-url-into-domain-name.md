@@ -1,4 +1,5 @@
 ---
+permalink: "/eleventy-filter-to-turn-url-into-domain-name/"
 title: "Eleventy Filter to Turn a URL Into a Domain Name"
 description: "ZOMG my first 11ty filter!"
 date: 2024-01-31
