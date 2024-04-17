@@ -9,7 +9,7 @@
     "build": "rm -rf _site && ELEVENTY_ENV=production npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.6",
+    "@11ty/eleventy": "3.0.0-alpha.5",
     "@11ty/eleventy-plugin-rss": "^1.2.0"
   },
   "dependencies": {
