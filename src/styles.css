@@ -80,6 +80,11 @@ pre {
   border-radius: .5rem;
   padding: 1rem;
   overflow-x: auto;
+  @media print {
+      white-space: pre-wrap;
+      background-color: canvas;
+      border: 1px solid #000;
+    }  
 }
 
 code {
@@ -93,6 +98,9 @@ blockquote {
 
 div {
   text-align: center;
+  @media print {
+    display: none;
+  }
 }
 
 div a:first-of-type:before {
@@ -112,16 +120,7 @@ footer {
   gap: 2rem;
   padding-top: 2rem;
   display: flex;
-}
-
-@media print {
-  pre {
-    white-space: pre-wrap;
-    background-color: canvas;
-    border: 1px solid #000;
-  }
-
-  div, footer {
+  @media print {
     display: none;
   }
 }
