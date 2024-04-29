@@ -3,16 +3,11 @@
   --accent: #ec622b;
 }
 
-* {
-  line-height: calc(1em + .5rem);
-}
-
 html {
   scroll-behavior: smooth;
   background-color: Canvas;
   color: CanvasText;
-  font-family: system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-  font-size: clamp(1rem, .75rem + 1.5vi, 3.25rem);
+  font: 200 clamp(1rem, .75rem + 1.5vi, 3.25rem)/calc(1em + .5rem) system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 }
 
 a {
@@ -49,8 +44,8 @@ body {
 
 header a {
   align-items: center;
-  font-weight: bold;
   display: flex;
+  letter-spacing: .2rem;
 }
 
 header img {
