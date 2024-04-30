@@ -18,11 +18,10 @@ a {
   transition-property: all;
   transition-duration: 99ms;
   transition-timing-function: cubic-bezier(.4, 0, .2, 1);
-}
-
-a:hover {
-  color: var(--accent);
-  text-decoration-thickness: .12rem;
+  &:hover {
+    color: var(--accent);
+    text-decoration-thickness: .12rem;
+  }
 }
 
 header a, div a, footer a, article h1 a {
@@ -45,7 +44,12 @@ body {
 header a {
   align-items: center;
   display: flex;
-  letter-spacing: .2rem;
+  letter-spacing: .1rem;
+  transition: all .2s ease-in-out, margin-left .2s ease-in-out;
+  &:hover {
+    letter-spacing: .25rem;
+    font-weight: 400;
+  }
 }
 
 header img {
