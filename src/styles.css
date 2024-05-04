@@ -8,6 +8,9 @@ html {
   background-color: Canvas;
   color: CanvasText;
   font: 200 clamp(1rem, .75rem + 1.5vi, 3.25rem)/calc(1em + .5rem) system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  @supports (-webkit-touch-callout: none) {
+    font-weight: 300;
+  }
 }
 
 a {
