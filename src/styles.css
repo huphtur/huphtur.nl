@@ -44,7 +44,7 @@ body {
 
 header a {
   align-items: center;
-  display: flex;
+  display: inline-flex;
   letter-spacing: .1rem;
 }
 
