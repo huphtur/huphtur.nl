@@ -1,16 +1,14 @@
 export default {
-  lang: 'en',
-  title: 'huphtur - Marcel Appelman',
+  title: 'huphtur',
   description:
-    'Tall, skinny Dutch guy with a penchant for cycling, skateboarding, and nerdy computer stuff.',
-  url: 'https://huphtur.nl', // don't end with a slash /
+    'Tall, Dutch guy with a penchant for cycling, skateboarding, music, and nerdy computer stuff.',
+  url: 'https://huphtur.nl',
   author: {
     name: 'Marcel Appelman',
     email: 'huphtur@gmail.com',
   },
-  meta_data: {
-    theme_color: '#f56565',
-    default_social_image: '/icon-512.png',
-    locale: 'en_US',
-  },
+  theme: {
+    dark: '#1c1b21',
+    light: '#d6d5dd',
+  }
 };

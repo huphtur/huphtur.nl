@@ -2,6 +2,7 @@
 title: "I Have Never…"
 description: "Done drugs, Drank coffee, Worn a scarf, and less."
 date: 2015-04-21
+tags: ["Etcetera"]
 ---
 * Done drugs
 * Drank coffee

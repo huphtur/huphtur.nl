@@ -2,25 +2,33 @@
 layout: default
 pagination:
   data: collections.post
-  size: 11
+  size: 5
   reverse: true
   alias: posts
 ---
+{% if page.url == "/" %}
+  <article>
+    <div>
+      <p>👋 I’m Marcel Appelman, a tall, <s>skinny</s> Dutch guy with a penchant for <a href="/cycling/">cycling</a>, <a href="/skateboarding/">skateboarding</a>, <a href="/music/">music</a>, and <a href="/nerdy-computer-stuff/">nerdy computer stuff</a>. Welcome to my silly little blog.</p>
+    </div>
+  </article>
+{% endif %}
+
 {% for item in posts %}
-<article>
-  <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
-  {% if item.data.intro %} {% if item.data.image %}
-  <p><a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}" /></a></p>
-  {% endif %}
-  <p>{{ item.data.description }}</p>
-  {% else %}
-  <p>{{ item.templateContent }}</p>
-  {% endif %}
-</article>
+  <article style="background:hsl({{ item.date | daysPassed }},99%,var(--lightness));">
+    <div>
+      <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
+      {% if item.data.intro %} {% if item.data.image %}
+      <p><a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}" /></a></p>
+      {% endif %}
+      <p>{{ item.data.description }}</p>
+      {% else %}
+      <p>{{ item.templateContent }}</p>
+      {% endif %}
+    </div>
+  </article>
 {% endfor %}
 
-
-<div>
-  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older</a>{% endif %} {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer</a>{% endif %}
-</div>
-
+<section>
+  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older posts</a>{% endif %} {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer posts</a>{% endif %}
+</section>

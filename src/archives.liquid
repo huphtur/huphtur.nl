@@ -1,16 +1,16 @@
 ---
-layout: default
-title: "huphtur archives"
+layout: post
+title: "Articles"
 ---
-{% for post in collections.post reversed %}
-  {% assign currentdate = post.date | date: "%Y" %}
+{% for item in collections.post reversed %}
+  {% assign currentdate = item.date | date: "%Y" %}
   {% if currentdate != date %}
     {% unless forloop.first %}</ul>{% endunless %}
-    <h1 id="y{{post.date | date: "%Y"}}">{{ currentdate }}</h1>
+    <h2>{{ currentdate }}</h2>
     <ul>
       {% assign date = currentdate %}
-      {% endif %}
-        <li><a href="{{ post.url }}">{{ post.data.title }}</a></li>
+    {% endif %} 
+        <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
       {% if forloop.last %}
     </ul>
   {% endif %}

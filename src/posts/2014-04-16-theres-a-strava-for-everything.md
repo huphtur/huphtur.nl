@@ -2,6 +2,7 @@
 title: "There’s a Strava for Everything"
 description: "You get a Strava, and you get a Strava!"
 date: 2014-04-16
+tags: ["Nerdy Computer Stuff", "Cycling"]
 ---
 - [Strava for flying][1]
 - [Strava for tennis][2]

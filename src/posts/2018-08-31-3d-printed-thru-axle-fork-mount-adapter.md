@@ -5,6 +5,7 @@ image: /images/tacx-thru-axle.jpg
 alt: "Thru-Axle bike fork mounted on the bike stand."
 date: 2018-08-31
 intro: yes
+tags: ["Nerdy Computer Stuff", "Cycling"]
 ---
 Recently I got me one of those bikes with disc brakes. However my [Tacx Spider Team Repair Stand (T3050)](https://amzn.to/2LH6C1W) only came with a quick release fork mount, which doesn’t work with the new disc brake fork (12mm × 100mm).
 

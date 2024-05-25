@@ -1,0 +1,22 @@
+---
+layout: post
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+eleventyComputed:
+  title: "{{ tag }}"
+permalink: /{{ tag | slugify }}/
+---
+{% assign posts = collections[ tag ] %}
+  <ul>
+    {% for item in posts reversed %}
+    <li><a href="{{ item.url }}">{{ item.data.title }}</a></li>
+    {% endfor %}
+  </ul>

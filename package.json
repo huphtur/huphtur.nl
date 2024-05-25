@@ -1,20 +1,23 @@
 {
   "name": "huphtur.nl",
-  "description": "Personal blog built with Eleventy and Tailwind CSS.",
+  "description": "My silly little blog",
   "repository": "https://github.com/huphtur/huphtur.nl",
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "serve": "rm -rf _site && npx @11ty/eleventy --serve --quiet",
-    "build": "rm -rf _site && ELEVENTY_ENV=production npx @11ty/eleventy"
+    "clean": "rm -rf _site",
+    "serve": "npx @11ty/eleventy --serve --quiet",
+    "build": "npx @11ty/eleventy",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+    "debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+    "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.5",
-    "@11ty/eleventy-plugin-rss": "^1.2.0"
-  },
-  "dependencies": {
+    "@11ty/eleventy": "3.0.0-alpha.10",
     "@11ty/eleventy-fetch": "^4.0.1",
     "@11ty/eleventy-img": "^4.0.2",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
     "dotenv": "^16.4.5",
     "eleventy-plugin-embed-everything": "^1.18.2"
   }
