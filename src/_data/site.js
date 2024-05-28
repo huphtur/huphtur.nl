@@ -9,6 +9,6 @@ export default {
   },
   theme: {
     dark: '#1c1b21',
-    light: '#d6d5dd',
+    light: '#dedde3',
   }
 };

@@ -22,7 +22,7 @@ svg {
   color-scheme: light dark;
   --accent: #ec622b;
   --dark: #1c1b21;
-  --light: #d6d5dd;
+  --light: #dedde3;
   --saturation: 69%;
   --lightness: 25%;
   @media (prefers-color-scheme: light) {
