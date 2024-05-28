@@ -59,6 +59,14 @@
         {% include 'nav' %}
     </header>
 
+    {% if page.url == "/" %}
+      <article>
+        <div>
+          <p>👋 I’m Marcel Appelman, a tall, <s>skinny</s> Dutch guy with a penchant for <a href="/cycling/">cycling</a>, <a href="/skateboarding/">skateboarding</a>, <a href="/music/">music</a>, and <a href="/nerdy-computer-stuff/">nerdy computer stuff</a>. Welcome to my silly little blog.</p>
+        </div>
+      </article>
+    {% endif %}
+        
     <main>
       {{ content }}
     </main>

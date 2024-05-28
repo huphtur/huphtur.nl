@@ -23,10 +23,10 @@ svg {
   --accent: #ec622b;
   --dark: #1c1b21;
   --light: #d6d5dd;
-  --lightness: 12%;
-
+  --saturation: 69%;
+  --lightness: 25%;
   @media (prefers-color-scheme: light) {
-    --lightness: 85%;
+    --lightness: 75%;
   }
 }
 
@@ -174,3 +174,7 @@ section {
   gap: 1rem;
   padding: 1rem;
 }
+
+/* main article:not(:first-child)  { 
+  border-top: .08rem solid light-dark(var(--dark), var(--light));
+} */
