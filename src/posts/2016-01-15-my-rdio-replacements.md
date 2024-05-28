@@ -5,6 +5,7 @@ image: /images/rdio-goodbye.png
 alt: "rdio banner image with the text goodbye for now."
 date: 2016-01-15
 intro: yes
+tags: ["Music"]
 ---
 Some of us must have done something bad last year, because Santa shut down [Rdio](http://rdio.com/) right before Xmas. It was one of the better music services with a clean design and amazing comunity with whom I discovered and shared so many great tunes with.
 

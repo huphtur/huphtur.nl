@@ -1,0 +1,180 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+:root {
+  color-scheme: light dark;
+  --accent: #ec622b;
+  --dark: #1c1b21;
+  --light: #dedde3;
+  --saturation: 69%;
+  --lightness: 25%;
+  @media (prefers-color-scheme: light) {
+    --lightness: 75%;
+  }
+}
+
+html {
+  background-color: light-dark(var(--light), var(--dark));
+  color: light-dark(var(--dark), var(--light));
+  font: 400 clamp(1rem, 0.75rem + 1.5vi, 3.25rem) / calc(1em + 0.5rem) system-ui, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+}
+
+div {
+  max-width: 23rem;
+  margin: 0 auto;
+}
+
+header,
+footer,
+article {
+  padding: 1rem;
+}
+
+a {
+  color: light-dark(black, white);
+  text-decoration-color: var(--accent);
+  text-underline-offset: .12rem;
+  text-decoration-thickness: .08rem;
+  transition: color .14s ease-in-out;
+
+  &:hover {
+    color: var(--accent);
+    text-decoration-thickness: .12rem;
+  }
+}
+
+pre {
+  background-color: light-dark(var(--light), var(--dark));
+  tab-size: 2;
+  border-radius: .5rem;
+  padding: 1rem;
+  overflow-x: auto;
+  line-height: 1.25;
+
+  @media print {
+    white-space: pre-wrap;
+    background-color: canvas;
+    border: 1px solid #000;
+  }
+}
+
+code {
+  font-size: smaller;
+}
+
+blockquote {
+  border-left: .4rem solid var(--accent);
+  padding-left: 1rem;
+}
+
+header a,
+footer a,
+article h1 a {
+  text-decoration: none;
+}
+
+header {
+  div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    >a {
+      align-items: center;
+      display: inline-flex;
+      font-weight: normal;
+    }
+  }
+
+  img {
+    border-radius: 999px;
+    width: 2rem;
+    height: 2rem;
+    margin-right: 0.5rem;
+  }
+
+  nav ul {
+    list-style: none;
+    margin: 0;
+    display: flex;
+    gap: .75rem;
+
+    span {
+      border: 0;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+  }
+}
+
+nav {
+  @media print {
+    display: none;
+  }
+}
+
+h1 {
+  /* https://mastodon.social/@pepelsbey/112124066833118895 */
+  font-size: 200%;
+}
+
+header,
+footer,
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: -0.05rem;
+  font-family: Superclarendon, Bookman Old Style, URW Bookman, URW Bookman L, Georgia Pro, Georgia, serif;
+  line-height: 100%;
+  color: light-dark(black, white);
+}
+
+footer {
+  ul {
+    font-size: smaller;
+    list-style: none;
+    display: flex;
+    gap: .75rem;
+    padding: 0;
+    justify-content: space-between;
+
+    b {
+      display: none;
+    }
+  }
+}
+
+section {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* main article:not(:first-child)  { 
+  border-top: .08rem solid light-dark(var(--dark), var(--light));
+} */

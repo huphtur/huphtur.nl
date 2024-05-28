@@ -1,77 +1,82 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover"
-    />
-    <meta
-      name="description"
-      content="{% if description %}{{ description }}{% else %}{{
-        site.description
-      }}{% endif %}"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+
+    {%if title %}
+      <title>{{ title }}</title>
+      <meta name="twitter:title" content="{{ title }}" />
+      <meta property="og:title" content="{{ title }}" />
+    {% else %}
+      <title>{{ site.title }}</title>
+      <meta name="twitter:title" content="{{ title }}" />
+      <meta property="og:title" content="{{ site.title }}" />
+    {% endif %} 
+
+    {% if description %}
+      <meta name="twitter:description" content="{{ description }}" />
+      <meta name="description" content="{{ description }}" />
+      <meta property="og:description" content="{{ description }}" />
+    {% else %}
+      <meta name="twitter:description" content="{{ site.description }}" />
+      <meta name="description" content="{{ site.description }}" />
+      <meta property="og:description" content="{{ site.description }}" />
+    {% endif %} 
 
     {% if eleventyExcludeFromCollections %}
-    <meta name="robots" content="noindex" />
-    {% else %}
-    <meta name="robots" content="index,follow" />
+      <meta name="robots" content="noindex" />
+      {% else %}
+      <meta name="robots" content="index,follow" />
     {% endif %}
 
-    <meta name="google" content="nositelinkssearchbox" />
-    <meta name="format-detection" content="telephone=no" />
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
-    <title>{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}</title>
 
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <link rel="icon" href="/icon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
-    <meta property="og:type" content="website" />
-    <meta
-      property="og:title"
-      content="{% if title %}{{ title }}{% else %}{{ site.title }}{% endif %}"
-    />
-    <meta
-      property="og:description"
-      content="{% if description %}{{ description }}{% else %}{{
-        site.description
-      }}{% endif %}"
-    />
     <meta name="generator" content="Eleventy">
-    <meta name="theme-color" content="#E2E2E2" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#1C2126" media="(prefers-color-scheme: dark)">    
+    <meta name="theme-color" content="{{site.theme.light}}" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="{{site.theme.dark}}" media="(prefers-color-scheme: dark)">
     <meta property="og:site_name" content="huphtur.nl" />
     <meta property="og:locale" content="{{ site.meta_data.locale }}" />
     <meta property="article:author" content="{{ site.author.name }}" />
     <meta property="og:image" content="{{ site.url }}{% if image %}{{ image }}{% else %}{{ site.meta_data.default_social_image }}{% endif %}">
     <link rel="me" href="https://mastodon.social/@huphtur">
-
-    <link rel="stylesheet" href="/styles.css">
+    
+    <link rel="stylesheet" href="/css/styles.css">
   </head>
-
   <body>
-  
+
     <header>
-      <a href="/">
-        <img eleventy:widths="100,200" loading="eager" src="/images/huphtur.png" alt="Memoji of man with a bike helmet on his head sitting behind a MacBook."/>
-        <p>huphtur</p>
-      </a>
+      <div>
+        <a href="/">
+          <img eleventy:widths="100,200" loading="eager" src="/images/huphtur.png" alt="An emoji-style man wearing an orange bike helmet and AirPods, peeking over a MacBook on a light orange background."/>
+          <span>huphtur</span>
+        </a>
+        {% include 'nav' %}
     </header>
 
+    {% if page.url == "/" %}
+      <article>
+        <div>
+          <p>👋 I’m Marcel Appelman, a tall, <s>skinny</s> Dutch guy with a penchant for <a href="/cycling/">cycling</a>, <a href="/skateboarding/">skateboarding</a>, <a href="/music/">music</a>, and <a href="/nerdy-computer-stuff/">nerdy computer stuff</a>. Welcome to my silly little blog.</p>
+        </div>
+      </article>
+    {% endif %}
+        
     <main>
       {{ content }}
     </main>
 
     <footer>
-      <a href="/">🏠</a>
-      <a href="/about/">ℹ️</a>
-      <a href="/now/">‼️</a>
-      <a href="/archives/">🗄️</a>
-      <a href="/feed.xml">🗞️</a>
+      <div>
+        {% include 'nav' %}
+      </div>
     </footer>
+
+    {% include "scripts.liquid" %}
   </body>
 </html>

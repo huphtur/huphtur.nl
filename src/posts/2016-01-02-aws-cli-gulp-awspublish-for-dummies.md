@@ -3,6 +3,7 @@ title: "AWS-CLI + Gulp + awspublish for Dummies"
 description: "Quick tutorial on how to automaticaly upload files to S3."
 date: 2016-01-02
 intro: yes
+tags: ["Nerdy Computer Stuff"]
 ---
 One of the better [Gulp](http://gulpjs.com/) plugins to upload your files to [Amazon S3](https://aws.amazon.com/s3/) has to be [awspublish](https://www.npmjs.com/package/gulp-awspublish). Unfortunately, since I’m not the brightest when it comes to CLI stuff, it took me a while to get it working properly. Here’s a quick tutorial that will hopefully save other developers *in spe* some time.
 

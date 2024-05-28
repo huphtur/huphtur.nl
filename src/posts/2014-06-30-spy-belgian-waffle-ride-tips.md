@@ -5,6 +5,7 @@ image: /images/spybwr-steep-hill.jpg
 alt: "This hill hurts, specially after 200KM of racing."
 date: 2014-06-30
 intro: yes
+tags: ["Cycling"]
 ---
 Back in April I participated in what was labeled *The Most Unique Cycling Event in The U.S.* aka the [SPY Belgian Waffle Ride.](https://facebook.com/SPYBWR). A 217KM long ride/race with over 3450 meters of climbing, dirt sections, water crossing, jerseys, waffles and beer. What more does a bike nerd need?!
 

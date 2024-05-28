@@ -5,6 +5,7 @@ image: /images/strava-doper.jpg
 alt: "Legendary Strava doper Nicholas Brandt-Sorenson taking a selfie while biking."
 date: 2016-04-12
 intro: yes
+tags: ["Nerdy Computer Stuff", "Cycling"]
 ---
 Amateur cyclist Nicholas Brandt-Sorenson got busted for doping, then got busted again for selling dope. Peter Flax wrote a [great article](http://cyclingtips.com/2016/03/who-is-thorfinn-sassquatch-the-mysterious-case-of-a-los-angeles-strava-legend/) about him on CyclingTips. This and many similar articles got shared and discussed at great length on [/r/Velo/](https://www.reddit.com/r/Velo/).
 

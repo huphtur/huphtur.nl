@@ -3,8 +3,10 @@ permalink: "/single-serving-sites/"
 title: "Introducing Single-Serving Sites"
 description: "Why and how I launched a single-serving site to list all the cool single-serving sites still online."
 image: /images/singleservingsitesthumbs.png
+alt: "A webpage listing single-serving sites, each with a title, date, description, author, and thumbnail, showcasing unique and quirky one-page websites."
 date: 2024-02-12
 intro: yes
+tags: ["Nerdy Computer Stuff"]
 ---
 After I [launched](/how-many-days-until-omloop/) How Many Days Until Omloop, I wondered if there was a site that would list all single-serving sites. Did some searching and I came to the conclusion that there are no actively maintained sites for this. 
 

@@ -5,6 +5,7 @@ image: /images/aaron-collins-mask-test-video.jpg
 alt: "Aaron Collins with a mask sitting in his room with tests results spreadsheet in the background."
 date: 2021-01-24
 intro: yes
+tags: ["Etcetera"]
 ---
 https://youtu.be/Gu0GkjOpOj0
 

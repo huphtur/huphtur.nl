@@ -2,6 +2,7 @@
 title: "Where’s the Fun in Skateboarding?"
 description: "Kids nowadays don’t really understand skateboard humor anymore."
 date: 2015-10-07
+tags: ["Skateboarding"]
 ---
 Yesterday I enjoyed a great lunch with [Parra][1], one of the guys behind [Tired Skateboards][2]. While reminiscing about our time skating together, he noted that kids nowadays don’t really understand "skateboard humor" anymore.
 

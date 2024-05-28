@@ -3,6 +3,7 @@ title: "My Top 5 ’90s Hip-Hop Tracks"
 description: " It’s incredible hard to pick a top 5 because that era is just too good. I tried anyway."
 date: 2017-04-12
 intro: yes
+tags: ["Music"]
 ---
 My friend [Matt Bochneak](https://twitter.com/MattBochneak) sent me a link to [Hauschka’s Top 5 ’90s Hip-Hop Tracks](http://www.self-titledmag.com/2017/04/05/hauschka-top-5-90s-hip-hop-tracks/). He thought the picks weren’t that great. I replied that it’s actually pretty hard to make picks because that era is so good. Which got me thinking, could I pick 5 tracks?
 

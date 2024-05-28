@@ -4,6 +4,7 @@ description: "Karl, Recycling, Cat 6 racing, Street spam, and Layer programming.
 image: /images/streetspam.jpg
 alt: "streetspam."
 date: 2013-10-14
+tags: ["Etcetera"]
 ---
 [![streetspam.](/images/streetspam.jpg)][1]
 
