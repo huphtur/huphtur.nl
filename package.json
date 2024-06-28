@@ -13,10 +13,10 @@
     "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "3.0.0-alpha.10",
+    "@11ty/eleventy": "3.0.0-alpha.14",
     "@11ty/eleventy-fetch": "^4.0.1",
     "@11ty/eleventy-img": "^4.0.2",
-    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-rss": "^2.0.1",
     "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
     "dotenv": "^16.4.5",
     "eleventy-plugin-embed-everything": "^1.18.2"
