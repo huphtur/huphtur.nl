@@ -157,3 +157,11 @@ section {
   gap: 1rem;
   padding: 1rem;
 }
+
+body > i a {
+  position: absolute;
+  top: -20em;
+  &:focus, &:focus-visible {
+    top: 0em;
+  }
+}
