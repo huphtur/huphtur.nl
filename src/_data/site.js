@@ -7,8 +7,4 @@ export default {
     name: 'Marcel Appelman',
     email: 'huphtur@gmail.com',
   },
-  theme: {
-    dark: '#1c1b21',
-    light: '#dedde3',
-  }
 };

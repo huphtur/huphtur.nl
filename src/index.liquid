@@ -7,7 +7,7 @@ pagination:
   alias: posts
 ---
 {% for item in posts %}
-  <article style="background:hsl({{ item.date | daysPassed }},var(--saturation),var(--lightness));">
+  <article>
     <div>
       <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
       {% if item.data.intro %} {% if item.data.image %}
