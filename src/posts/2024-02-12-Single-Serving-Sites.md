@@ -3,7 +3,7 @@ permalink: "/single-serving-sites/"
 title: "Introducing Single-Serving Sites"
 description: "Why and how I launched a single-serving site to list all the cool single-serving sites still online."
 image: /images/singleservingsitesthumbs.png
-alt: "A webpage listing single-serving sites, each with a title, date, description, author, and thumbnail, showcasing unique and quirky one-page websites."
+alt: "A webpage listing single-serving sites showcasing unique and quirky one-page websites."
 date: 2024-02-12
 intro: yes
 tags: ["Nerdy Computer Stuff"]
