@@ -6,6 +6,7 @@ import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default async function (eleventyConfig) {
 
+	eleventyConfig.addPassthroughCopy("src/_headers");
   eleventyConfig.addPassthroughCopy({ 'src/favicon/': '/', });
   eleventyConfig.addPassthroughCopy('src/images');
 
