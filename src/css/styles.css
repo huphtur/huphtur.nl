@@ -33,13 +33,13 @@ article {
 a {
   color: light-dark(black, white);
   text-decoration-color: var(--accent);
-  text-underline-offset: .12rem;
-  text-decoration-thickness: .08rem;
+  text-underline-offset: .14rem;
+  text-decoration-thickness: .06rem;
   transition: color .14s ease-in-out;
 
   &:hover {
     color: var(--accent);
-    text-decoration-thickness: .12rem;
+    text-decoration-thickness: .08rem;
   }
 }
 
