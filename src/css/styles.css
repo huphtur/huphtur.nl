@@ -117,7 +117,6 @@ header {
 
     span {
       border: 0;
-      clip: rect(0 0 0 0);
       height: 1px;
       margin: -1px;
       overflow: hidden;
@@ -166,7 +165,7 @@ footer {
   }
 }
 
-section {
+small:not(article *) {
   text-align: center;
   display: flex;
   justify-content: center;

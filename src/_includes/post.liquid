@@ -4,7 +4,9 @@ layout: default
 <article>
 	<div>
 		<h1>{{ title }}</h1>
-		<time datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%B %e, %Y" }}</time>
+		{% if date	%}	
+		<small><time datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%B %e, %Y" }}</time></small>
+		{% endif %}
 		{{ content }}
 	</div>
 </article>

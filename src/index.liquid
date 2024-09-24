@@ -21,6 +21,4 @@ pagination:
   </article>
 {% endfor %}
 
-<section>
-  {% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older posts</a>{% endif %} {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer posts</a>{% endif %}
-</section>
+<small>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older posts</a>{% endif %} {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer posts</a>{% endif %}</small>
