@@ -27,6 +27,7 @@ html {
 
 body {
   margin: 0;
+  position: relative
 }
 
 header,
@@ -100,7 +101,6 @@ header {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
   >a {
     align-items: center;
     display: inline-flex;
@@ -126,13 +126,7 @@ header {
     gap: .75rem;
 
     span {
-      border: 0;
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
+      display: none;
     }
   }
 
@@ -140,9 +134,29 @@ header {
     margin: .5rem 0;
   }
   @media (min-width: 666px) {
-    max-width: 35vw;
-    height: 100vh;
+    width: 35vw;
+    height: 100dvh;
     position: fixed;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    nav {
+      order: 3;
+      ul {
+        gap: .15rem;
+        flex-direction: column;
+        span {
+          display: inline-flex;
+          padding-left: .25rem;
+          font-size: smaller;
+        }
+      }
+    }
+    p {
+      font-size: smaller;
+    }    
   }
   
 }
@@ -150,6 +164,7 @@ header {
 main {
   @media (min-width: 666px) {
     margin-left: 35vw;
+    height: 100dvh;
   }
 }
 nav {
@@ -161,6 +176,9 @@ nav {
 h1 {
   /* https://mastodon.social/@pepelsbey/112124066833118895 */
   font-size: 200%;
+  @media (min-width: 666px) {
+    margin-top: .5rem;
+  }
 }
 
 header>a,
