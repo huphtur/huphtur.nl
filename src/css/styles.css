@@ -9,14 +9,20 @@ svg {
 }
 
 :root {
-  /* color-scheme: light dark; */
-  --accent: #ec622b;
+  color-scheme: light dark;
+  --vividorange: #ed6b2c;
+  --satindeepblack: #1c1b21;
+  --brilliance: #fbfbfe;
 }
 
 html {
-  color: CanvasText;
-  background-color: Canvas;
+  color: light-dark(var(--satindeepblack), var(--brilliance));
+  background-color: light-dark(var(--brilliance), var(--satindeepblack));
   font: 300 clamp(1rem, 0.75rem + 1.5vi, 3.25rem) / 1.5 Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+}
+
+body {
+  margin: 0;
 }
 
 div {
@@ -33,13 +39,13 @@ article {
 
 a {
   color: light-dark(black, white);
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--vividorange);
   text-underline-offset: .14rem;
   text-decoration-thickness: .06rem;
   transition: color .14s ease-in-out;
 
   &:hover {
-    color: var(--accent);
+    color: var(--vividorange);
     text-decoration-thickness: .08rem;
   }
 }
@@ -62,7 +68,7 @@ a[href="#main"]:hover {
 }
 
 pre {
-  background-color: light-dark(silver, black);
+  background-color: light-dark(white, black);
   tab-size: 2;
   border-radius: .5rem;
   padding: 1rem;
@@ -71,7 +77,6 @@ pre {
 
   @media print {
     white-space: pre-wrap;
-    background-color: canvas;
     border: 1px solid #000;
   }
 }
@@ -81,21 +86,23 @@ code {
 }
 
 blockquote {
-  border-left: .2rem solid var(--accent);
+  border-left: .2rem solid var(--vividorange);
   padding-left: 1rem;
 }
 
-header a,
-footer a,
+header > a,
+header nav a,
 article h1 a {
   text-decoration: none;
 }
 
 header {
-  div {
+  background-color: light-dark(white, black);
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
 
     >a {
       align-items: center;
@@ -104,7 +111,7 @@ header {
       span {
         padding-top: 0.15rem;
       }
-    }
+
   }
 
   img {
@@ -143,8 +150,7 @@ h1 {
   font-size: 200%;
 }
 
-header,
-footer,
+header>a,
 h1,
 h2,
 h3,

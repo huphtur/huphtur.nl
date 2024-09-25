@@ -50,22 +50,25 @@
   <body>
     <a href="#main">Skip to main content</a>
     <header>
-      <div>
-        <a href="/">
-          <img eleventy:widths="100,200" loading="eager" src="/images/huphtur.png" alt="An emoji-style man wearing an orange bike helmet and AirPods, peeking over a MacBook on a light orange background."/>
-          <span>huphtur</span>
-        </a>
-        {% include 'nav' %}
-      </div>
-    </header>
-
-    {% if page.url == "/" %}
-      <aside>
-        <div>
+      <a href="/">
+        <img eleventy:widths="100,200" loading="eager" src="/images/huphtur.png" alt="An emoji-style man wearing an orange bike helmet and AirPods, peeking over a MacBook on a light orange background."/>
+        <span>huphtur</span>
+      </a>
+      <nav>
+        <ul>
+          <li><a href="/"><b aria-hidden="true">🏡</b> <span>Home</span></a></li>
+          <li><a href="/about/"><b aria-hidden="true">💁‍♂️</b> <span>About</span></a></li>
+          <li><a href="/contact/"><b aria-hidden="true">📇</b> <span>Contact</span></a></li>
+          <li><a href="/archives/"><b aria-hidden="true">🗄️</b> <span>Archives</span></a></li>
+          <li><a href="/feed.xml"><b aria-hidden="true">📡</b> <span>RSS</span></a></li>
+        </ul>
+      </nav>
+      {% if page.url == "/" %}
+        <aside>
           <p>👋 I’m Marcel Appelman, a tall, <s>skinny</s> Dutch guy with a penchant for <a href="/cycling/">cycling</a>, <a href="/skateboarding/">skateboarding</a>, <a href="/music/">music</a>, and <a href="/nerdy-computer-stuff/">nerdy computer stuff</a>. Welcome to my silly little blog.</p>
-        </div>
-      </aside>
-    {% endif %}
+        </aside>
+      {% endif %}
+    </header>
         
     <main id="main">
       {{ content }}
