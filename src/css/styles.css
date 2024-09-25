@@ -1,3 +1,7 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 img,
 picture,
 video,
@@ -25,19 +29,13 @@ body {
   margin: 0;
 }
 
-div {
-  max-width: 23rem;
-  margin: 0 auto;
-}
-
 header,
-aside,
-footer,
 article {
   padding: 1rem;
 }
 
-a {
+a:link,
+a:visited {
   color: light-dark(black, white);
   text-decoration-color: var(--vividorange);
   text-underline-offset: .14rem;
@@ -90,7 +88,7 @@ blockquote {
   padding-left: 1rem;
 }
 
-header > a,
+header>a,
 header nav a,
 article h1 a {
   text-decoration: none;
@@ -98,20 +96,19 @@ article h1 a {
 
 header {
   background-color: light-dark(white, black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    display: flex;
+  >a {
     align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: inline-flex;
+    font-weight: normal;
 
-    >a {
-      align-items: center;
-      display: inline-flex;
-      font-weight: normal;
-      span {
-        padding-top: 0.15rem;
-      }
-
+    span {
+      padding-top: 0.15rem;
+    }
   }
 
   img {
@@ -136,6 +133,10 @@ header {
       position: absolute;
       width: 1px;
     }
+  }
+
+  aside {
+    margin: .5rem 0;
   }
 }
 
