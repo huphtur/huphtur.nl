@@ -9,7 +9,7 @@ svg {
 }
 
 :root {
-  color-scheme: light dark;
+  /* color-scheme: light dark; */
   --accent: #ec622b;
 }
 
@@ -52,6 +52,7 @@ a[href="#main"] {
   transform: translateX(-50%);
   text-align: center;
   font-size: smaller;
+  background-color: light-dark(white, black);
 }
 
 a[href="#main"]:active,
