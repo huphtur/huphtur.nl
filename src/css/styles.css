@@ -121,6 +121,7 @@ header {
   nav ul {
     list-style: none;
     margin: 0;
+    padding: 0;
     display: flex;
     gap: .75rem;
 
@@ -138,8 +139,19 @@ header {
   aside {
     margin: .5rem 0;
   }
+  @media (min-width: 666px) {
+    max-width: 35vw;
+    height: 100vh;
+    position: fixed;
+  }
+  
 }
 
+main {
+  @media (min-width: 666px) {
+    margin-left: 35vw;
+  }
+}
 nav {
   @media print {
     display: none;
