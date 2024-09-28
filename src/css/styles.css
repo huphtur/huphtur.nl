@@ -181,7 +181,10 @@ main {
   flex-grow: 1;
   height: 100dvh;
   overflow-y: auto;
-
+  
+  @media (orientation: portrait) {
+    padding-bottom: 3rem;
+  }
   @media (min-width: 666px) {
     padding-right: env(safe-area-inset-right);
   }
