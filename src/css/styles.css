@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 img,
 picture,
 video,
@@ -10,36 +16,44 @@ svg {
 
 :root {
   color-scheme: light dark;
-  --accent: #ec622b;
+  --vividorange: #ed6b2c;
+  --satindeepblack: #1c1b21;
+  --brilliance: #fbfbfe;
 }
 
 html {
-  color: CanvasText;
-  background-color: Canvas;
+  color: light-dark(var(--satindeepblack), var(--brilliance));
+  background-color: light-dark(var(--brilliance), var(--satindeepblack));
   font: 300 clamp(1rem, 0.75rem + 1.5vi, 3.25rem) / 1.5 Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  overflow: hidden;
+  height: 100vh;
 }
 
-div {
-  max-width: 23rem;
-  margin: 0 auto;
+body {
+  margin: 0;
+  position: relative;
+  height: 100%;
+
+  @media (min-width: 666px) {
+    display: flex;
+  }
 }
 
 header,
-aside,
-footer,
 article {
   padding: 1rem;
 }
 
-a {
+a:link,
+a:visited {
   color: light-dark(black, white);
-  text-decoration-color: var(--accent);
+  text-decoration-color: var(--vividorange);
   text-underline-offset: .14rem;
   text-decoration-thickness: .06rem;
   transition: color .14s ease-in-out;
 
   &:hover {
-    color: var(--accent);
+    color: var(--vividorange);
     text-decoration-thickness: .08rem;
   }
 }
@@ -62,7 +76,7 @@ a[href="#main"]:hover {
 }
 
 pre {
-  background-color: light-dark(silver, black);
+  background-color: light-dark(white, black);
   tab-size: 2;
   border-radius: .5rem;
   padding: 1rem;
@@ -71,7 +85,6 @@ pre {
 
   @media print {
     white-space: pre-wrap;
-    background-color: canvas;
     border: 1px solid #000;
   }
 }
@@ -81,29 +94,30 @@ code {
 }
 
 blockquote {
-  border-left: .2rem solid var(--accent);
+  border-left: .2rem solid var(--vividorange);
   padding-left: 1rem;
 }
 
-header a,
-footer a,
+header>a,
+header nav a,
 article h1 a {
   text-decoration: none;
 }
 
 header {
-  div {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  background-color: light-dark(white, black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 
-    >a {
-      align-items: center;
-      display: inline-flex;
-      font-weight: normal;
-      span {
-        padding-top: 0.15rem;
-      }
+  >a {
+    align-items: center;
+    display: inline-flex;
+    font-weight: normal;
+
+    span {
+      padding-top: 0.15rem;
     }
   }
 
@@ -117,18 +131,62 @@ header {
   nav ul {
     list-style: none;
     margin: 0;
+    padding: 0;
     display: flex;
-    gap: .75rem;
+    gap: 0.75rem;
 
     span {
-      border: 0;
-      height: 1px;
-      margin: -1px;
-      overflow: hidden;
-      padding: 0;
-      position: absolute;
-      width: 1px;
+      display: none;
     }
+  }
+
+  @media (min-width: 666px) {
+    height: 100dvh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    flex-wrap: nowrap;
+
+    @supports (-webkit-touch-callout: none) {
+      padding-left: env(safe-area-inset-left);
+    }
+
+    nav {
+      ul {
+        margin: 1rem .5rem;
+        gap: 0;
+        flex-direction: column;
+
+        li a {
+          display: inline-flex;
+        }
+
+        span {
+          display: inline-flex;
+          padding-left: .25rem;
+        }
+      }
+    }
+  }
+
+}
+
+main {
+  article {
+    max-width: 28rem;
+  }
+
+  flex-grow: 1;
+  height: 100dvh;
+  overflow-y: auto;
+  
+  @media (orientation: portrait) {
+    padding-bottom: 3rem;
+  }
+  @media (min-width: 666px) {
+    padding-right: env(safe-area-inset-right);
   }
 }
 
@@ -141,10 +199,13 @@ nav {
 h1 {
   /* https://mastodon.social/@pepelsbey/112124066833118895 */
   font-size: 200%;
+
+  @media (min-width: 666px) {
+    margin-top: .5rem;
+  }
 }
 
-header,
-footer,
+header>a,
 h1,
 h2,
 h3,
@@ -160,21 +221,6 @@ h2 a,
 h3 a,
 h4 a {
   padding-top: 0.5rem;
-}
-
-footer {
-  ul {
-    font-size: smaller;
-    list-style: none;
-    display: flex;
-    gap: .75rem;
-    padding: 0;
-    justify-content: space-between;
-
-    b {
-      display: none;
-    }
-  }
 }
 
 small:not(article *) {
