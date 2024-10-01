@@ -3,6 +3,7 @@ import pluginRss from '@11ty/eleventy-plugin-rss';
 import lightningCSS from '@11tyrocks/eleventy-plugin-lightningcss';
 import embeds from 'eleventy-plugin-embed-everything';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
+import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/_headers');
@@ -19,7 +20,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.setLibrary('md', markdownIt(mdOptions));
 
   eleventyConfig.addPlugin(pluginRss);
-
+	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
   eleventyConfig.addPlugin(lightningCSS);
 
   eleventyConfig.addPlugin(embeds, {
