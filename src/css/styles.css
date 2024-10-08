@@ -148,24 +148,45 @@ header {
     align-items: start;
     justify-content: start;
     flex-wrap: nowrap;
+    text-transform: lowercase;
 
     @supports (-webkit-touch-callout: none) {
       padding-left: env(safe-area-inset-left);
     }
 
+    >a {
+      flex-direction: column;
+
+      img {
+        margin: 0 0 .25rem 0;
+      }
+    }
+
     nav {
       ul {
-        margin: 1rem .5rem;
+        margin: 1rem 0;
         gap: 0;
         flex-direction: column;
 
-        li a {
-          display: inline-flex;
+        li {
+          display: flex;
         }
 
-        span {
+        li a {
           display: inline-flex;
-          padding-left: .25rem;
+
+          :before {
+            content: '/';
+          }
+
+          b {
+            display: none;
+          }
+
+          span {
+            display: inline-flex;
+            font-size: smaller;
+          }
         }
       }
     }
@@ -176,15 +197,17 @@ header {
 main {
   article {
     max-width: 28rem;
+    margin: 0 auto;
   }
 
   flex-grow: 1;
   height: 100dvh;
   overflow-y: auto;
-  
+
   @media (orientation: portrait) {
     padding-bottom: 3rem;
   }
+
   @media (min-width: 666px) {
     padding-right: env(safe-area-inset-right);
   }

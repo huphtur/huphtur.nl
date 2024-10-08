@@ -11,7 +11,7 @@ pagination:
     - tagList
   addAllPagesToCollections: true
 eleventyComputed:
-  title: "{{ tag }}"
+  title: "{{ tag }} Blog Posts"
 permalink: /{{ tag | slugify }}/
 ---
 {% assign posts = collections[ tag ] %}
