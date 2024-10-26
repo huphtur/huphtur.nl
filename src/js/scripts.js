@@ -6,6 +6,12 @@ const ColorManager = {
 		document.head.appendChild(this.style);
 		const savedColors = localStorage.getItem('siteColorTheme');
 
+		// Add click handler to any generate buttons on the page
+		const generateButtons = document.querySelectorAll('[data-action="generate-colors"]');
+		generateButtons.forEach(button => {
+			button.addEventListener('click', () => this.generateNewColors());
+		});
+
 		if (savedColors) {
 			this.loadColors();
 		} else {
@@ -50,11 +56,11 @@ const ColorManager = {
 
 	applyColors(bg, fg, ratio) {
 		this.style.textContent = `
-						:root {
-								--light: rgb(${bg.r}, ${bg.g}, ${bg.b});
-								--dark: rgb(${fg.r}, ${fg.g}, ${fg.b});
-						}
-				`;
+									:root {
+											--light: rgb(${bg.r}, ${bg.g}, ${bg.b});
+											--dark: rgb(${fg.r}, ${fg.g}, ${fg.b});
+									}
+							`;
 
 		// Only update contrast display if the element exists on the current page
 		const contrastElement = document.getElementById('contrast');
