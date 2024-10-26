@@ -3,7 +3,7 @@ layout: post
 title: "My Daily Nerd Tools"
 eleventyNavigation:
   key: Uses
-  order: 2
+  order: 4
   emoji: 🛠
 ---
 ## Hardware

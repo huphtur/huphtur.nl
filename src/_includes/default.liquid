@@ -47,29 +47,43 @@
     <link rel="me" href="https://github.com/huphtur/">
     
     <link rel="stylesheet" href="/css/styles.css">
+    <style>
+      :root {
+        --light: #fbfbfe;
+        --dark: #1c1b21;
+      }
+    </style>
   </head>
   <body>
     <a href="#main">Skip to main content</a>
     <header>
-      <a href="/">
-        <img eleventy:widths="100,200" loading="eager" src="/images/huphtur.png" alt="An emoji-style man wearing an orange bike helmet and AirPods, peeking over a MacBook on a light orange background."/>
-        <span>huphtur</span>
-      </a>
-      <nav>
-      {% assign navPages = collections.all | eleventyNavigation %}
-      <ul>
-      {%- for entry in navPages %}
-        <li{% if entry.url == page.url %} class="current"{% endif %}>
-          <a href="{{ entry.url }}"><b aria-hidden="true">{{ entry.emoji }}</b> <span>{{ entry.title }}</span></a>
-        </li>
-      {%- endfor %}
-      </ul>
-      </nav>
+      <div>
+        <a href="/">
+          <img eleventy:widths="100,200" loading="eager" src="/images/huphtur.png" alt="An emoji-style man wearing an orange bike helmet and AirPods, peeking over a MacBook on a light orange background."/><span>huphtur</span>
+        </a>
+        <nav>
+          {% assign navPages = collections.all | eleventyNavigation %}
+          {% assign urlFound = false %}
+          <label id="menu-select">Pages</label>
+          <div>
+            <select name="menu" id="menu-select" aria-labelledby="menu-select" onchange="location = this.options[this.selectedIndex].value;">
+              {% for entry in navPages %}
+              <option {% if entry.url == page.url %}selected{% assign urlFound = true %}{% endif %} value="{{ entry.url }}">{{ entry.title }}</option>
+              {% endfor %}
+              {% unless urlFound %}
+              <option selected value="{{ page.url }}">{{ page.url | remove: "/" | truncate: 8, "…" }}</option>
+              {% endunless %}
+            </select>
+          </div>
+        </nav>
+        <button data-action="generate-colors">🎨</button>
+      </div>
     </header>
-        
-    <main id="main" tabindex="0" role="main">
+
+    <main id="main" role="main">
       {{ content }}
     </main>
 
+    <script src="/js/scripts.js"></script>
   </body>
 </html>

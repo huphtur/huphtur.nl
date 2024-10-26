@@ -3,7 +3,7 @@ layout: post
 title: "Follow Me"
 eleventyNavigation:
   key: Follow
-  order: 4
+  order: 5
   emoji: 📡	
 ---
 Best way to follow me is ofcourse to subscribe to [this site's RSS feed](/feed.xml).

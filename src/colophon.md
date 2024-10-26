@@ -3,7 +3,7 @@ layout: post
 title: "How This Site Was Made"
 eleventyNavigation:
   key: Colophon
-  order: 7
+  order: 8
   emoji: 🧪
 ---
 I mostly use [Visual Studio Code](https://code.visualstudio.com/) and [Pixelmator Pro](https://www.pixelmator.com/pro/) on a [Macbook Air](https://www.apple.com/macbook-air/) to create content for my blog. 

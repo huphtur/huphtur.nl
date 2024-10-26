@@ -3,7 +3,7 @@ layout: post
 title: "About Me"
 eleventyNavigation:
   key: About
-  order: 3
+  order: 2
   emoji: 💁‍♂️
 ---
 👋 I'm Marcel Appelman, a tall, ~~skinny~~ Dutch guy with a penchant for [cycling](/cycling/), [skateboarding](/skateboarding/), [music](/music/), and [nerdy computer stuff](/nerdy-computer-stuff/). 
