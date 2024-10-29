@@ -34,7 +34,7 @@ a {
   color: light-dark(var(--dark), var(--light));
   text-underline-offset: .15rem;
   text-decoration-thickness: var(--borderWidth);
-  /* transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out; */
+
   &:hover {
     color: light-dark(black, white);
     text-shadow: 0 0 calc(var(--borderWidth) * 2) light-dark(black, white);
@@ -97,6 +97,7 @@ header {
     padding: 0;
     margin: 0;
     font-size: 1.2rem;
+
     &:hover {
       color: light-dark(black, white);
       text-shadow: 0 0 calc(var(--borderWidth) * 2) light-dark(black, white);
