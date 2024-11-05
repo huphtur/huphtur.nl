@@ -11,6 +11,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/localcopy.xslt');
   eleventyConfig.addPassthroughCopy({ 'src/favicon/': '/', });
   eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy('src/js');
 
   const mdOptions = {
     html: true,
@@ -22,14 +23,16 @@ export default async function (eleventyConfig) {
 
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
   eleventyConfig.addPlugin(pluginRss);
-	eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
+  eleventyConfig.addPlugin(InputPathToUrlTransformPlugin);
   eleventyConfig.addPlugin(lightningCSS);
 
   eleventyConfig.addPlugin(embeds, {
     use: ['youtube', 'soundcloud'],
     youtube: {
       options: {
-        lite: true,
+        lite: {
+          responsive: true
+        }
       },
     },
   });
@@ -51,7 +54,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addFilter('daysPassed', (value) => {
     return Math.ceil(
       (new Date(value) - new Date((new Date(value)).getFullYear(), 0, 1)) /
-        (86400000),
+      (86400000),
     );
   });
 
