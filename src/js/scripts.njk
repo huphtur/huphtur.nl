@@ -1,3 +1,9 @@
+---
+permalink: /js/scripts.js
+eleventyExcludeFromCollections: true
+---
+{%- set js -%}
+
 // Color Manager Module
 const ColorManager = {
 	style: document.createElement('style'),
@@ -103,3 +109,6 @@ const ColorManager = {
 
 // Initialize the color manager
 ColorManager.init();
+
+{%- endset -%}
+{{ js | jsmin | safe }}

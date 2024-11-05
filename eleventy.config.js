@@ -5,13 +5,13 @@ import embeds from 'eleventy-plugin-embed-everything';
 import { eleventyImageTransformPlugin } from '@11ty/eleventy-img';
 import { InputPathToUrlTransformPlugin } from "@11ty/eleventy";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
+import { minify } from "terser";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/_headers');
   eleventyConfig.addPassthroughCopy('src/localcopy.xslt');
   eleventyConfig.addPassthroughCopy({ 'src/favicon/': '/', });
   eleventyConfig.addPassthroughCopy('src/images');
-  eleventyConfig.addPassthroughCopy('src/js');
 
   const mdOptions = {
     html: true,
@@ -36,6 +36,23 @@ export default async function (eleventyConfig) {
       },
     },
   });
+
+  eleventyConfig.addNunjucksAsyncFilter(
+    'jsmin',
+    async function (code, callback) {
+      if (process.env.ELEVENTY_ENV === 'production') {
+        try {
+          const minified = await minify(code);
+          callback(null, minified.code);
+        } catch (err) {
+          console.error('Terser error: ', err);
+          // Fail gracefully.
+          callback(null, code);
+        }
+      }
+      callback(null, code);
+    }
+  );
 
   eleventyConfig.addPlugin(
     eleventyImageTransformPlugin,
