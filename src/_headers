@@ -1,3 +1,7 @@
 /feed.xml
   Content-Type: application/xml; charset=utf-8
 	x-content-type-options: nosniff
+
+/.well-known/atproto-did
+	Content-Type: text/html; charset=utf-8
+	x-content-type-options: nosniff
