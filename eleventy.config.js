@@ -12,6 +12,7 @@ export default async function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('src/localcopy.xslt');
   eleventyConfig.addPassthroughCopy({ 'src/favicon/': '/', });
   eleventyConfig.addPassthroughCopy('src/images');
+  eleventyConfig.addPassthroughCopy('src/.well-known/');
 
   const mdOptions = {
     html: true,
