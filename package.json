@@ -14,11 +14,11 @@
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^5.0.0",
+    "@11ty/eleventy-img": "^6.0.1",
     "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.2",
+    "@11ty/eleventy-plugin-rss": "^2.0.3",
     "@11tyrocks/eleventy-plugin-lightningcss": "^1.4.0",
     "eleventy-plugin-embed-everything": "^1.19.0",
-    "terser": "^5.36.0"
+    "terser": "^5.37.0"
   }
 }
