@@ -25,7 +25,7 @@ export default async function (eleventyConfig) {
 
 	eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
 		// output image formats
-		formats: ["avif", "webp", "jpeg"],
+		formats: ["webp", "jpeg"],
 
 		// output image widths
 		widths: ["auto"],
