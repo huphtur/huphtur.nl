@@ -6,7 +6,7 @@ date: 2024-01-31
 intro: yes
 tags: ["Nerdy Computer Stuff"]
 ---
-For a new site I'm working on I needed to convert a URL `https://howmanydaysuntilomloop.com/` into just the domain name `howmanydaysuntilomloop.com`.
+For a new site I'm working on I needed to convert a URL like `https://example.com/` into just the domain name: `example.com`.
 
 Originally I had a somewhat silly Liquid chain set up:
 

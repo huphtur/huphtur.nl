@@ -1,9 +1,5 @@
 ---
 layout: default
-eleventyNavigation:
-  key: Home
-  order: 1
-  emoji: 🏠	
 pagination:
   data: collections.post
   size: 10
@@ -12,15 +8,27 @@ pagination:
 ---
 {% for item in posts %}
   <article>
-    <h1><a href="{{ item.url }}">{{ item.data.title }}</a></h1>
-    {% if item.data.intro %} {% if item.data.image %}
-    <p><a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}" /></a></p>
-    {% endif %}
-    <p>{{ item.data.description }}</p>
+    <h1>
+      <a href="{{ item.url }}">{{ item.data.title }}</a>
+    </h1>
+    {% if item.data.intro %}
+      {% if item.data.image %}
+        <p>
+          <a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}" /></a>
+        </p>
+      {% endif %}
+      <p>{{ item.data.description }}</p>
     {% else %}
-    <p>{{ item.templateContent }}</p>
+      <p>{{ item.templateContent }}</p>
     {% endif %}
   </article>
 {% endfor %}
 
-<small>{% if pagination.href.next %}<a href="{{ pagination.href.next }}">Older posts</a>{% endif %} {% if pagination.href.previous %}<a href="{{ pagination.href.previous }}">Newer posts</a>{% endif %}</small>
+<small>
+  {% if pagination.href.next %}
+    <a href="{{ pagination.href.next }}">Older posts</a>
+  {% endif %}
+  {% if pagination.href.previous %}
+    <a href="{{ pagination.href.previous }}">Newer posts</a>
+  {% endif %}
+</small>

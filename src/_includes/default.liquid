@@ -4,39 +4,41 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
 
-    {%if title %}
+    {% if title %}
       <title>{{ title }}</title>
-      <meta name="twitter:title" content="{{ title }}" />
-      <meta property="og:title" content="{{ title }}" />
     {% else %}
       <title>{{ site.title }}</title>
-      <meta name="twitter:title" content="{{ title }}" />
-      <meta property="og:title" content="{{ site.title }}" />
-    {% endif %} 
+    {% endif %}
 
     {% if description %}
-      <meta name="twitter:description" content="{{ description }}" />
       <meta name="description" content="{{ description }}" />
-      <meta property="og:description" content="{{ description }}" />
     {% else %}
-      <meta name="twitter:description" content="{{ site.description }}" />
       <meta name="description" content="{{ site.description }}" />
-      <meta property="og:description" content="{{ site.description }}" />
-    {% endif %} 
+    {% endif %}
 
     {% if eleventyExcludeFromCollections %}
       <meta name="robots" content="noindex" />
-      {% else %}
+    {% else %}
       <meta name="robots" content="index,follow" />
     {% endif %}
 
     <link rel="canonical" href="{{ site.url }}{{ page.url }}" />
 
-    <link rel="icon" href="/favicon.ico" sizes="any" />
-    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link
+      rel="icon"
+      href="/favicon.ico"
+      sizes="any" />
+    <link
+      rel="icon"
+      href="/icon.svg"
+      type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
     <link rel="manifest" href="/site.webmanifest" />
-    <link rel="alternate" type="application/rss+xml" title="RSS Feed for huphtur.nl" href="/feed.xml" />
+    <link
+      rel="alternate"
+      type="application/rss+xml"
+      title="RSS Feed for huphtur.nl"
+      href="/feed.xml" />
 
     <meta name="generator" content="{{ eleventy.generator }}">
     <meta property="og:site_name" content="huphtur.nl" />
@@ -45,39 +47,47 @@
     <meta property="og:image" content="{{ site.url }}{% if image %}{{ image }}{% else %}{{ site.meta_data.default_social_image }}{% endif %}">
     <link rel="me" href="https://mastodon.social/@huphtur">
     <link rel="me" href="https://github.com/huphtur/">
-    
-    <link rel="stylesheet" href="/css/styles.css">
+
+    <link rel="stylesheet" href="/bundle.css">
   </head>
   <body>
     <a href="#main">Skip to main content</a>
+
     <header>
       <div>
         <a href="/">
-          <img eleventy:widths="100,200" loading="eager" src="/images/huphtur.png" alt="An emoji-style man wearing an orange bike helmet and AirPods, peeking over a MacBook on a light orange background."/><span>huphtur</span>
+          <img
+            width="100"
+            height="100"
+            loading="eager"
+            src="/images/huphtur.png"
+            alt="An emoji-style man wearing an orange bike helmet and AirPods, peeking over a MacBook on a light orange background." />
         </a>
-        <nav>
-          {% assign navPages = collections.all | eleventyNavigation %}
-          {% assign urlFound = false %}
-          <label id="menu-select">Pages</label>
-          <div>
-            <select name="menu" id="menu-select" aria-labelledby="menu-select" onchange="location = this.options[this.selectedIndex].value;">
-              {% for entry in navPages %}
-              <option {% if entry.url == page.url %}selected{% assign urlFound = true %}{% endif %} value="{{ entry.url }}">{{ entry.title }}</option>
-              {% endfor %}
-              {% unless urlFound %}
-              <option selected value="{{ page.url }}">{{ page.url | remove: "/" | truncate: 8, "…" }}</option>
-              {% endunless %}
-            </select>
-          </div>
-        </nav>
-        <button data-action="generate-colors">🎨</button>
+        <p>
+          <a href="/">
+            huphtur
+          </a>
+        </p>
       </div>
+      <nav>
+        {% assign navPages = collections.all | eleventyNavigation %}
+        <ul role='list'>
+          {%- for entry in navPages %}
+            <li
+              {% if entry.url == page.url %}
+              class="active"
+              {% endif %}>
+              <a class="nav-{{ entry.title | slugify }}" href="{{ entry.url }}">{{ entry.title }}</a>
+            </li>
+          {%- endfor %}
+        </ul>
+      </nav>
     </header>
 
     <main id="main" role="main">
       {{ content }}
     </main>
 
-    <script src="/js/scripts.js"></script>
+  {% comment %} <script src="/js/scripts.js"></script> {% endcomment %}
   </body>
 </html>
