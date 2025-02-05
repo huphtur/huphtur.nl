@@ -8,11 +8,11 @@ eleventyNavigation:
 ---
 Best way to follow me is ofcourse to subscribe to [this site's RSS feed](/feed.xml).
 
-You can also find me on a bunch of other online entities such as
+You can also find me on a bunch of other online platforms such as
 [Mastodon](https://mastodon.social/@huphtur), 
 [Instagram](https://www.instagram.com/huphtur/),
 [GitHub](https://github.com/huphtur/),
-[Flickr](https://www.flickr.com/photos/huphtur/),
 [Strava](https://www.strava.com/athletes/huphtur),
+[Last.fm](https://www.last.fm/user/huphtur),
 and
-[YouTube](https://www.youtube.com/@huphtur ).
+[Letterboxd](https://letterboxd.com/huphtur/).
