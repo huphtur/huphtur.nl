@@ -1,5 +1,5 @@
 ---
-title: "We Started a Movie Club With Some Friends"
+title: "We Launched an Awesome Movie Club With Friends"
 description: "Early 2024, my wife Kayo had the brilliant idea to start a movie club with some of our friends. A quick rundown of the first eight movies we watched so far."
 date: 2025-02-05
 tags: ["Etcetera"]
