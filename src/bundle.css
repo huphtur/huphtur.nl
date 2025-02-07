@@ -49,12 +49,6 @@ ol[role='list'] {
   scroll-margin-block: 2ex;
 }
 
-button {
-  font-family: inherit;
-  font-size: inherit;
-  touch-action: manipulation;
-}
-
 body {
   min-height: 100vh;
   line-height: 1.25;
@@ -100,19 +94,20 @@ h4 {
 
 a {
   text-decoration-skip-ink: auto;
-  transition: background-color .4s linear, color .2s linear;
+  transition: background-color .2s linear;
   color: currentColor;
+  text-decoration: underline currentColor;
 
   &:hover {
     background-color: light-dark(var(--dark), var(--light));
     color: light-dark(var(--light), var(--dark));
+    text-decoration-color: transparent;
   }
 }
 
 img,
 video,
 canvas,
-svg,
 div[class^="eleventy-plugin"] {
   max-width: 100%;
   height: auto;
@@ -135,16 +130,27 @@ aside {
 
   div {
     display: flex;
+    gap: .2rem;
 
     @media (scripting: none) {
       display: none;
     }
 
     button {
+      font-family: inherit;
+      font-size: inherit;
+      touch-action: manipulation;
       border: none;
       background: none;
-      padding: 0 .25rem;
+      padding: .1rem .2rem;
       font-family: var(--font-system-ui);
+      color: light-dark(var(--dark), var(--light));
+      transition: background-color .2s linear;
+
+      &:hover {
+        background-color: light-dark(var(--dark), var(--light));
+        color: light-dark(var(--light), var(--dark));
+      }
 
       span {
         position: absolute;
@@ -156,6 +162,13 @@ aside {
         clip: rect(0, 0, 0, 0);
         white-space: nowrap;
         border-width: 0;
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        pointer-events: none;
       }
 
     }
@@ -198,12 +211,12 @@ header {
   img {
     width: 5.25rem;
     height: 5.25rem;
-    background-color: currentColor;
-    transition: background-color .2s linear;
+    background-color: transparent;
+    transition: background-color .1s linear;
     border-radius: 999px;
 
     &:hover {
-      background-color: transparent;
+      background-color: currentColor;
     }
   }
 
