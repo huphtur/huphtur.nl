@@ -1,0 +1,179 @@
+---
+permalink: /js/scripts.js
+eleventyExcludeFromCollections: true
+---
+{%- set js -%}
+
+// Color Manager Module
+const ColorManager = {
+	style: document.createElement('style'),
+	isDarkMode: false,
+	fontFamilies: [
+		"var(--font-system-ui)",
+		"var(--font-transitional)",
+		"var(--font-humanist)",
+		"var(--font-rounded-sans)",
+		"var(--font-didone)",
+		"var(--font-handwritten)",
+	],
+	currentFontIndex: 0,
+	previousColors: null,
+	isBlackWhiteMode: false,
+
+	init() {
+		document.head.appendChild(this.style);
+		this.loadSettings();
+
+		// Event delegation for button clicks
+		document.addEventListener('click', (event) => {
+			const action = event.target.dataset.action;
+			if (action === 'colors') this.generateNewColors();
+			else if (action === 'blackwhite') this.toggleBlackWhite();
+			else if (action === 'darkmode') this.toggleColorScheme();
+			else if (action === 'font') this.cycleFontFamily();
+		});
+
+		if (!localStorage.getItem('siteColorTheme')) {
+			this.generateNewColors();
+		}
+	},
+
+	randomHex() {
+		return Math.floor(Math.random() * 256);
+	},
+
+	luminance(r, g, b) {
+		const [rs, gs, bs] = [r, g, b].map(c => {
+			c /= 255;
+			return c <= 0.03928 ? c / 12.92 : Math.pow((c + 0.055) / 1.055, 2.4);
+		});
+		return 0.2126 * rs + 0.7152 * gs + 0.0722 * bs;
+	},
+
+	contrastRatio(l1, l2) {
+		const lighter = Math.max(l1, l2);
+		const darker = Math.min(l1, l2);
+		return (lighter + 0.05) / (darker + 0.05);
+	},
+
+	saveSettings() {
+		const savedColors = localStorage.getItem('siteColorTheme');
+		const settings = {
+			colors: savedColors ? JSON.parse(savedColors) : null,
+			isDarkMode: this.isDarkMode,
+			currentFontIndex: this.currentFontIndex,
+			isBlackWhiteMode: this.isBlackWhiteMode
+		};
+		localStorage.setItem('siteSettings', JSON.stringify(settings));
+	},
+
+	loadSettings() {
+		const savedSettings = localStorage.getItem('siteSettings');
+		if (savedSettings) {
+			const settings = JSON.parse(savedSettings);
+			this.isDarkMode = settings.isDarkMode;
+			this.currentFontIndex = settings.currentFontIndex;
+			this.isBlackWhiteMode = settings.isBlackWhiteMode;
+
+			if (settings.colors) {
+				this.applyColors(settings.colors.background, settings.colors.foreground, settings.colors.contrastRatio);
+			}
+		}
+	},
+
+	saveColors(bg, fg, ratio) {
+		const colors = { background: bg, foreground: fg, contrastRatio: ratio };
+		localStorage.setItem('siteColorTheme', JSON.stringify(colors));
+		this.saveSettings();
+	},
+
+	applyColors(bg, fg, ratio) {
+		this.style.textContent = `
+			:root {
+				--light: rgb(${bg.r}, ${bg.g}, ${bg.b});
+				--dark: rgb(${fg.r}, ${fg.g}, ${fg.b});
+				color-scheme: ${this.isDarkMode ? 'dark' : 'light'};
+				font-family: ${this.fontFamilies[this.currentFontIndex]};
+			}
+		`;
+
+		const contrastElement = document.getElementById('contrast');
+		if (contrastElement) {
+			contrastElement.textContent = ratio.toFixed(2);
+		}
+	},
+
+	generateNewColors() {
+		let bg, fg, bgLum, fgLum, ratio;
+
+		do {
+			bg = { r: this.randomHex(), g: this.randomHex(), b: this.randomHex() };
+			fg = { r: this.randomHex(), g: this.randomHex(), b: this.randomHex() };
+
+			bgLum = this.luminance(bg.r, bg.g, bg.b);
+			fgLum = this.luminance(fg.r, fg.g, fg.b);
+
+			if (bgLum < fgLum) {
+				[bg, fg] = [fg, bg];
+				[bgLum, fgLum] = [fgLum, bgLum];
+			}
+
+			ratio = this.contrastRatio(bgLum, fgLum);
+		} while (ratio < 4.5);
+
+		this.applyColors(bg, fg, ratio);
+		this.saveColors(bg, fg, ratio);
+	},
+
+	toggleBlackWhite() {
+		if (this.isBlackWhiteMode && this.previousColors) {
+			this.applyColors(this.previousColors.background, this.previousColors.foreground, this.previousColors.contrastRatio);
+			this.saveColors(this.previousColors.background, this.previousColors.foreground, this.previousColors.contrastRatio);
+		} else {
+			const savedColors = localStorage.getItem('siteColorTheme');
+			if (savedColors) {
+				this.previousColors = JSON.parse(savedColors);
+			}
+
+			const bg = { r: 255, g: 255, b: 255 }; // White
+			const fg = { r: 0, g: 0, b: 0 };       // Black
+			const ratio = this.contrastRatio(this.luminance(bg.r, bg.g, bg.b), this.luminance(fg.r, fg.g, fg.b));
+
+			this.applyColors(bg, fg, ratio);
+			this.saveColors(bg, fg, ratio);
+		}
+
+		this.isBlackWhiteMode = !this.isBlackWhiteMode;
+		this.saveSettings();
+	},
+
+	toggleColorScheme() {
+		this.isDarkMode = !this.isDarkMode;
+		const savedColors = localStorage.getItem('siteColorTheme');
+		if (savedColors) {
+			const colors = JSON.parse(savedColors);
+			this.applyColors(colors.background, colors.foreground, colors.contrastRatio);
+		} else {
+			this.generateNewColors();
+		}
+		this.saveSettings();
+	},
+
+	cycleFontFamily() {
+		this.currentFontIndex = (this.currentFontIndex + 1) % this.fontFamilies.length;
+		const savedColors = localStorage.getItem('siteColorTheme');
+		if (savedColors) {
+			const colors = JSON.parse(savedColors);
+			this.applyColors(colors.background, colors.foreground, colors.contrastRatio);
+		} else {
+			this.generateNewColors();
+		}
+		this.saveSettings();
+	}
+};
+
+// Initialize the color manager
+ColorManager.init();
+
+{%- endset -%}
+{{ js | safe }}

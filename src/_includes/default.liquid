@@ -51,8 +51,23 @@
     <link rel="stylesheet" href="/bundle.css">
   </head>
   <body>
-    <a href="#main">Skip to main content</a>
-
+    <aside>
+      <a href="#main">Skip to main content</a>
+      <div>
+        <button data-action="font">
+          <span>Toggle font</span>🔡
+        </button>
+        <button data-action="colors">
+          <span>Random colors</span>🎨
+        </button>
+        <button data-action="blackwhite">
+          <span>Toggle black or white</span>🔲
+        </button>
+        <button data-action="darkmode">
+          <span>Toggle darkmode</span>🌓
+        </button>
+      </div>
+    </aside>
     <header>
       <div>
         <a href="/">
@@ -86,6 +101,6 @@
       {{ content }}
     </main>
 
-  {% comment %} <script src="/js/scripts.js"></script> {% endcomment %}
+    <script src="/js/scripts.js"></script>
   </body>
 </html>
