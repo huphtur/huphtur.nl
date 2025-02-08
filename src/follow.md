@@ -6,7 +6,7 @@ eleventyNavigation:
   order: 5
   emoji: 📡	
 ---
-Best way to follow me is ofcourse to subscribe to [this site's RSS feed](/feed.xml).
+Best way to follow me is of course to subscribe to [this site's RSS feed](/feed.xml).
 
 You can also find me on a bunch of other online platforms such as
 [Mastodon](https://mastodon.social/@huphtur), 
