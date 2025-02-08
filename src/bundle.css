@@ -1,7 +1,10 @@
 :root {
-  color-scheme: light dark;
-  --light: #fff;
-  --dark: #000;
+  --font-system-ui: system-ui, sans-serif;
+  --font-transitional: Charter, 'Bitstream Charter', 'Sitka Text', Cambria, serif;
+  --font-humanist: Seravek, 'Gill Sans Nova', Ubuntu, Calibri, 'DejaVu Sans', source-sans-pro, sans-serif;
+  --font-rounded-sans: ui-rounded, 'Hiragino Maru Gothic ProN', Quicksand, Comfortaa, Manjari, 'Arial Rounded MT', 'Arial Rounded MT Bold', Calibri, source-sans-pro, sans-serif;
+  --font-didone: Didot, 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', P052, Sylfaen, serif;
+  --font-handwritten: 'Segoe Print', 'Bradley Hand', Chilanka, TSCu_Comic, casual, cursive;
 }
 
 *,
@@ -14,11 +17,14 @@ html {
   -moz-text-size-adjust: none;
   -webkit-text-size-adjust: none;
   text-size-adjust: none;
-  font: 400 clamp(1rem, 0.75rem + 1.5vi, 3.25rem) / 1.25 system-ui, sans-serif;
+  font: 400 clamp(1rem, 0.75rem + 1.5vi, 3.25rem) / 1.25 system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
   letter-spacing: -0.05rem;
   font-stretch: 95%;
   color: light-dark(var(--dark), var(--light));
   background-color: light-dark(var(--light), var(--dark));
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body,
@@ -37,6 +43,10 @@ dd {
 ul[role='list'],
 ol[role='list'] {
   list-style: none;
+}
+
+:target {
+  scroll-margin-block: 2ex;
 }
 
 body {
@@ -84,18 +94,20 @@ h4 {
 
 a {
   text-decoration-skip-ink: auto;
-  transition: color .2s ease-out;
+  transition: background-color .2s linear;
   color: currentColor;
+  text-decoration: underline currentColor;
 
   &:hover {
-    color: grey;
+    background-color: light-dark(var(--dark), var(--light));
+    color: light-dark(var(--light), var(--dark));
+    text-decoration-color: transparent;
   }
 }
 
 img,
 video,
 canvas,
-svg,
 div[class^="eleventy-plugin"] {
   max-width: 100%;
   height: auto;
@@ -107,35 +119,81 @@ div[class^="eleventy-plugin"] {
   margin-top: 1rem;
 }
 
-a[href="#main"] {
-  position: fixed;
-  background: white;
-  color: blue;
-  top: -20rem;
-  z-index: 2;
+aside {
+  margin: 0 0 .5rem 0;
+  display: flex;
+  justify-content: space-between;
 
-  &:active,
-  &:focus,
-  &:hover {
-    top: 0;
+  a {
+    text-decoration: none;
+  }
+
+  div {
+    display: flex;
+    gap: .2rem;
+
+    @media (scripting: none) {
+      display: none;
+    }
+
+    button {
+      font-family: inherit;
+      font-size: inherit;
+      touch-action: manipulation;
+      border: none;
+      background: none;
+      padding: .1rem .2rem;
+      font-family: var(--font-system-ui);
+      color: light-dark(var(--dark), var(--light));
+      transition: background-color .2s linear;
+
+      @media (hover: hover) {
+        &:hover {
+          background-color: light-dark(var(--dark), var(--light));
+          color: light-dark(var(--light), var(--dark));
+        }
+      }
+
+      span {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border-width: 0;
+      }
+
+      svg {
+        width: 1rem;
+        height: 1rem;
+        display: flex;
+        pointer-events: none;
+      }
+
+    }
+
+
   }
 }
 
 header {
-  button {
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-    margin: .2rem 0;
-    font-size: 1.2rem;
-  }
+  border-top: 1px solid currentColor;
+  border-bottom: 1px solid currentColor;
+  padding-top: .5rem;
 
   div {
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
     justify-content: space-between;
+
+    a:hover {
+      background-color: transparent;
+      color: currentColor;
+    }
 
     p {
       margin: 0;
@@ -157,13 +215,17 @@ header {
   img {
     width: 5.25rem;
     height: 5.25rem;
-    background-color: currentColor;
+    background-color: transparent;
+    transition: background-color .1s linear;
     border-radius: 999px;
+
+    &:hover {
+      background-color: currentColor;
+    }
   }
 
   nav {
     padding: .5rem 0;
-    border-bottom: 1px solid currentColor;
 
     ul {
       display: flex;
@@ -178,12 +240,13 @@ header {
       font-size: 3.8vw !important;
     }
 
-    .active a {
-      color: grey;
-    }
-
     a {
       text-decoration: none;
+    }
+
+    .active a {
+      background-color: light-dark(var(--dark), var(--light));
+      color: light-dark(var(--light), var(--dark));
     }
   }
 }

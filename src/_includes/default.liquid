@@ -51,8 +51,39 @@
     <link rel="stylesheet" href="/bundle.css">
   </head>
   <body>
-    <a href="#main">Skip to main content</a>
-
+    <aside>
+      <a href="#main">Skip to main content</a>
+      <div>
+        <button data-action="font">
+          <span>Toggle font</span>
+          <svg
+            fill="currentColor"
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512">
+            <path d="M432 32a16 16 0 0 1 16 16v96a16 16 0 0 1 -16 16h-32a16 16 0 0 1 -16-16v-32H264v304h40a16 16 0 0 1 16 16v32a16 16 0 0 1 -16 16H144a16 16 0 0 1 -16-16v-32a16 16 0 0 1 16-16h40V112H64v32a16 16 0 0 1 -16 16H16a16 16 0 0 1 -16-16V48a16 16 0 0 1 16-16z" />
+          </svg>
+        </button>
+        <button data-action="colors">
+          <span>Random colors</span>
+          <svg
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 512 512">
+            <path d="M204.3 5C104.9 24.4 24.8 104.3 5.2 203.4c-37 187 131.7 326.4 258.8 306.7 41.2-6.4 61.4-54.6 42.5-91.7-23.1-45.4 9.9-98.4 60.9-98.4h79.7c35.8 0 64.8-29.6 64.9-65.3C511.5 97.1 368.1-26.9 204.3 5zM96 320c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm32-128c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128-64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm128 64c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32z" />
+          </svg>
+        </button>
+        <button data-action="darkmode">
+          <span>Toggle darkmode</span>
+          <svg
+            fill="currentColor"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 496 512">
+            <path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm0 376c-17.7 0-32-14.3-32-32s14.3-32 32-32 32 14.3 32 32-14.3 32-32 32zm0-128c-53 0-96 43-96 96s43 96 96 96c-106 0-192-86-192-192S142 64 248 64c53 0 96 43 96 96s-43 96-96 96zm0-128c-17.7 0-32 14.3-32 32s14.3 32 32 32 32-14.3 32-32-14.3-32-32-32z" />
+          </svg>
+        </button>
+      </div>
+    </aside>
     <header>
       <div>
         <a href="/">
@@ -86,6 +117,9 @@
       {{ content }}
     </main>
 
-  {% comment %} <script src="/js/scripts.js"></script> {% endcomment %}
+    <script type="module">
+      import ColorManager from '/bundle.js';
+      ColorManager.init();
+    </script>
   </body>
 </html>
