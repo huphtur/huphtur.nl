@@ -147,9 +147,11 @@ aside {
       color: light-dark(var(--dark), var(--light));
       transition: background-color .2s linear;
 
-      &:hover {
-        background-color: light-dark(var(--dark), var(--light));
-        color: light-dark(var(--light), var(--dark));
+      @media (hover: hover) {
+        &:hover {
+          background-color: light-dark(var(--dark), var(--light));
+          color: light-dark(var(--light), var(--dark));
+        }
       }
 
       span {
@@ -172,6 +174,8 @@ aside {
       }
 
     }
+
+
   }
 }
 
