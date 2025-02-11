@@ -52,11 +52,6 @@ dd {
   margin-block-end: 0;
 }
 
-ul[role='list'],
-ol[role='list'] {
-  list-style: none;
-}
-
 :target {
   scroll-margin-block: 2ex;
 }
@@ -241,6 +236,7 @@ header {
     ul {
       display: flex;
       justify-content: space-between;
+      list-style: none;
       padding: 0;
       margin: 0;
       font-size: 3.8cqw;
