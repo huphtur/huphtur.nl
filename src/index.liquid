@@ -6,23 +6,25 @@ pagination:
   reverse: true
   alias: posts
 ---
-{% for item in posts %}
-  <article>
-    <h1>
-      <a href="{{ item.url }}">{{ item.data.title }}</a>
-    </h1>
-    {% if item.data.intro %}
-      {% if item.data.image %}
-        <p>
-          <a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}" /></a>
-        </p>
+<main id="main" role="main">
+  {% for item in posts %}
+    <article>
+      <h1>
+        <a href="{{ item.url }}">{{ item.data.title }}</a>
+      </h1>
+      {% if item.data.intro %}
+        {% if item.data.image %}
+          <p>
+            <a href="{{ item.url }}"><img src="{{ item.data.image }}" alt="{{ item.data.alt }}" /></a>
+          </p>
+        {% endif %}
+        <p>{{ item.data.description }}</p>
+      {% else %}
+        <p>{{ item.templateContent }}</p>
       {% endif %}
-      <p>{{ item.data.description }}</p>
-    {% else %}
-      <p>{{ item.templateContent }}</p>
-    {% endif %}
-  </article>
-{% endfor %}
+    </article>
+  {% endfor %}
+</main>
 
 <small>
   {% if pagination.href.next %}
