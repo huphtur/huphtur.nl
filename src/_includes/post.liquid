@@ -1,14 +1,16 @@
 ---
 layout: default
 ---
-<article>
-  <div>
-    <h1>{{ title }}</h1>
-    {% if date %}
-      <small>
-        <time datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%B %e, %Y" }}</time>
-      </small>
-    {% endif %}
-    {{ content }}
-  </div>
-</article>
+<main id="main" role="main">
+  <article>
+    <div>
+      <h1>{{ title }}</h1>
+      {% if date %}
+        <small>
+          <time datetime="{{ date | date: "%Y-%m-%d" }}">{{ date | date: "%B %e, %Y" }}</time>
+        </small>
+      {% endif %}
+      {{ content }}
+    </div>
+  </article>
+</main>

@@ -5,8 +5,8 @@ import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 import { eleventyImageTransformPlugin } from "@11ty/eleventy-img";
 
 export default async function (eleventyConfig) {
-  eleventyConfig.addPassthroughCopy("src/bundle.css");
-  eleventyConfig.addPassthroughCopy("src/bundle.js");
+  eleventyConfig.addPassthroughCopy("src/style.css");
+  eleventyConfig.addPassthroughCopy("src/script.js");
   eleventyConfig.addPassthroughCopy('src/_headers');
   eleventyConfig.addPassthroughCopy('src/localcopy.xslt');
   eleventyConfig.addPassthroughCopy({ 'src/favicon/': '/', });

@@ -1,0 +1,305 @@
+:root {
+  --font-systemui: 'system-ui', 'sans-serif';
+  --font-transitional: 'Charter', 'Bitstream Charter', 'Sitka Text', 'Cambria', 'serif';
+  --font-oldstyle: 'Iowan Old Style', 'Palatino Linotype', 'URW Palladio L', 'P052', 'serif';
+  --font-humanist: 'Seravek', 'Gill Sans Nova', 'Ubuntu', 'Calibri', 'DejaVu Sans', 'source-sans-pro', 'sans-serif';
+  --font-geohumanist: 'Avenir', 'Montserrat', 'Corbel', 'URW Gothic', 'source-sans-pro', 'sans-serif';
+  --font-classhuman: 'Optima', 'Candara', 'Noto Sans', 'source-sans-pro', 'sans-serif';
+  --font-neogrote: 'Inter', 'Roboto', 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', 'Arial', 'sans-serif';
+  --font-monoslab: 'Nimbus Mono PS', 'Courier New', 'monospace';
+  --font-monocode: 'ui-monospace', 'Cascadia Code', 'Source Code Pro', 'Menlo', 'Consolas', 'DejaVu Sans Mono', 'monospace';
+  --font-industrial: 'Bahnschrift', 'DIN Alternate', 'Franklin Gothic Medium', 'Nimbus Sans Narrow', 'sans-serif-condensed', 'sans-serif';
+  --font-roundsans: 'ui-rounded', 'Hiragino Maru Gothic ProN', 'Quicksand', 'Comfortaa', 'Manjari', 'Arial Rounded MT', 'Arial Rounded MT Bold', 'Calibri', 'source-sans-pro', 'sans-serif';
+  --font-slabserif: 'Rockwell', 'Rockwell Nova', 'Roboto Slab', 'DejaVu Serif', 'Sitka Small', 'serif';
+  --font-antique: 'Superclarendon', 'Bookman Old Style', 'URW Bookman', 'URW Bookman L', 'Georgia Pro', 'Georgia', 'serif';
+  --font-didone: 'Didot', 'Bodoni MT', 'Noto Serif Display', 'URW Palladio L', 'P052', 'Sylfaen', 'serif';
+  --font-handwritten: 'Segoe Print', 'Bradley Hand', 'Chilanka', 'TSCu_Comic', 'casual', 'cursive';
+  --width-site: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  font: 400 clamp(1rem, 0.75rem + 1.5vi, 3.25rem) / 1.25 system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  letter-spacing: -0.05rem;
+  font-stretch: 95%;
+  color: light-dark(var(--dark), var(--light));
+  background-color: light-dark(var(--light), var(--dark));
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  width: var(--width-site);
+  margin: 0 auto;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+:target {
+  scroll-margin-block: 2ex;
+}
+
+body {
+  min-height: 100vh;
+  line-height: 1.25;
+  margin: 1rem auto;
+  padding: env(safe-area-inset-top) env(safe-area-inset-right) env(safe-area-inset-bottom) env(safe-area-inset-left);
+  margin: 1rem;
+
+  @media (width > 700px) {
+    margin: 1rem 1.5rem 1.5rem 1.5rem;
+  }
+
+  @media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+    margin: 1rem;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  line-height: 1;
+  font-weight: 500;
+  overflow-wrap: break-word;
+  hyphens: auto;
+
+  a {
+    text-decoration: none;
+  }
+}
+
+h1 {
+  font-size: 200%;
+}
+
+h2 {
+  font-size: 166%;
+}
+
+h3 {
+  font-size: 133%;
+}
+
+h4 {
+  font-size: 100%;
+}
+
+a {
+  text-decoration-skip-ink: auto;
+  transition: background-color .2s linear;
+  color: currentColor;
+  text-decoration: underline currentColor;
+
+  &:hover {
+    background-color: light-dark(var(--dark), var(--light));
+    color: light-dark(var(--light), var(--dark));
+    text-decoration-color: transparent;
+  }
+}
+
+img,
+video,
+canvas,
+div[class^="eleventy-plugin"] {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 1px solid currentColor;
+}
+
+div[class^="eleventy-plugin"] {
+  margin-top: 1rem;
+}
+
+header {
+  border-bottom: 1px solid currentColor;
+  container-type: inline-size;
+  
+
+  a {
+    text-decoration: none;
+  }
+
+  aside {
+    margin: 0 0 .5rem 0;
+    padding: 0 0 .5rem 0;
+    border-bottom: 1px solid currentColor;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    a {
+      font-size: 3.8cqw;
+    }
+    div {
+      display: flex;
+      flex-direction: row;
+      gap: .2rem;
+
+      @media (scripting: none) {
+        display: none;
+      }
+
+      button {
+        font-family: inherit;
+        font-size: inherit;
+        touch-action: manipulation;
+        border: none;
+        background: none;
+        padding: .1rem .2rem;
+        font-family: var(--font-system-ui);
+        color: light-dark(var(--dark), var(--light));
+        transition: background-color .2s linear;
+
+        @media (hover: hover) {
+          &:hover {
+            background-color: light-dark(var(--dark), var(--light));
+            color: light-dark(var(--light), var(--dark));
+          }
+        }
+
+        span {
+          position: absolute;
+          width: 1px;
+          height: 1px;
+          padding: 0;
+          margin: -1px;
+          overflow: hidden;
+          clip: rect(0, 0, 0, 0);
+          white-space: nowrap;
+          border-width: 0;
+        }
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+          display: flex;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+
+  div {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+
+    a:hover {
+      background-color: transparent;
+      color: currentColor;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.1;
+      font-size: 15cqw;
+
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+
+  img {
+    width: 16cqw;
+    background-color: transparent;
+    transition: background-color .1s linear;
+    border-radius: 999px;
+
+    &:hover {
+      background-color: currentColor;
+    }
+  }
+
+  nav {
+    padding: .5rem 0;
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      padding: 0;
+      margin: 0;
+      font-size: 3.8cqw;
+    }
+    .active a {
+      background-color: light-dark(var(--dark), var(--light));
+      color: light-dark(var(--light), var(--dark));
+    }
+  }
+}
+
+main {
+  &> :not(:last-child) {
+    border-bottom: 1px solid currentColor;
+  }
+
+  article {
+    padding-bottom: 2rem;
+  }
+
+  p {
+    overflow-wrap: break-word;
+    text-wrap: pretty;
+  }
+
+  ul li,
+  ol li {
+    padding: 0.04rem 0;
+  }
+
+  pre {
+    tab-size: 2;
+    border: 1px dashed currentColor;
+    padding: 1rem;
+    overflow-x: auto;
+    line-height: 1.5;
+    font-size: 80%;
+
+    @media print {
+      white-space: pre-wrap;
+      border: 1px solid #000;
+    }
+  }
+
+  blockquote {
+    border-left: 1px solid currentColor;
+    padding-left: 1rem;
+  }
+}
+
+small:not(article *) {
+  border-top: 1px solid currentColor;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+
+  a {
+    text-decoration: none;
+  }
+}
