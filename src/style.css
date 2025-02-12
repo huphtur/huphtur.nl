@@ -118,11 +118,15 @@ a {
 img,
 video,
 canvas,
-div[class^="eleventy-plugin"] {
+.eleventy-plugin-youtube-embed, 
+.eleventy-plugin-embed-soundcloud iframe {
   max-width: 100%;
   height: auto;
   display: block;
   border: 1px solid currentColor;
+  &:hover {
+    border: 1px solid light-dark(var(--dark), var(--light));
+  }
 }
 
 div[class^="eleventy-plugin"] {
