@@ -36,12 +36,12 @@ const SiteManager = {
     if (!localStorage.getItem('siteColorTheme')) this.generateNewColors();
   },
 
-  randomHex() {
-    return Math.floor(Math.random() * 256);
+  randomP3() {
+    return Math.random(); // Random value in the range [0, 1] for Display P3
   },
 
   luminance(r, g, b) {
-    return [r, g, b].map(c => (c /= 255) <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4)
+    return [r, g, b].map(c => (c <= 0.03928 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4))
       .reduce((acc, val, i) => acc + [0.2126, 0.7152, 0.0722][i] * val, 0);
   },
 
@@ -79,8 +79,8 @@ const SiteManager = {
     const ratio = this.contrastRatio(this.luminance(bg.r, bg.g, bg.b), this.luminance(fg.r, fg.g, fg.b));
     this.style.textContent = `
       :root {
-        --light: rgb(${bg.r}, ${bg.g}, ${bg.b});
-        --dark: rgb(${fg.r}, ${fg.g}, ${fg.b});
+        --light: color(display-p3 ${bg.r} ${bg.g} ${bg.b});
+        --dark: color(display-p3 ${fg.r} ${fg.g} ${fg.b});
         --width-site: ${this.widthValues[this.currentWidthIndex]}%;
         color-scheme: ${this.isDarkMode ? 'dark' : 'light'};
         font-family: ${this.fontFamilies[this.currentFontIndex]};
@@ -93,13 +93,13 @@ const SiteManager = {
   generateNewColors() {
     let bg, fg, ratio;
     do {
-      bg = { r: this.randomHex(), g: this.randomHex(), b: this.randomHex() };
-      fg = { r: this.randomHex(), g: this.randomHex(), b: this.randomHex() };
+      bg = { r: this.randomP3(), g: this.randomP3(), b: this.randomP3() };
+      fg = { r: this.randomP3(), g: this.randomP3(), b: this.randomP3() };
       const bgLum = this.luminance(bg.r, bg.g, bg.b);
       const fgLum = this.luminance(fg.r, fg.g, fg.b);
-      if (bgLum < fgLum) [bg, fg] = [fg, bg];
+      if (bgLum < fgLum) [bg, fg] = [fg, bg]; // Ensure background is lighter
       ratio = this.contrastRatio(bgLum, fgLum);
-    } while (ratio < 4.5);
+    } while (ratio < 4.5); // Ensure sufficient contrast
     this.applyColors(bg, fg);
     this.saveColors(bg, fg);
   },
