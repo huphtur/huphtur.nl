@@ -37,6 +37,15 @@ html {
   -moz-osx-font-smoothing: grayscale;
   width: var(--width-site);
   margin: 0 auto;
+  @media print {
+    background-color: white;
+    color: black;
+    width: 100%;
+    font-size: 12pt;
+    header {
+      display: none;
+    }
+  }
 }
 
 body,
@@ -278,11 +287,6 @@ main {
     overflow-x: auto;
     line-height: 1.5;
     font-size: 80%;
-
-    @media print {
-      white-space: pre-wrap;
-      border: 1px solid #000;
-    }
   }
 
   blockquote {
