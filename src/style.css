@@ -37,13 +37,19 @@ html {
   -moz-osx-font-smoothing: grayscale;
   width: var(--width-site);
   margin: 0 auto;
+
   @media print {
     background-color: white;
     color: black;
     width: 100%;
     font-size: 12pt;
+
     header {
       display: none;
+    }
+
+    pre {
+      white-space: pre-wrap;
     }
   }
 }
@@ -127,12 +133,13 @@ a {
 img,
 video,
 canvas,
-.eleventy-plugin-youtube-embed, 
+.eleventy-plugin-youtube-embed,
 .eleventy-plugin-embed-soundcloud iframe {
   max-width: 100%;
   height: auto;
   display: block;
   border: 1px solid currentColor;
+
   &:hover {
     border: 1px solid light-dark(var(--dark), var(--light));
   }
@@ -145,7 +152,7 @@ div[class^="eleventy-plugin"] {
 header {
   border-bottom: 1px solid currentColor;
   container-type: inline-size;
-  
+
 
   a {
     text-decoration: none;
@@ -158,9 +165,11 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     a {
       font-size: 3.8cqw;
     }
+
     div {
       display: flex;
       flex-direction: row;
@@ -254,6 +263,7 @@ header {
       margin: 0;
       font-size: 3.8cqw;
     }
+
     .active a {
       background-color: light-dark(var(--dark), var(--light));
       color: light-dark(var(--light), var(--dark));
