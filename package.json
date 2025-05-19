@@ -13,10 +13,10 @@
     "benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
   },
   "devDependencies": {
-    "@11ty/eleventy": "^3.0.0",
-    "@11ty/eleventy-img": "^6.0.1",
-    "@11ty/eleventy-navigation": "^0.3.5",
-    "@11ty/eleventy-plugin-rss": "^2.0.3",
-    "eleventy-plugin-embed-everything": "^1.20.0"
+    "@11ty/eleventy": "^3.1.0",
+    "@11ty/eleventy-img": "^6.0.4",
+    "@11ty/eleventy-navigation": "^1.0.4",
+    "@11ty/eleventy-plugin-rss": "^2.0.4",
+    "eleventy-plugin-embed-everything": "^1.21.0"
   }
 }
