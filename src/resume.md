@@ -24,7 +24,7 @@ Design Engineer focused on developing clean, accessible, and user-friendly solut
 
 **Network Ninja**  
 Design Engineer  
-_Jul 2016 - Sep 2025
+_Jul 2016 - Sep 2025_
 * Took the lead in redesigning Network Ninja’s largest application, delivering a modern and more accessible user experience. Created all designs and prototypes in Vue.js, resulting in fully accessible markup ready for implementation.
 * Used Storybook to build a component library.
 * Worked with an agile development team to design and build a proprietary mobile application for one of Network Ninja's clients, serving thousands of internal users.
