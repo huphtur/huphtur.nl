@@ -55,7 +55,7 @@ _Apr 1995 - Mar 1999_
 - Filmed and produced two full-length skateboard videos.
 - Developed Acme’s website, establishing one of the skateboard industry’s first online presences and launching direct mail newsletters.
 
-### Buyer, Graphic Designer
+### Buyer & Graphic Designer
 [Rodolfo’s](https://www.rodolfos.nl)  
 _Feb 1992 - Apr 1995_
 - Imported and distributed sports and lifestyle products from the USA to skate shops across the Netherlands, Belgium, and Luxembourg.
