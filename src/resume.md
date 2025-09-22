@@ -19,6 +19,7 @@ Design Engineer developing clean, accessible, and user-friendly solutions. Speci
 - Design systems
 - Accessibility
 - Storybook
+- Jira
 
 ## Work Experience
 
@@ -60,5 +61,5 @@ _Apr 1995 - Mar 1999_
 _Feb 1992 - Apr 1995_
 - Imported and distributed sports and lifestyle products from the USA to skate shops across the Netherlands, Belgium, and Luxembourg.
 - Started and managed an amateur skateboard team to promote imported brands.
-- Produced and managed printed media for Rodolfo, including ads, catalogs, magazines, and point-of-purchase materials.
-- Supported sales operations as a skate shop nerd, delivering customer service and product expertise.
+- Produced and managed printed media for Rodolfo’s, including ads, catalogs, magazines, and point-of-purchase materials.
+- Supported sales operations in retail stores, delivering customer service and product expertise.
