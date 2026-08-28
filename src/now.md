@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "What I Been Up To"
-date: "2025-10-27"
+date: "2026-08-28"
 eleventyNavigation:
   key: Now
   order: 3
   emoji: ⏰
 ---
-Moving to Antwerpen 🇧🇪 soon!
+Moved to Antwerpen 🇧🇪 with the fam! Working some fun stuff with the Lockwood Avenue folks and enjoying life Euro style again.
