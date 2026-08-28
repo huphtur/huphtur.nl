@@ -303,6 +303,17 @@ main {
     border-left: 1px solid currentColor;
     padding-left: 1rem;
   }
+
+  .bookmarklet-button {
+    cursor: move;
+    background-color: light-dark(var(--dark), var(--light));
+    color: light-dark(var(--light), var(--dark));
+    white-space: nowrap;
+    user-select: none;
+    border-radius: .25rem;
+    padding: .1rem .5rem;
+    text-decoration: none;
+  }
 }
 
 small:not(article *) {
