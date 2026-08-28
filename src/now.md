@@ -7,4 +7,4 @@ eleventyNavigation:
   order: 3
   emoji: ⏰
 ---
-Moved to Antwerpen 🇧🇪 with the fam! Working some fun stuff with the Lockwood Avenue folks and enjoying life Euro style again.
+Living in Antwerpen 🇧🇪 with the fam. Working on some fun stuff with the [Lockwood Avenue](https://www.lockwood-avenue.com/) folks and enjoying life Euro style.
